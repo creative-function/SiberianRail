@@ -15,6 +15,9 @@ TABLE OF CONTENTS:
 
 /* 0. Reset ================================= */
 @import 'reset';
+@import 'base/colors';
+@import 'base/fonts';
+@import 'base/media';
 
 
 /* 1. Main Layout ================================= */
@@ -24,7 +27,7 @@ TABLE OF CONTENTS:
 }
 
 body {
-	background: #ccc;
+	background: #fff;
 }
 
 
@@ -32,72 +35,112 @@ body {
 
 /* 2. Content ================================= */
 
-.floating-box {
-	position: relative;
-	font-family: sans-serif;
-	width: 90%;
-	max-width: 500px;
-	margin: 140px auto;
-	padding: 30px 20px 30px 30px;
-	.foreground {
-		position: relative;
-		z-index: 2;
-		transform: translateZ(100px);
-	}
-	.background {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		left: 0;
-		top: 0;
-		background: white;
-		z-index: 1;
-		// perspective: 2000px;
-		transition: 0.2s;
-		transform: translateX(20px) perspective(600px) rotateY(15deg);
-	}
-	&:hover .background {
-		transform: translateX(-30px) perspective(600px) rotateY(-15deg);		
-	}
-	.logo {
-		position: absolute;
-		top: -30px;
-		width: 60px;
-		z-index: 2;
-		transform: translateZ(100px);
-		transition: 0.3s;
+section#page-wrapper{
+	width:100%;
+	height: 100vh;
+	margin:0 auto;
+	display: flex;
+	flex-direction: column;
 
-		&:hover {
-			transform: rotate(-0.4turn)
+	@media#{$tablet}{
+		flex-direction: row;
+	}
+
+	.scroll-wrapper{
+		width:100%;
+		margin:0 auto;
+		height: 50vh;
+		background-color:rgb(218, 196, 199);
+		overflow: auto;
+		@media#{$tablet}{
+			height: 100vh;
 		}
+	
 	}
-	h1 {
-		font-weight: 700;
-		font-size: 22pt;
-		margin: 15px 0;
-	}
-	p {
-		color: #777;
-		// margin: 10px 0;
-		line-height: 140%;
-	}
-	p.github {
-		font-size: 0.8em;
+	.fixed-wrapper{
+		width:100%;
+		height: 50vh;
+		border:$TSR_GoldTint;
+		display:flex;
+		flex-direction: column;
+		position: relative;
+		@media#{$tablet}{
+			height: 100vh;
+		}
 		
-		a {
-			opacity: 0.2;
-			transition: 0.3s;
-			&:hover {
-				opacity: 1;
-				color: red;
+		
+		.bookNow_bttn{
+			display: none;
+			position: absolute;
+			top:0;
+			right:0;
+			width:150px;
+			height:20px;
+			margin:2%;
+			border: 2px solid;
+			background: transparent;
+
+			@media#{$tablet}{
+				display: block;
+			}
+			
+
+		}
+
+		.fixed-button{
+			width:100%;
+			height: 50vh;
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			
+
+			.inner_bttn{
+				width:50%;
+				margin: 0 auto;
+				display: flex;
+				flex-direction: column;
+				align-self: center;
+				font-size:3em;
+				h1{
+					font-size:2em;
+				}
+				h2{
+					font-size:.5em;
+				}
+				
+				.arrow_top{
+					position: relative;
+					right:0;
+				}
+
+				
 			}
 		}
+
+		.button_top{
+			background-color: $TSR-Orange;
+		}
+
+		.button_bottom{
+			background-color:$TSR-Gold;
+		}
+
+		.fixed-bar{
+			position:absolute;
+			top:calc(100% - 10px);
+			right:0;
+			width: 70%;
+			height: 40px;
+			background-color:$TSR-White;
+			@media#{$tablet}{
+				top:49%;
+			}
+			
+
+		}
+
 	}
-	code {
-		position: absolute;
-		top: 20px;
-		right: 20px;
-		font-size: 0.8em;
-		opacity: 0.2;
-	}
+
+	
 }

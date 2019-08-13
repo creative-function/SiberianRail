@@ -9,57 +9,53 @@
 
 		<link rel="stylesheet" href="dist/css/main.css">
 
-		<!--
-			Do I work in src or dist? Good question.
-
-			First of all, if you're a newbie and you don't want to worry about any of this
-			Prepros or Gulp stuff, or scss, or browser-syncing, just do everything in dist.
-			In fact, just delete the src folder.
-
-			If you're a geek and want to get into it, here's some background...
-
-			Prepros and Gulp do mostly the same things. Prepros is a GUI (it's pretty),
-			Gulp is a CLI (it's in the terminal, and it's ugly).
-
-			Both will watch your files, and where appropriate, they will error-check and
-			compile them from one format to another. To stay organized, we have to
-			split things up between the files we write: the *source* files in "src";
-			and the files they become: the files that get *distributed* on the web, in "dist".
-
-			So src/scss files become dist/css files,
-			And src/js files become dist/js files (that have been compiled down to ES5),
-			And src/img files become dist/img files (that have been compressed for you).
-
-			Anything that doesn't need compiling/compressing/error-checking (plugins, video, fonts, etc),
-			just put straight in *dist*.
-
-			One way to remember it is: you're only going to distribute *dist*. You keep the source files
-			to yourself, hidden from the world.
-
-			Go here to learn more about src and dist:
-				https://stackoverflow.com/questions/23730882/what-is-the-role-of-src-and-dist-folders
-			Or here for detailed instructions on setting up the gulp command line helper.
-				https://github.com/CreativeCircus/circus-starter
-
-			- Chris Silich
-		-->
+		
 
 	</head>
 	<body>
 
-		<div class="floating-box">
-			<img class="logo" src="dist/img/logo.png" alt="Circus Logo">
-			<div class="foreground">
-				<h1>Hello World!</h1>
-				<p>Yep, you've got the Circus Starter project working.</p>
-				<p>Congratulations! You're ready to code.</p>
-				<p class="github">
-					<a target="_blank" rel="noopener" href="https://github.com/CreativeCircus/circus-starter">https://github.com/CreativeCircus/circus-starter</a>
-				</p>
-				<code>1.7.1</code>
-			</div>
-			<div class="background"></div>
-		</div>
+
+		<section id="page-wrapper">
+			<section class="scroll-wrapper">
+				SCROLLER
+
+				<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque ex, molestias sequi odit quae fugiat. Velit excepturi est totam dignissimos, dicta nisi, cupiditate atque quidem reprehenderit repellat, fuga deleniti cumque?Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet quam aliquam esse labore quod perspiciatis obcaecati alias maiores, officiis sapiente, quibusdam odit excepturi. Labore quisquam sed numquam sit consequatur Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum veritatis perferendis atque doloribus eius voluptatibus, quasi sed officiis iusto voluptatum accusantium impedit minus inventore saepe perspiciatis molestiae adipisci nesciunt cumque. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam praesentium consequuntur nisi, quisquam vero iure corrupti a dolor, sint eos facilis similique cupiditate cum maxime tempore saepe. Ullam, esse nisi! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum fugit quos veritatis optio voluptate doloribus, ipsa fugiat magni blanditiis molestiae praesentium! Doloremque dolores velit iure voluptatem accusamus ipsum tempora repellendus? Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, eum dolorum! Recusandae assumenda explicabo cupiditate doloribus nihil facere corporis soluta asperiores eum quibusdam, iste dolores animi ullam consequatur esse placeat. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur rerum ratione nihil consequuntur a veniam distinctio debitis, deserunt, est possimus, facere rem ullam excepturi dolore sint aut. Rem, explicabo at.</p>
+			</section>
+			<section class="fixed-wrapper">
+					<button class="bookNow_bttn">BOOK NOW</button>
+				<a href="#">
+					<div class="fixed-button button_top">
+						<span class="inner_bttn bttn_title">
+							<h2>begin in</h2>
+							<h1>MOSCOW</h1>
+						</span>
+						
+						<span class="inner_bttn bttn_arrow">
+							<p class="arrow_top">">"</p>
+						</span>
+					</div>
+				</a>
+				<a href="#">
+					<div class="fixed-button button_bottom">
+
+						<span class="inner_bttn bttn_arrow">
+							<p class="arrow_bottom">">"</p>
+						</span>
+						<span class="inner_bttn bttn_title">
+							<h2>begin in</h2>
+							<h1>BEIJING</h1>
+						</span>
+						
+					</div>
+				</a>
+	
+				<a href="#">
+					<div class="fixed-bar button_middle">
+						the journey
+					</div>
+				</a>
+			</section>
+		</section>
 
 		<script src="dist/js/main.js"></script>
 
