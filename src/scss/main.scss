@@ -50,10 +50,122 @@ section#page-wrapper{
 		width:100%;
 		margin:0 auto;
 		height: 50vh;
-		background-color:rgb(218, 196, 199);
-		overflow: auto;
+		// background-color:rgb(218, 196, 199);
+		overflow: scroll;
 		@media#{$tablet}{
 			height: 100vh;
+			width:50%;
+			margin:0;
+			overflow: unset;
+		}
+
+		#left-nav{
+			width:100%;
+			height:50px;
+			background-color:#ffffff;
+			border-bottom: 3px solid black;
+		}
+
+		.scroll-screen{
+			width:100%;
+			height: 100vh;
+			display: flex;
+			flex-direction: column;
+			background-color: lightblue;
+			border:2px dashed red;
+
+			.screen_top{
+				width:100%;
+				height: 50%;
+				background-color: pink;
+			}
+
+			.screen-infoBox{
+				width: 100%;
+				height: 50vh;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-evenly;
+
+				.infoBox_wrapper{
+					width:50%;
+					margin:0 auto;
+					line-height: 1.4em;
+				}
+			}
+			
+		}
+
+		.screen_1Header{
+			.header-welcome{
+				width:100%;
+				height: 60vh;
+				display: flex;
+				flex-direction: column;
+				background-color: goldenrod;
+				.welcome-txtBox{
+					width:50%;
+					margin: 0 auto;
+					height:40vh;
+					display: flex;
+					flex-direction: column;
+					justify-content: space-between;background-color: lavender;
+
+					.txtBox{
+						text-align: center;
+						margin: 0 auto;
+					}
+
+					.welcome_h1{
+						font-size: 4em;
+					}
+				}
+			}
+
+			
+		}
+
+		.screen_2TSR{
+			.screen_top{
+				.IMGbox{
+					width:50%;
+					height: 200px;
+					margin-top:15%;
+					background-color: purple;
+				}
+			}
+		}
+
+		.screen_3Service{
+			.screen_top{
+				display: flex;
+				flex-direction: column;
+				justify-content: flex-end;
+			
+				h1{
+					font-size: 5.5em;
+					width: 50%;
+					margin: 0 auto;
+				}
+				.screen3_topTxtBox{
+					width:100%;
+					height: 150px;
+					display: flex;
+					flex-direction: row;
+					background-color: yellow;
+				
+
+					.screen3_topImg{
+						width:25%;
+						border: 2px solid black;
+					}
+
+					.screen3_topTxt{
+						width:75%;
+						padding:2%;
+					}
+				}
+			}
 		}
 	
 	}
@@ -64,8 +176,13 @@ section#page-wrapper{
 		display:flex;
 		flex-direction: column;
 		position: relative;
+		
+		
 		@media#{$tablet}{
 			height: 100vh;
+			width:50%;
+			position: fixed;
+			right:0;
 		}
 		
 		
@@ -96,14 +213,13 @@ section#page-wrapper{
 			
 
 			.inner_bttn{
-				width:50%;
 				margin: 0 auto;
 				display: flex;
 				flex-direction: column;
 				align-self: center;
 				font-size:3em;
 				h1{
-					font-size:2em;
+					font-size:1.3em;
 				}
 				h2{
 					font-size:.5em;
@@ -141,6 +257,4 @@ section#page-wrapper{
 		}
 
 	}
-
-	
 }
