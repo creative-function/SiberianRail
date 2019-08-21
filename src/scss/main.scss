@@ -35,7 +35,15 @@ body {
 	z-index: 99;
 }
 
-
+.tsr_bttn{
+	margin-top:5%;
+	width:35%;
+	background-color:$TSR_textHead;
+	border: none;
+	color:white;
+	font-family: $TSRmain;
+	padding:1%;
+}
 
 /* 2. Content ================================= */
 
@@ -67,7 +75,7 @@ section#page-wrapper{
 			width:100%;
 			height:50px;
 			background-color:#ffffff;
-			border-bottom: 3px solid black;
+			border-bottom: 3px solid $TSR_Accent;
 		}
 
 		.scroll-screen{
@@ -75,10 +83,21 @@ section#page-wrapper{
 			height: 100vh;
 			display: flex;
 			flex-direction: column;
+			@media#{$tablet}{
+				height: 55vh;
+			}
+			@media#{$desktop}{
+				height: 100vh;
+			}
 
 			.screen_top{
 				width:100%;
 				height: 50%;
+
+				.tsr_txt{
+					font-size:.9em;
+					color: $TSR_text;
+				}
 			}
 
 			.screen-bottomBox{
@@ -89,9 +108,20 @@ section#page-wrapper{
 				justify-content: space-evenly;
 
 				.bottomBox_wrapper{
-					width:70%;
+					width:80%;
 					margin:0 auto;
-					line-height: 1.4em;
+					line-height: 1.5em;
+					font-family:$TSRmain;
+
+					.tsr_txtHead{
+						color: $TSR_textHead;
+						font-size:1.2em;
+						margin: 2% 0;
+					}
+					.tsr_txt{
+						font-size:.9em;
+						color: $TSR_text;
+					}
 				}
 			}
 			
@@ -100,13 +130,12 @@ section#page-wrapper{
 		.screen_1Header{
 			.header-welcome{
 				width:100%;
-				height: 60vh;
 				display: flex;
 				flex-direction: column;
 				.welcome-txtBox{
-					width:60%;
+					width:85%;
 					margin: 0 auto;
-					height:40vh;
+					
 					display: flex;
 					flex-direction: column;
 					justify-content: space-between;
@@ -115,10 +144,12 @@ section#page-wrapper{
 						text-align: center;
 						margin: 0 auto;
 						margin-bottom:10%;
-						font-size:1.5em;
+						font-size:1.2em;
+						color: $TSR_textHead;
+						font-family: $TSRmain;
 					}
 
-					.img{
+					#logo{
 						width:100%;
 					}
 				}
@@ -131,21 +162,32 @@ section#page-wrapper{
 			.screen_top{
 				
 				.IMGbox{
-					width:100%;
+					width:70%;
+					max-width: 75%;
 					height: 100%;
 					position: relative;
+					@media#{$tablet}{
+						min-width:88%;
+					}
+					@media#{$desktop}{
+						min-width:70%;
+					}
 
 					.float-title{
-						//width:100%;
+						width:max-content;
 						position: absolute;
-						top:50px;
-						right:25px;
+						top:20%;
+						right:-15%;
 						font-size:3em;
 						z-index: 99;
+						color:$TSR_textHead;
+						@media#{$tablet}{
+							font-size:5em;
+						}
 					}
 
 					img{
-						width:70%;
+						width:100%;
 						height: 70%;
 						position: absolute;
 						bottom:0;
@@ -158,28 +200,36 @@ section#page-wrapper{
 			.screen_top{
 				display: flex;
 				flex-direction: column;
-				justify-content: space-evenly;
+				justify-content: center;
 				position: relative;
 				width:100%;
 				.float-title{
 					font-size:3em;
 					z-index: 99;
+					margin-bottom:5%;
 					text-align: center;
+					color:$TSR_Accent;
+					@media#{$desktop}{
+						font-size: 5em;
+					}
+					
 				}
 				.screen3_topTxtBox{
-					width:100%;
+					width:90%;
 					display: flex;
 					flex-direction: row;
-
+					align-self: center;
+					justify-content: space-evenly;
+					
 					.screen3_topImg{
-						width:30%;
+						width:25%;
 						img{
 							width:100%;
 						}
 					}
 
 					.screen3_topTxt{
-						width:60%;
+						width:70%;
 						padding:2%;
 					}
 				}
@@ -187,29 +237,43 @@ section#page-wrapper{
 
 			.bottomBox_3{
 				width:100%;
-				height:50%;
 				.bottomBox_wrapper{
 					width:100%;
+					height: 100%;
 					display:flex;
 					flex-direction:row;
-					justify-content: flex-end;
+					
 
 					.screen3_bttmTxt{
-						width:45%;
-						padding:1%;
+						width:50%;
+						padding:0 2%;
 						line-height: 1.5em;
 						display: flex;
 						flex-direction: column;
 						justify-content: space-between;
-						p{
-							width:90%;
+
+						.bttmTxt_wrapper{
+							width:80%;
+							margin:0 auto;
+							display: flex;
+							flex-direction: column;
+							
+
 						}
+
+					
+						.tsr_txt{
+							width:85%;
+						}
+
+						.bttnBox_3{
+							width:70%;
+						}
+					
 					}
 
 					.screen3_bttmImg{
 						width:50%;
-						height: 100%;
-
 						img{
 							width: 100%;
 						}
@@ -224,19 +288,30 @@ section#page-wrapper{
 			
 			.screen_top{
 				width:100%;
-				height: 100%;
+				height: 50vh;
 				.IMGbox{
 					width:75%;
 					position: relative;
 					top:25%;
-					.float-title{
+					.tint_box{
+						position: absolute;
+						bottom:0;
 						width:100%;
+						height: 20%;
+						background-color:$TSR_WhiteTint;
+					}
+					.float-title{
+						width:max-content;
 						font-size:3em;
 						z-index: 99;
 						//text-align: center;
 						position: absolute;
-						bottom:-30px;
-						left:100px;
+						bottom:-20%;
+						right:-30%;
+						color: $TSR_textHead;
+						@media#{$tablet}{
+							font-size: 5em;
+						}
 					}
 
 					img{
@@ -245,6 +320,89 @@ section#page-wrapper{
 				}
 
 				
+			}
+
+			.screen-bottomBox{
+				
+			}
+
+		}
+
+		
+		.screen_5Footer{
+			
+
+			.screen_top{
+				width:100%;
+				height:50%;
+				
+				.TXTbox{
+					width:100%;
+					height: 100%;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+
+					.footer_txt{
+						width:30%;
+						height: auto;
+						font-size:2em;
+						text-align: center;
+					}
+				}
+			}
+
+			.screen-bottomBox{
+				width: 100%;
+				height: 50%;
+
+				.bottomBox_wrapper{
+					width:100%;
+					height: 100%;
+					display: flex;
+					flex-direction: column;
+
+					.top_footer{
+						width:100%;
+						height: 50%;
+						display: flex;
+						flex-direction: column;
+						
+
+						.footer_logo{
+							width:50%;
+							height: 75%;
+							align-self: center;
+							#logo_footer{
+								width: 100%;
+							}
+						}
+
+						.social_icons{
+							width:100%;
+							height: 25%;
+							background-color: yellow;
+						}
+					}
+					.bttm_footer{
+						width:100%;
+						height: 50%;
+						display: flex;
+						flex-direction: row;
+
+						.bttm_left{
+							width:50%;
+							height: 100%;
+							background-color: bisque;
+						}
+						.bttm_left{
+							width:50%;
+							height: 100%;
+							
+						}
+					
+					}
+				}
 			}
 
 		}
@@ -257,6 +415,24 @@ section#page-wrapper{
 		display:flex;
 		flex-direction: column;
 		position: relative;
+		font-family: $TSRstencil;
+
+		a:link{
+			text-decoration: none;
+		}
+		
+		h2{
+			font-family: $TSRmain;
+			color:white;
+		}
+
+		.moscow{
+			color:$TSR_Mscw;
+		}
+
+		.bjing{
+			color:$TSR_Bjing;
+		}
 		
 		
 		@media#{$tablet}{
@@ -309,6 +485,13 @@ section#page-wrapper{
 				.arrow_top{
 					position: relative;
 					right:0;
+					color:white;
+				}
+
+				.arrow_bottom{
+					position: relative;
+					right:0;
+					color:white;
 				}
 
 				
@@ -330,6 +513,20 @@ section#page-wrapper{
 			width: 70%;
 			height: 40px;
 			background-color:$TSR-White;
+
+			.fixed-bar_title{
+				width:50%;
+				height: 100%;
+				display: flex;
+				justify-content: center;
+				align-content: center;
+				h2{
+					display: flex;
+					align-self: center;
+					color:$TSR_textHead;
+					font-size:1.3em;
+				}
+			}
 			@media#{$tablet}{
 				top:49%;
 			}

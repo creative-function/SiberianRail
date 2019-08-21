@@ -89,6 +89,16 @@ body {
 	z-index: 99;
 }
 
+.tsr_bttn {
+	margin-top: 5%;
+	width: 35%;
+	background-color: #B55827;
+	border: none;
+	color: white;
+	font-family: Arial, Helvetica, sans-serif;
+	padding: 1%;
+}
+
 /* 2. Content ================================= */
 section#page-wrapper {
 	width: 100%;
@@ -129,7 +139,7 @@ section#page-wrapper .scroll-wrapper #left-nav {
 	width: 100%;
 	height: 50px;
 	background-color: #ffffff;
-	border-bottom: 3px solid black;
+	border-bottom: 3px solid #E3DAC6;
 }
 
 section#page-wrapper .scroll-wrapper .scroll-screen {
@@ -142,9 +152,26 @@ section#page-wrapper .scroll-wrapper .scroll-screen {
 	        flex-direction: column;
 }
 
+@media (min-width: 767px) {
+	section#page-wrapper .scroll-wrapper .scroll-screen {
+		height: 55vh;
+	}
+}
+
+@media (min-width: 900px) {
+	section#page-wrapper .scroll-wrapper .scroll-screen {
+		height: 100vh;
+	}
+}
+
 section#page-wrapper .scroll-wrapper .scroll-screen .screen_top {
 	width: 100%;
 	height: 50%;
+}
+
+section#page-wrapper .scroll-wrapper .scroll-screen .screen_top .tsr_txt {
+	font-size: .9em;
+	color: #83554E;
 }
 
 section#page-wrapper .scroll-wrapper .scroll-screen .screen-bottomBox {
@@ -160,14 +187,25 @@ section#page-wrapper .scroll-wrapper .scroll-screen .screen-bottomBox {
 }
 
 section#page-wrapper .scroll-wrapper .scroll-screen .screen-bottomBox .bottomBox_wrapper {
-	width: 70%;
+	width: 80%;
 	margin: 0 auto;
-	line-height: 1.4em;
+	line-height: 1.5em;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+section#page-wrapper .scroll-wrapper .scroll-screen .screen-bottomBox .bottomBox_wrapper .tsr_txtHead {
+	color: #B55827;
+	font-size: 1.2em;
+	margin: 2% 0;
+}
+
+section#page-wrapper .scroll-wrapper .scroll-screen .screen-bottomBox .bottomBox_wrapper .tsr_txt {
+	font-size: .9em;
+	color: #83554E;
 }
 
 section#page-wrapper .scroll-wrapper .screen_1Header .header-welcome {
 	width: 100%;
-	height: 60vh;
 	display: -webkit-box;
 	display: flex;
 	-webkit-box-orient: vertical;
@@ -176,9 +214,8 @@ section#page-wrapper .scroll-wrapper .screen_1Header .header-welcome {
 }
 
 section#page-wrapper .scroll-wrapper .screen_1Header .header-welcome .welcome-txtBox {
-	width: 60%;
+	width: 85%;
 	margin: 0 auto;
-	height: 40vh;
 	display: -webkit-box;
 	display: flex;
 	-webkit-box-orient: vertical;
@@ -192,29 +229,54 @@ section#page-wrapper .scroll-wrapper .screen_1Header .header-welcome .welcome-tx
 	text-align: center;
 	margin: 0 auto;
 	margin-bottom: 10%;
-	font-size: 1.5em;
+	font-size: 1.2em;
+	color: #B55827;
+	font-family: Arial, Helvetica, sans-serif;
 }
 
-section#page-wrapper .scroll-wrapper .screen_1Header .header-welcome .welcome-txtBox .img {
+section#page-wrapper .scroll-wrapper .screen_1Header .header-welcome .welcome-txtBox #logo {
 	width: 100%;
 }
 
 section#page-wrapper .scroll-wrapper .screen_2TSR .screen_top .IMGbox {
-	width: 100%;
+	width: 70%;
+	max-width: 75%;
 	height: 100%;
 	position: relative;
 }
 
+@media (min-width: 767px) {
+	section#page-wrapper .scroll-wrapper .screen_2TSR .screen_top .IMGbox {
+		min-width: 88%;
+	}
+}
+
+@media (min-width: 900px) {
+	section#page-wrapper .scroll-wrapper .screen_2TSR .screen_top .IMGbox {
+		min-width: 70%;
+	}
+}
+
 section#page-wrapper .scroll-wrapper .screen_2TSR .screen_top .IMGbox .float-title {
+	width: -webkit-max-content;
+	width: -moz-max-content;
+	width: max-content;
 	position: absolute;
-	top: 50px;
-	right: 25px;
+	top: 20%;
+	right: -15%;
 	font-size: 3em;
 	z-index: 99;
+	color: #B55827;
+}
+
+@media (min-width: 767px) {
+	section#page-wrapper .scroll-wrapper .screen_2TSR .screen_top .IMGbox .float-title {
+		font-size: 5em;
+	}
 }
 
 section#page-wrapper .scroll-wrapper .screen_2TSR .screen_top .IMGbox img {
-	width: 70%;
+	width: 100%;
 	height: 70%;
 	position: absolute;
 	bottom: 0;
@@ -226,8 +288,8 @@ section#page-wrapper .scroll-wrapper .screen_3Service .screen_top {
 	-webkit-box-orient: vertical;
 	-webkit-box-direction: normal;
 	        flex-direction: column;
-	-webkit-box-pack: space-evenly;
-	        justify-content: space-evenly;
+	-webkit-box-pack: center;
+	        justify-content: center;
 	position: relative;
 	width: 100%;
 }
@@ -235,20 +297,31 @@ section#page-wrapper .scroll-wrapper .screen_3Service .screen_top {
 section#page-wrapper .scroll-wrapper .screen_3Service .screen_top .float-title {
 	font-size: 3em;
 	z-index: 99;
+	margin-bottom: 5%;
 	text-align: center;
+	color: #E3DAC6;
+}
+
+@media (min-width: 900px) {
+	section#page-wrapper .scroll-wrapper .screen_3Service .screen_top .float-title {
+		font-size: 5em;
+	}
 }
 
 section#page-wrapper .scroll-wrapper .screen_3Service .screen_top .screen3_topTxtBox {
-	width: 100%;
+	width: 90%;
 	display: -webkit-box;
 	display: flex;
 	-webkit-box-orient: horizontal;
 	-webkit-box-direction: normal;
 	        flex-direction: row;
+	align-self: center;
+	-webkit-box-pack: space-evenly;
+	        justify-content: space-evenly;
 }
 
 section#page-wrapper .scroll-wrapper .screen_3Service .screen_top .screen3_topTxtBox .screen3_topImg {
-	width: 30%;
+	width: 25%;
 }
 
 section#page-wrapper .scroll-wrapper .screen_3Service .screen_top .screen3_topTxtBox .screen3_topImg img {
@@ -256,29 +329,27 @@ section#page-wrapper .scroll-wrapper .screen_3Service .screen_top .screen3_topTx
 }
 
 section#page-wrapper .scroll-wrapper .screen_3Service .screen_top .screen3_topTxtBox .screen3_topTxt {
-	width: 60%;
+	width: 70%;
 	padding: 2%;
 }
 
 section#page-wrapper .scroll-wrapper .screen_3Service .bottomBox_3 {
 	width: 100%;
-	height: 50%;
 }
 
 section#page-wrapper .scroll-wrapper .screen_3Service .bottomBox_3 .bottomBox_wrapper {
 	width: 100%;
+	height: 100%;
 	display: -webkit-box;
 	display: flex;
 	-webkit-box-orient: horizontal;
 	-webkit-box-direction: normal;
 	        flex-direction: row;
-	-webkit-box-pack: end;
-	        justify-content: flex-end;
 }
 
 section#page-wrapper .scroll-wrapper .screen_3Service .bottomBox_3 .bottomBox_wrapper .screen3_bttmTxt {
-	width: 45%;
-	padding: 1%;
+	width: 50%;
+	padding: 0 2%;
 	line-height: 1.5em;
 	display: -webkit-box;
 	display: flex;
@@ -289,13 +360,26 @@ section#page-wrapper .scroll-wrapper .screen_3Service .bottomBox_3 .bottomBox_wr
 	        justify-content: space-between;
 }
 
-section#page-wrapper .scroll-wrapper .screen_3Service .bottomBox_3 .bottomBox_wrapper .screen3_bttmTxt p {
-	width: 90%;
+section#page-wrapper .scroll-wrapper .screen_3Service .bottomBox_3 .bottomBox_wrapper .screen3_bttmTxt .bttmTxt_wrapper {
+	width: 80%;
+	margin: 0 auto;
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	        flex-direction: column;
+}
+
+section#page-wrapper .scroll-wrapper .screen_3Service .bottomBox_3 .bottomBox_wrapper .screen3_bttmTxt .tsr_txt {
+	width: 85%;
+}
+
+section#page-wrapper .scroll-wrapper .screen_3Service .bottomBox_3 .bottomBox_wrapper .screen3_bttmTxt .bttnBox_3 {
+	width: 70%;
 }
 
 section#page-wrapper .scroll-wrapper .screen_3Service .bottomBox_3 .bottomBox_wrapper .screen3_bttmImg {
 	width: 50%;
-	height: 100%;
 }
 
 section#page-wrapper .scroll-wrapper .screen_3Service .bottomBox_3 .bottomBox_wrapper .screen3_bttmImg img {
@@ -304,7 +388,7 @@ section#page-wrapper .scroll-wrapper .screen_3Service .bottomBox_3 .bottomBox_wr
 
 section#page-wrapper .scroll-wrapper .screen_4Cabins .screen_top {
 	width: 100%;
-	height: 100%;
+	height: 50vh;
 }
 
 section#page-wrapper .scroll-wrapper .screen_4Cabins .screen_top .IMGbox {
@@ -313,29 +397,149 @@ section#page-wrapper .scroll-wrapper .screen_4Cabins .screen_top .IMGbox {
 	top: 25%;
 }
 
-section#page-wrapper .scroll-wrapper .screen_4Cabins .screen_top .IMGbox .float-title {
+section#page-wrapper .scroll-wrapper .screen_4Cabins .screen_top .IMGbox .tint_box {
+	position: absolute;
+	bottom: 0;
 	width: 100%;
+	height: 20%;
+	background-color: rgba(255, 255, 255, 0.5);
+}
+
+section#page-wrapper .scroll-wrapper .screen_4Cabins .screen_top .IMGbox .float-title {
+	width: -webkit-max-content;
+	width: -moz-max-content;
+	width: max-content;
 	font-size: 3em;
 	z-index: 99;
 	position: absolute;
-	bottom: -30px;
-	left: 100px;
+	bottom: -20%;
+	right: -30%;
+	color: #B55827;
+}
+
+@media (min-width: 767px) {
+	section#page-wrapper .scroll-wrapper .screen_4Cabins .screen_top .IMGbox .float-title {
+		font-size: 5em;
+	}
 }
 
 section#page-wrapper .scroll-wrapper .screen_4Cabins .screen_top .IMGbox img {
 	width: 100%;
 }
 
+section#page-wrapper .scroll-wrapper .screen_5Footer .screen_top {
+	width: 100%;
+	height: 50%;
+}
+
+section#page-wrapper .scroll-wrapper .screen_5Footer .screen_top .TXTbox {
+	width: 100%;
+	height: 100%;
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-pack: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	        align-items: center;
+}
+
+section#page-wrapper .scroll-wrapper .screen_5Footer .screen_top .TXTbox .footer_txt {
+	width: 30%;
+	height: auto;
+	font-size: 2em;
+	text-align: center;
+}
+
+section#page-wrapper .scroll-wrapper .screen_5Footer .screen-bottomBox {
+	width: 100%;
+	height: 50%;
+}
+
+section#page-wrapper .scroll-wrapper .screen_5Footer .screen-bottomBox .bottomBox_wrapper {
+	width: 100%;
+	height: 100%;
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	        flex-direction: column;
+}
+
+section#page-wrapper .scroll-wrapper .screen_5Footer .screen-bottomBox .bottomBox_wrapper .top_footer {
+	width: 100%;
+	height: 50%;
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	        flex-direction: column;
+}
+
+section#page-wrapper .scroll-wrapper .screen_5Footer .screen-bottomBox .bottomBox_wrapper .top_footer .footer_logo {
+	width: 50%;
+	height: 75%;
+	align-self: center;
+}
+
+section#page-wrapper .scroll-wrapper .screen_5Footer .screen-bottomBox .bottomBox_wrapper .top_footer .footer_logo #logo_footer {
+	width: 100%;
+}
+
+section#page-wrapper .scroll-wrapper .screen_5Footer .screen-bottomBox .bottomBox_wrapper .top_footer .social_icons {
+	width: 100%;
+	height: 25%;
+	background-color: yellow;
+}
+
+section#page-wrapper .scroll-wrapper .screen_5Footer .screen-bottomBox .bottomBox_wrapper .bttm_footer {
+	width: 100%;
+	height: 50%;
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	        flex-direction: row;
+}
+
+section#page-wrapper .scroll-wrapper .screen_5Footer .screen-bottomBox .bottomBox_wrapper .bttm_footer .bttm_left {
+	width: 50%;
+	height: 100%;
+	background-color: bisque;
+}
+
+section#page-wrapper .scroll-wrapper .screen_5Footer .screen-bottomBox .bottomBox_wrapper .bttm_footer .bttm_left {
+	width: 50%;
+	height: 100%;
+}
+
 section#page-wrapper .fixed-wrapper {
 	width: 100%;
 	height: 50vh;
-	border: rgba(253, 209, 43, 0.5);
+	border: rgba(253, 209, 43, 0.7);
 	display: -webkit-box;
 	display: flex;
 	-webkit-box-orient: vertical;
 	-webkit-box-direction: normal;
 	        flex-direction: column;
 	position: relative;
+	font-family: "zefani_stencilregular";
+}
+
+section#page-wrapper .fixed-wrapper a:link {
+	text-decoration: none;
+}
+
+section#page-wrapper .fixed-wrapper h2 {
+	font-family: Arial, Helvetica, sans-serif;
+	color: white;
+}
+
+section#page-wrapper .fixed-wrapper .moscow {
+	color: #A5CDEE;
+}
+
+section#page-wrapper .fixed-wrapper .bjing {
+	color: #493615;
 }
 
 @media (min-width: 767px) {
@@ -399,14 +603,21 @@ section#page-wrapper .fixed-wrapper .fixed-button .inner_bttn h2 {
 section#page-wrapper .fixed-wrapper .fixed-button .inner_bttn .arrow_top {
 	position: relative;
 	right: 0;
+	color: white;
+}
+
+section#page-wrapper .fixed-wrapper .fixed-button .inner_bttn .arrow_bottom {
+	position: relative;
+	right: 0;
+	color: white;
 }
 
 section#page-wrapper .fixed-wrapper .button_top {
-	background-color: #DC4A13;
+	background-color: #E46125;
 }
 
 section#page-wrapper .fixed-wrapper .button_bottom {
-	background-color: #FDD12B;
+	background-color: #FDD739;
 }
 
 section#page-wrapper .fixed-wrapper .fixed-bar {
@@ -416,6 +627,24 @@ section#page-wrapper .fixed-wrapper .fixed-bar {
 	width: 70%;
 	height: 40px;
 	background-color: #FFFFFF;
+}
+
+section#page-wrapper .fixed-wrapper .fixed-bar .fixed-bar_title {
+	width: 50%;
+	height: 100%;
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-pack: center;
+	        justify-content: center;
+	align-content: center;
+}
+
+section#page-wrapper .fixed-wrapper .fixed-bar .fixed-bar_title h2 {
+	display: -webkit-box;
+	display: flex;
+	align-self: center;
+	color: #B55827;
+	font-size: 1.3em;
 }
 
 @media (min-width: 767px) {
