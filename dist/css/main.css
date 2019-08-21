@@ -67,6 +67,14 @@ table {
 	border-spacing: 0;
 }
 
+@font-face {
+	font-family: 'zefani_stencilregular';
+	src: url("1565218551_zefanistenciluppercase-regular-webfont.woff2") format("woff2");
+	src: url("1565218551_zefanistenciluppercase-regular-webfont.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+
 /* 1. Main Layout ================================= */
 * {
 	box-sizing: border-box;
@@ -74,6 +82,11 @@ table {
 
 body {
 	background: #fff;
+}
+
+.float-title {
+	font-family: "zefani_stencilregular";
+	z-index: 99;
 }
 
 /* 2. Content ================================= */
@@ -127,17 +140,14 @@ section#page-wrapper .scroll-wrapper .scroll-screen {
 	-webkit-box-orient: vertical;
 	-webkit-box-direction: normal;
 	        flex-direction: column;
-	background-color: lightblue;
-	border: 2px dashed red;
 }
 
 section#page-wrapper .scroll-wrapper .scroll-screen .screen_top {
 	width: 100%;
 	height: 50%;
-	background-color: pink;
 }
 
-section#page-wrapper .scroll-wrapper .scroll-screen .screen-infoBox {
+section#page-wrapper .scroll-wrapper .scroll-screen .screen-bottomBox {
 	width: 100%;
 	height: 50vh;
 	display: -webkit-box;
@@ -149,8 +159,8 @@ section#page-wrapper .scroll-wrapper .scroll-screen .screen-infoBox {
 	        justify-content: space-evenly;
 }
 
-section#page-wrapper .scroll-wrapper .scroll-screen .screen-infoBox .infoBox_wrapper {
-	width: 50%;
+section#page-wrapper .scroll-wrapper .scroll-screen .screen-bottomBox .bottomBox_wrapper {
+	width: 70%;
 	margin: 0 auto;
 	line-height: 1.4em;
 }
@@ -163,11 +173,10 @@ section#page-wrapper .scroll-wrapper .screen_1Header .header-welcome {
 	-webkit-box-orient: vertical;
 	-webkit-box-direction: normal;
 	        flex-direction: column;
-	background-color: goldenrod;
 }
 
 section#page-wrapper .scroll-wrapper .screen_1Header .header-welcome .welcome-txtBox {
-	width: 50%;
+	width: 60%;
 	margin: 0 auto;
 	height: 40vh;
 	display: -webkit-box;
@@ -177,23 +186,38 @@ section#page-wrapper .scroll-wrapper .screen_1Header .header-welcome .welcome-tx
 	        flex-direction: column;
 	-webkit-box-pack: justify;
 	        justify-content: space-between;
-	background-color: lavender;
 }
 
 section#page-wrapper .scroll-wrapper .screen_1Header .header-welcome .welcome-txtBox .txtBox {
 	text-align: center;
 	margin: 0 auto;
+	margin-bottom: 10%;
+	font-size: 1.5em;
 }
 
-section#page-wrapper .scroll-wrapper .screen_1Header .header-welcome .welcome-txtBox .welcome_h1 {
-	font-size: 4em;
+section#page-wrapper .scroll-wrapper .screen_1Header .header-welcome .welcome-txtBox .img {
+	width: 100%;
 }
 
 section#page-wrapper .scroll-wrapper .screen_2TSR .screen_top .IMGbox {
-	width: 50%;
-	height: 200px;
-	margin-top: 15%;
-	background-color: purple;
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+
+section#page-wrapper .scroll-wrapper .screen_2TSR .screen_top .IMGbox .float-title {
+	position: absolute;
+	top: 50px;
+	right: 25px;
+	font-size: 3em;
+	z-index: 99;
+}
+
+section#page-wrapper .scroll-wrapper .screen_2TSR .screen_top .IMGbox img {
+	width: 70%;
+	height: 70%;
+	position: absolute;
+	bottom: 0;
 }
 
 section#page-wrapper .scroll-wrapper .screen_3Service .screen_top {
@@ -202,35 +226,104 @@ section#page-wrapper .scroll-wrapper .screen_3Service .screen_top {
 	-webkit-box-orient: vertical;
 	-webkit-box-direction: normal;
 	        flex-direction: column;
-	-webkit-box-pack: end;
-	        justify-content: flex-end;
+	-webkit-box-pack: space-evenly;
+	        justify-content: space-evenly;
+	position: relative;
+	width: 100%;
 }
 
-section#page-wrapper .scroll-wrapper .screen_3Service .screen_top h1 {
-	font-size: 5.5em;
-	width: 50%;
-	margin: 0 auto;
+section#page-wrapper .scroll-wrapper .screen_3Service .screen_top .float-title {
+	font-size: 3em;
+	z-index: 99;
+	text-align: center;
 }
 
 section#page-wrapper .scroll-wrapper .screen_3Service .screen_top .screen3_topTxtBox {
 	width: 100%;
-	height: 150px;
 	display: -webkit-box;
 	display: flex;
 	-webkit-box-orient: horizontal;
 	-webkit-box-direction: normal;
 	        flex-direction: row;
-	background-color: yellow;
 }
 
 section#page-wrapper .scroll-wrapper .screen_3Service .screen_top .screen3_topTxtBox .screen3_topImg {
-	width: 25%;
-	border: 2px solid black;
+	width: 30%;
+}
+
+section#page-wrapper .scroll-wrapper .screen_3Service .screen_top .screen3_topTxtBox .screen3_topImg img {
+	width: 100%;
 }
 
 section#page-wrapper .scroll-wrapper .screen_3Service .screen_top .screen3_topTxtBox .screen3_topTxt {
-	width: 75%;
+	width: 60%;
 	padding: 2%;
+}
+
+section#page-wrapper .scroll-wrapper .screen_3Service .bottomBox_3 {
+	width: 100%;
+	height: 50%;
+}
+
+section#page-wrapper .scroll-wrapper .screen_3Service .bottomBox_3 .bottomBox_wrapper {
+	width: 100%;
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	        flex-direction: row;
+	-webkit-box-pack: end;
+	        justify-content: flex-end;
+}
+
+section#page-wrapper .scroll-wrapper .screen_3Service .bottomBox_3 .bottomBox_wrapper .screen3_bttmTxt {
+	width: 45%;
+	padding: 1%;
+	line-height: 1.5em;
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	        flex-direction: column;
+	-webkit-box-pack: justify;
+	        justify-content: space-between;
+}
+
+section#page-wrapper .scroll-wrapper .screen_3Service .bottomBox_3 .bottomBox_wrapper .screen3_bttmTxt p {
+	width: 90%;
+}
+
+section#page-wrapper .scroll-wrapper .screen_3Service .bottomBox_3 .bottomBox_wrapper .screen3_bttmImg {
+	width: 50%;
+	height: 100%;
+}
+
+section#page-wrapper .scroll-wrapper .screen_3Service .bottomBox_3 .bottomBox_wrapper .screen3_bttmImg img {
+	width: 100%;
+}
+
+section#page-wrapper .scroll-wrapper .screen_4Cabins .screen_top {
+	width: 100%;
+	height: 100%;
+}
+
+section#page-wrapper .scroll-wrapper .screen_4Cabins .screen_top .IMGbox {
+	width: 75%;
+	position: relative;
+	top: 25%;
+}
+
+section#page-wrapper .scroll-wrapper .screen_4Cabins .screen_top .IMGbox .float-title {
+	width: 100%;
+	font-size: 3em;
+	z-index: 99;
+	position: absolute;
+	bottom: -30px;
+	left: 100px;
+}
+
+section#page-wrapper .scroll-wrapper .screen_4Cabins .screen_top .IMGbox img {
+	width: 100%;
 }
 
 section#page-wrapper .fixed-wrapper {

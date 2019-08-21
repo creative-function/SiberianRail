@@ -1,2 +1,13 @@
 $fontNun: 'Nunito Sans', sans-serif; //in place of AvenirLTPro-Heavy
 $fontOpen: 'Open Sans', sans-serif; //in place of AvenirLTPro-Roman
+
+@font-face {
+    font-family: 'zefani_stencilregular';
+    src: url('1565218551_zefanistenciluppercase-regular-webfont.woff2') format('woff2');
+    src: url('1565218551_zefanistenciluppercase-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+$TSRstencil: "zefani_stencilregular";
