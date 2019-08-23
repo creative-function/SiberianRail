@@ -112,13 +112,20 @@ section#page-wrapper{
 					margin:0 auto;
 					line-height: 1.5em;
 					font-family:$TSRmain;
+					height: 100%;
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					align-items: center;
 
 					.tsr_txtHead{
+						width:65%;
 						color: $TSR_textHead;
 						font-size:1.2em;
 						margin: 2% 0;
 					}
 					.tsr_txt{
+						width:65%;
 						font-size:.9em;
 						color: $TSR_text;
 					}
@@ -241,16 +248,23 @@ section#page-wrapper{
 					width:100%;
 					height: 100%;
 					display:flex;
-					flex-direction:row;
+					flex-direction: column-reverse;
+					@media#{$tablet}{
+						flex-direction:row;
+					}
 					
 
 					.screen3_bttmTxt{
-						width:50%;
+						width:100%;
 						padding:0 2%;
 						line-height: 1.5em;
 						display: flex;
 						flex-direction: column;
 						justify-content: space-between;
+						@media#{$tablet}{
+							width:50%;
+						}
+						
 
 						.bttmTxt_wrapper{
 							width:80%;
@@ -273,7 +287,11 @@ section#page-wrapper{
 					}
 
 					.screen3_bttmImg{
-						width:50%;
+						width:100%;
+						@media#{$tablet}{
+							width:60%
+						}
+						
 						img{
 							width: 100%;
 						}
@@ -311,6 +329,7 @@ section#page-wrapper{
 						color: $TSR_textHead;
 						@media#{$tablet}{
 							font-size: 5em;
+							bottom:-15%;
 						}
 					}
 
@@ -319,11 +338,6 @@ section#page-wrapper{
 					}
 				}
 
-				
-			}
-
-			.screen-bottomBox{
-				
 			}
 
 		}
@@ -355,6 +369,7 @@ section#page-wrapper{
 			.screen-bottomBox{
 				width: 100%;
 				height: 50%;
+				border-top: 5px solid $TSR_Accent;
 
 				.bottomBox_wrapper{
 					width:100%;
@@ -370,7 +385,7 @@ section#page-wrapper{
 						
 
 						.footer_logo{
-							width:50%;
+							width:30%;
 							height: 75%;
 							align-self: center;
 							#logo_footer{
@@ -534,5 +549,55 @@ section#page-wrapper{
 
 		}
 
+	}
+}
+
+
+section#page2-wrapper{
+	width:100%;
+	height: auto;
+	margin:0 auto;
+	display: flex;
+	flex-direction: column;
+	background-color:green;
+	justify-content: space-around;
+
+	.cabin{
+		width:90%;
+		height:300px;
+		
+		margin:5% auto;
+		background-color:lightgreen;
+		border: 2px solid $TSR_Accent;
+		display: flex;
+		flex-direction: row;
+
+		.cabin-IMG{
+			width:50%;
+			position: relative;
+			
+			background-color:lightyellow;
+			img{
+				width:100%;
+				position: absolute;
+				left:-12%;
+			}
+		}
+		.cabin-txt{
+			width:50%;
+			.cabin-text-wrapper{
+				width:90%;
+				margin: 0 auto;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-evenly;
+			
+				h2,p,ol{
+					width:85%;
+					
+				}
+				
+			}
+		}
 	}
 }
