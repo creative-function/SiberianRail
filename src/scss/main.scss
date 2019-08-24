@@ -28,10 +28,12 @@ TABLE OF CONTENTS:
 
 body {
 	background: #fff;
+	font-family: $TSRmain;
 }
 
 .float-title{
-	font-family: $TSRstencil;
+	font-family: $TSRheading;
+	font-weight:700; 
 	z-index: 99;
 }
 
@@ -111,7 +113,7 @@ section#page-wrapper{
 					width:80%;
 					margin:0 auto;
 					line-height: 1.5em;
-					font-family:$TSRmain;
+				
 					height: 100%;
 					display: flex;
 					flex-direction: column;
@@ -142,7 +144,6 @@ section#page-wrapper{
 				.welcome-txtBox{
 					width:85%;
 					margin: 0 auto;
-					
 					display: flex;
 					flex-direction: column;
 					justify-content: space-between;
@@ -153,7 +154,6 @@ section#page-wrapper{
 						margin-bottom:10%;
 						font-size:1.2em;
 						color: $TSR_textHead;
-						font-family: $TSRmain;
 					}
 
 					#logo{
@@ -564,7 +564,7 @@ section#page2-wrapper{
 
 	.cabin{
 		width:90%;
-		height:300px;
+		height:70vh;
 		
 		margin:5% auto;
 		background-color:lightgreen;
@@ -575,7 +575,8 @@ section#page2-wrapper{
 		.cabin-IMG{
 			width:50%;
 			position: relative;
-			
+			display:flex;
+			align-items: center;
 			background-color:lightyellow;
 			img{
 				width:100%;
@@ -587,6 +588,7 @@ section#page2-wrapper{
 			width:50%;
 			.cabin-text-wrapper{
 				width:90%;
+				height: 100%;
 				margin: 0 auto;
 				display: flex;
 				flex-direction: column;
@@ -595,6 +597,11 @@ section#page2-wrapper{
 				h2,p,ol{
 					width:85%;
 					
+				}
+
+				.add-cart{
+					display:flex;
+					flex-direction: row;
 				}
 				
 			}

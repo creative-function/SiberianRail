@@ -82,10 +82,12 @@ table {
 
 body {
 	background: #fff;
+	font-family: "mr-eaves-sans", sans-serif;
 }
 
 .float-title {
-	font-family: "zefani_stencilregular";
+	font-family: "ff-carina", sans-serif;
+	font-weight: 700;
 	z-index: 99;
 }
 
@@ -95,7 +97,7 @@ body {
 	background-color: #B55827;
 	border: none;
 	color: white;
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: "mr-eaves-sans", sans-serif;
 	padding: 1%;
 }
 
@@ -190,7 +192,6 @@ section#page-wrapper .scroll-wrapper .scroll-screen .screen-bottomBox .bottomBox
 	width: 80%;
 	margin: 0 auto;
 	line-height: 1.5em;
-	font-family: Arial, Helvetica, sans-serif;
 	height: 100%;
 	display: -webkit-box;
 	display: flex;
@@ -243,7 +244,6 @@ section#page-wrapper .scroll-wrapper .screen_1Header .header-welcome .welcome-tx
 	margin-bottom: 10%;
 	font-size: 1.2em;
 	color: #B55827;
-	font-family: Arial, Helvetica, sans-serif;
 }
 
 section#page-wrapper .scroll-wrapper .screen_1Header .header-welcome .welcome-txtBox #logo {
@@ -564,7 +564,7 @@ section#page-wrapper .fixed-wrapper a:link {
 }
 
 section#page-wrapper .fixed-wrapper h2 {
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: "mr-eaves-sans", sans-serif;
 	color: white;
 }
 
@@ -702,7 +702,7 @@ section#page2-wrapper {
 
 section#page2-wrapper .cabin {
 	width: 90%;
-	height: 300px;
+	height: 70vh;
 	margin: 5% auto;
 	background-color: lightgreen;
 	border: 2px solid #E3DAC6;
@@ -716,6 +716,10 @@ section#page2-wrapper .cabin {
 section#page2-wrapper .cabin .cabin-IMG {
 	width: 50%;
 	position: relative;
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-align: center;
+	        align-items: center;
 	background-color: lightyellow;
 }
 
@@ -731,6 +735,7 @@ section#page2-wrapper .cabin .cabin-txt {
 
 section#page2-wrapper .cabin .cabin-txt .cabin-text-wrapper {
 	width: 90%;
+	height: 100%;
 	margin: 0 auto;
 	display: -webkit-box;
 	display: flex;
@@ -743,6 +748,14 @@ section#page2-wrapper .cabin .cabin-txt .cabin-text-wrapper {
 
 section#page2-wrapper .cabin .cabin-txt .cabin-text-wrapper h2, section#page2-wrapper .cabin .cabin-txt .cabin-text-wrapper p, section#page2-wrapper .cabin .cabin-txt .cabin-text-wrapper ol {
 	width: 85%;
+}
+
+section#page2-wrapper .cabin .cabin-txt .cabin-text-wrapper .add-cart {
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	        flex-direction: row;
 }
 
 /*# sourceMappingURL=main.css.map */
