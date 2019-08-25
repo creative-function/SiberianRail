@@ -1103,9 +1103,8 @@ section#page3-wrapper section.page3-articles .article1 .stencilBG {
 
 @media (min-width: 767px) {
 	section#page3-wrapper section.page3-articles .article1 .article-txt-wrapper {
-		width: 30%;
+		width: 40%;
 		position: relative;
-		left: 5%;
 		align-self: flex-end;
 	}
 	section#page3-wrapper section.page3-articles .article1 .stencilBG {
@@ -1140,12 +1139,12 @@ section#page3-wrapper section.page3-articles .article2 .test .sten2 {
 		        flex-direction: row;
 	}
 	section#page3-wrapper section.page3-articles .article2 .test .sten2 {
-		left: 300px;
+		left: 100px;
 	}
 	section#page3-wrapper section.page3-articles .article2 .article-txt-wrapper {
 		width: 40%;
 		position: relative;
-		left: 300px;
+		left: 100px;
 	}
 }
 

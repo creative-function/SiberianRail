@@ -901,9 +901,8 @@ section#page3-wrapper{
 
 			@media#{$tablet}{
 				.article-txt-wrapper{
-					width:30%;
+					width:40%;
 					position: relative;
-					left:5%;
 					align-self: flex-end;
 				}
 
@@ -933,13 +932,13 @@ section#page3-wrapper{
 				flex-direction: row;
 				.test{
 					.sten2{
-						left:300px;
+						left:100px;
 					}
 				}
 				.article-txt-wrapper{
 					width:40%;
 					position: relative;
-					left:300px;
+					left:100px;
 				}			
 			}
 
