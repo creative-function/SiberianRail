@@ -559,52 +559,422 @@ section#page2-wrapper{
 	margin:0 auto;
 	display: flex;
 	flex-direction: column;
-	background-color:green;
 	justify-content: space-around;
+	color: $TSR_textHead;
+
+	.pop-out-menu{
+		background-color: gray;
+		display: flex;
+		flex-direction: column;
+		align-items: center; 
+		#pop-out-logoA{
+			max-width: 30%;
+		}
+		ul{
+			width:100%;
+			display: flex;
+			flex-direction: row;
+			justify-content: space-evenly;
+			align-items: center;
+			
+			a{
+				width:25%;
+				text-decoration: none;
+				color:$TSR_Brown;
+
+				:hover{
+					background-color: $TSR_Brown;
+					color: white;
+				}
+				
+			}
+
+			
+			li{
+				font-size: 1.5em;
+				border: 1.5px solid $TSR_Brown;
+				text-align: center;padding:3%;
+			}
+
+
+			#pop-out-logo{
+				position: relative;	
+				right:43px;
+				border:none;
+
+				img{
+					width:170%;
+				}
+			}
+		}
+	}
 
 	.cabin{
 		width:90%;
-		height:70vh;
-		
+		height:100vh;
+		max-width:600px;
 		margin:5% auto;
-		background-color:lightgreen;
 		border: 2px solid $TSR_Accent;
 		display: flex;
-		flex-direction: row;
-
+		flex-direction:column;
 		.cabin-IMG{
-			width:50%;
+			width:100%;
+			height: 50%;
 			position: relative;
 			display:flex;
-			align-items: center;
-			background-color:lightyellow;
-			img{
+			align-items: center;		img{
 				width:100%;
+			}
+
+			.tint_box{
 				position: absolute;
-				left:-12%;
+				z-index:99;
+				right:0;
+				width:30%;
+				height:100%;
+				background-color:$TSR_WhiteTint;
 			}
 		}
 		.cabin-txt{
-			width:50%;
+			width:100%;
+			height:50%;
 			.cabin-text-wrapper{
-				width:90%;
+				width:80%;
 				height: 100%;
 				margin: 0 auto;
 				display: flex;
 				flex-direction: column;
 				justify-content: space-evenly;
+				font-size:1.2em;
 			
 				h2,p,ol{
 					width:85%;
-					
 				}
+				h2{
+					font-size:1.3em;
+				}
+				ol{
+					
+					list-style: circle;
+					align-self: flex-end;
 
+				}
 				.add-cart{
 					display:flex;
 					flex-direction: row;
+					width:100%;
 				}
 				
 			}
 		}
+
+		@media#{$desktop}{
+			height: 64vh;
+			flex-direction:row;
+			max-width:none;
+
+		
+			.cabin-IMG{
+				width:50%;
+				height:100%;
+				position: relative;
+
+				img{
+					position:absolute;
+					left:-12%;
+				}
+			}
+
+			.cabin-txt{
+				width:50%;
+				height:100%;
+			}
+
+
+		}
+	}
+
+	.cabin0{
+		width:90%;
+		height:50px;
+		margin:0% auto;
+		display: flex;
+		border: none;
+		justify-content: space-between;
+		font-size: 1.5em;
+		color:$TSR_text;
+	}
+
+	@media#{$desktop}{
+
+		.cabin:nth-child(odd){
+			flex-direction: row-reverse;
+
+			.cabin-IMG{
+				.tint_box{
+					left:0;
+				}
+
+				img{
+					position: absolute;
+					left:unset;
+					right:-11.5%;
+				}
+			}
+		}
 	}
 }
+
+section#page3-wrapper{
+
+	width:100%;
+
+	section.giantBG{
+		width:100%;
+		height: 100vh;
+		background-image: url("../img/beijing.png");
+		background-size: cover;
+		@media#{$tablet}{
+			height: 50vh;
+		}
+		@media#{$desktop}{
+			height: 100vh;
+		}
+
+		.header-logo{
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: space-around;
+			width: 100%;
+			height: 5%;
+			@media#{$tablet}{
+				height: 30%;
+			}
+
+			.clear{
+				width:95%;
+				margin:0 auto;
+				img{width:100%;}
+				
+				@media#{$tablet}{
+					visibility: hidden;
+				}
+			}
+			.hdr_left{
+				img{
+					width: 100%;
+					margin-top:2%;
+					visibility: hidden;
+					display: none;
+					@media#{$tablet}{
+						visibility: visible;
+					}
+				}
+			}
+			.hdr_right{
+				width:34%;
+				display: flex;
+				justify-content: flex-end;
+				visibility: hidden;	
+				@media#{$tablet}{
+					visibility: visible;
+				}
+		
+				button{
+					width:50%;
+					height:45px;
+					border:1px solid white;
+					background-color:transparent; 
+					padding:2%;
+					margin:2%;
+					font-family: $TSRmain;
+					font-size: 1em;
+					color:white;
+
+					:hover{
+						border:2px solid $TSR-Gold;
+
+						color:$TSR-Gold;
+					}
+				}
+			}
+			
+		}
+		.cities{
+			width:100%;
+			height: 95%;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			@media#{$tablet}{
+				flex-direction: row;
+				height: 50%;
+				align-self: center;
+			}
+		
+			.city-circle{
+				width:250px;
+				height:250px;
+				margin:5% auto;
+				border: 3px solid $TSR-Gold;
+				border-radius: 50%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				
+				h2{
+					font-size: 4em;
+					font-family: $TSRheading;
+					color:$TSR-Gold;
+					font-weight: 700;
+				}
+	
+			}
+		}
+	}
+
+	section.bg2{
+		background-image: url("../img/book-bg.jpg");
+	}
+
+	section.page3-articles{
+		width:95%;
+		margin:5% auto;
+		
+
+		.articles{
+			width:100%;
+			margin:5% auto;
+			display: flex;
+			flex-direction: column;
+
+			@media#{$tablet}{
+				flex-direction: row;
+
+			}
+
+			.article-txt-wrapper{
+				width:100%;
+				height: 50%;
+				z-index: 99;
+				margin:5%;
+				
+				.article-text{
+					width: 85%;
+					height: 100%;
+					font-size:.9em;
+					color: $TSR_text;
+					
+					h2{
+						margin: 2% auto;
+					}
+				}
+
+			}
+
+			.article-IMG{
+				width:100%;
+				height: 50%;
+
+				img{
+					width:100%;
+				}
+			}
+
+			.stencilBG{
+				color:$TSR-Gold;
+				font-family: $TSRstencil;
+				font-size: 20em;
+			}
+		}
+
+		.article1{
+			position: relative;
+			
+			.stencilBG{
+				position: absolute;
+				left:12%;
+				z-index: 1;
+			}
+
+			@media#{$tablet}{
+				.article-txt-wrapper{
+					width:30%;
+					position: relative;
+					left:5%;
+					align-self: flex-end;
+				}
+
+				.stencilBG{
+					left:12%;
+					bottom:0;
+				}
+	
+				.article-IMG{
+					width:55%;
+				}
+			}
+		}
+
+		.article2{
+			flex-direction: column-reverse;
+			.test{
+				position: relative;
+				.sten2{
+					position:absolute;
+					top:-200px;
+					right:0;
+				}
+			}
+
+			@media#{$tablet}{
+				flex-direction: row;
+				.test{
+					.sten2{
+						left:300px;
+					}
+				}
+				.article-txt-wrapper{
+					width:40%;
+					position: relative;
+					left:300px;
+				}			
+			}
+
+		}
+
+		.article3{
+			position: relative;
+			.test{
+				position: absolute;
+				
+			}
+
+			@media#{$tablet}{
+
+				.test{
+					top:15%;
+					left:21%;
+				}
+			
+				.article-txt-wrapper{
+					width:30%;
+					align-self: center;
+					z-index: 1;
+					margin:0%;
+				}
+
+				.article-IMG{
+					width:70%;
+				}
+			}
+		}
+		
+	}
+
+
+}
+
+
