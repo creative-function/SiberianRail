@@ -937,7 +937,7 @@ section#page3-wrapper section.giantBG .header-logo .clear img {
 
 @media (min-width: 767px) {
 	section#page3-wrapper section.giantBG .header-logo .clear {
-		visibility: hidden;
+		display: none;
 	}
 }
 
@@ -945,7 +945,6 @@ section#page3-wrapper section.giantBG .header-logo .hdr_left img {
 	width: 100%;
 	margin-top: 2%;
 	visibility: hidden;
-	display: none;
 }
 
 @media (min-width: 767px) {
@@ -971,24 +970,20 @@ section#page3-wrapper section.giantBG .header-logo .hdr_right {
 
 section#page3-wrapper section.giantBG .header-logo .hdr_right button {
 	width: 50%;
-	height: 45px;
+	height: 34px;
 	border: 1px solid white;
 	background-color: transparent;
-	padding: 2%;
-	margin: 2%;
+	padding: 1%;
+	margin: 1%;
 	font-family: "mr-eaves-sans", sans-serif;
 	font-size: 1em;
 	color: white;
 }
 
-section#page3-wrapper section.giantBG .header-logo .hdr_right button :hover {
-	border: 2px solid #FDD739;
-	color: #FDD739;
-}
-
 section#page3-wrapper section.giantBG .cities {
-	width: 100%;
+	width: 70%;
 	height: 95%;
+	float: right;
 	display: -webkit-box;
 	display: flex;
 	-webkit-box-orient: vertical;
@@ -1013,8 +1008,8 @@ section#page3-wrapper section.giantBG .cities {
 section#page3-wrapper section.giantBG .cities .city-circle {
 	width: 250px;
 	height: 250px;
-	margin: 5% auto;
-	border: 3px solid #FDD739;
+	margin: 3%;
+	border: 3px solid rgba(255, 255, 255, 0.5);
 	border-radius: 50%;
 	display: -webkit-box;
 	display: flex;
@@ -1027,8 +1022,39 @@ section#page3-wrapper section.giantBG .cities .city-circle {
 section#page3-wrapper section.giantBG .cities .city-circle h2 {
 	font-size: 4em;
 	font-family: "ff-carina", sans-serif;
-	color: #FDD739;
+	color: rgba(255, 255, 255, 0.5);
 	font-weight: 700;
+}
+
+section#page3-wrapper section.giantBG .cities .cc_2 {
+	width: 225px;
+	height: 225px;
+}
+
+section#page3-wrapper section.giantBG .cities .cc_2 h2 {
+	font-size: 3.5em;
+}
+
+section#page3-wrapper section.giantBG .cities .cc_3 {
+	width: 200px;
+	height: 200px;
+}
+
+section#page3-wrapper section.giantBG .cities .cc_3 h2 {
+	font-size: 4em;
+}
+
+section#page3-wrapper section.giantBG .cities .city-circle:hover {
+	-webkit-transform: scale(1.5);
+	    -ms-transform: scale(1.5);
+	        transform: scale(1.5);
+	-webkit-transition: 1.5s ease-in-out;
+	transition: 1.5s ease-in-out;
+	border: 3px solid #FDD739;
+}
+
+section#page3-wrapper section.giantBG .cities .city-circle:hover h2 {
+	color: #FDD739;
 }
 
 section#page3-wrapper section.bg2 {
@@ -1038,6 +1064,11 @@ section#page3-wrapper section.bg2 {
 section#page3-wrapper section.page3-articles {
 	width: 95%;
 	margin: 5% auto;
+}
+
+section#page3-wrapper section.page3-articles .article-intro h2 {
+	font-size: 3em;
+	color: #FDD739;
 }
 
 section#page3-wrapper section.page3-articles .articles {
@@ -1059,7 +1090,7 @@ section#page3-wrapper section.page3-articles .articles {
 }
 
 section#page3-wrapper section.page3-articles .articles .article-txt-wrapper {
-	width: 100%;
+	width: 89%;
 	height: 50%;
 	z-index: 99;
 	margin: 5%;
@@ -1068,12 +1099,14 @@ section#page3-wrapper section.page3-articles .articles .article-txt-wrapper {
 section#page3-wrapper section.page3-articles .articles .article-txt-wrapper .article-text {
 	width: 85%;
 	height: 100%;
-	font-size: .9em;
+	font-size: 1em;
+	line-height: 1.2em;
 	color: #83554E;
 }
 
 section#page3-wrapper section.page3-articles .articles .article-txt-wrapper .article-text h2 {
 	margin: 2% auto;
+	font-size: 1.2em;
 }
 
 section#page3-wrapper section.page3-articles .articles .article-IMG {
@@ -1098,6 +1131,7 @@ section#page3-wrapper section.page3-articles .article1 {
 section#page3-wrapper section.page3-articles .article1 .stencilBG {
 	position: absolute;
 	left: 12%;
+	top: 5%;
 	z-index: 1;
 }
 
@@ -1109,7 +1143,7 @@ section#page3-wrapper section.page3-articles .article1 .stencilBG {
 	}
 	section#page3-wrapper section.page3-articles .article1 .stencilBG {
 		left: 12%;
-		bottom: 0;
+		top: 30%;
 	}
 	section#page3-wrapper section.page3-articles .article1 .article-IMG {
 		width: 55%;
@@ -1170,6 +1204,170 @@ section#page3-wrapper section.page3-articles .article3 .test {
 	section#page3-wrapper section.page3-articles .article3 .article-IMG {
 		width: 70%;
 	}
+}
+
+section#page3-wrapper section.page3-footer {
+	width: 100%;
+	height: 100vh;
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	        flex-direction: column;
+}
+
+section#page3-wrapper section.page3-footer .footer-title {
+	width: 100%;
+	height: 10%;
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-pack: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	        align-items: center;
+}
+
+section#page3-wrapper section.page3-footer .footer-title h2 {
+	color: #B55827;
+	font-size: 1.3em;
+}
+
+section#page3-wrapper section.page3-footer .photo-grid {
+	width: 100%;
+	height: 54%;
+	background-color: lightpink;
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	        flex-direction: row;
+	position: relative;
+}
+
+section#page3-wrapper section.page3-footer .photo-grid .photo {
+	width: 33.33%;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+section#page3-wrapper section.page3-footer .photo-grid .photo1 {
+	background-image: url("../img/steak4a.jpg");
+}
+
+section#page3-wrapper section.page3-footer .photo-grid .photo2 {
+	background-image: url("../img/hotel4b.jpg");
+}
+
+section#page3-wrapper section.page3-footer .photo-grid .photo3 {
+	background-image: url("../img/garden4c.jpg");
+}
+
+section#page3-wrapper section.page3-footer .photo-grid .photo-banner {
+	width: 100%;
+	height: 30%;
+	background-color: #B55827;
+	position: absolute;
+	bottom: 0;
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	        flex-direction: row;
+	-webkit-box-pack: space-evenly;
+	        justify-content: space-evenly;
+}
+
+section#page3-wrapper section.page3-footer .photo-grid .photo-banner .banner-text {
+	width: 100%;
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-pack: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	        align-items: center;
+}
+
+section#page3-wrapper section.page3-footer .photo-grid .photo-banner .banner-text p {
+	padding: 2%;
+	color: #FFFFFF;
+	font-size: 1.2em;
+	line-height: 1.3em;
+}
+
+section#page3-wrapper section.page3-footer .photo-grid .photo-banner .banner-button {
+	width: 100%;
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-pack: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	        align-items: center;
+}
+
+section#page3-wrapper section.page3-footer .photo-grid .photo-banner .banner-button button {
+	width: 50%;
+	height: 34px;
+	border: 1px solid white;
+	background-color: transparent;
+	padding: 1%;
+	margin: 1%;
+	font-family: "mr-eaves-sans", sans-serif;
+	font-size: 1em;
+	color: white;
+}
+
+section#page3-wrapper section.page3-footer .footer {
+	width: 90%;
+	margin: 0 auto;
+	height: 25%;
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	        flex-direction: row;
+}
+
+section#page3-wrapper section.page3-footer .footer .foot {
+	width: 33%;
+	height: 90%;
+	border-bottom: 2px solid #E3DAC6;
+}
+
+section#page3-wrapper section.page3-footer .footer .foot2 {
+	width: 100%;
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	        flex-direction: column;
+	-webkit-box-pack: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	        align-items: center;
+}
+
+section#page3-wrapper section.page3-footer .footer .foot2 img {
+	width: 25%;
+}
+
+section#page3-wrapper section.page3-footer .footer .foot3 ul, section#page3-wrapper section.page3-footer .footer .foot1 ul {
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	        flex-direction: column;
+	-webkit-box-pack: space-evenly;
+	        justify-content: space-evenly;
+	width: 100%;
+	height: 100%;
+}
+
+section#page3-wrapper section.page3-footer .footer .foot3 ul li, section#page3-wrapper section.page3-footer .footer .foot1 ul li {
+	color: #B55827;
+}
+
+section#page3-wrapper .pic-label {
+	color: #B55827;
 }
 
 /*# sourceMappingURL=main.css.map */

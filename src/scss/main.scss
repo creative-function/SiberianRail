@@ -758,7 +758,7 @@ section#page3-wrapper{
 				img{width:100%;}
 				
 				@media#{$tablet}{
-					visibility: hidden;
+					display: none;
 				}
 			}
 			.hdr_left{
@@ -766,7 +766,7 @@ section#page3-wrapper{
 					width: 100%;
 					margin-top:2%;
 					visibility: hidden;
-					display: none;
+					
 					@media#{$tablet}{
 						visibility: visible;
 					}
@@ -783,27 +783,22 @@ section#page3-wrapper{
 		
 				button{
 					width:50%;
-					height:45px;
+					height:34px;
 					border:1px solid white;
 					background-color:transparent; 
-					padding:2%;
-					margin:2%;
+					padding:1%;
+					margin:1%;
 					font-family: $TSRmain;
 					font-size: 1em;
 					color:white;
-
-					:hover{
-						border:2px solid $TSR-Gold;
-
-						color:$TSR-Gold;
-					}
 				}
 			}
 			
 		}
 		.cities{
-			width:100%;
+			width:70%;
 			height: 95%;
+			float: right;
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
@@ -817,8 +812,8 @@ section#page3-wrapper{
 			.city-circle{
 				width:250px;
 				height:250px;
-				margin:5% auto;
-				border: 3px solid $TSR-Gold;
+				margin:3%;
+				border: 3px solid $TSR_WhiteTint;
 				border-radius: 50%;
 				display: flex;
 				align-items: center;
@@ -827,11 +822,34 @@ section#page3-wrapper{
 				h2{
 					font-size: 4em;
 					font-family: $TSRheading;
-					color:$TSR-Gold;
+					color:$TSR_WhiteTint;
 					font-weight: 700;
 				}
 	
 			}
+
+			.cc_2{
+				width:225px;
+				height:225px;
+				h2{font-size: 3.5em;}
+			}
+
+			.cc_3{
+				width:200px;
+				height:200px;
+				h2{font-size: 4em;}
+			}
+
+			.city-circle:hover{
+				transform: scale(1.5);
+				transition:1.5s ease-in-out;
+				border: 3px solid $TSR-Gold;
+				
+				h2{
+					color:$TSR-Gold;
+				}
+			}
+
 		}
 	}
 
@@ -842,8 +860,13 @@ section#page3-wrapper{
 	section.page3-articles{
 		width:95%;
 		margin:5% auto;
-		
 
+		.article-intro{
+			h2{
+				font-size:3em;
+				color:$TSR-Gold;
+			}
+		}
 		.articles{
 			width:100%;
 			margin:5% auto;
@@ -856,7 +879,7 @@ section#page3-wrapper{
 			}
 
 			.article-txt-wrapper{
-				width:100%;
+				width:89%;
 				height: 50%;
 				z-index: 99;
 				margin:5%;
@@ -864,11 +887,13 @@ section#page3-wrapper{
 				.article-text{
 					width: 85%;
 					height: 100%;
-					font-size:.9em;
+					font-size:1em;
+					line-height: 1.2em;
 					color: $TSR_text;
 					
 					h2{
 						margin: 2% auto;
+						font-size:1.2em;
 					}
 				}
 
@@ -896,6 +921,7 @@ section#page3-wrapper{
 			.stencilBG{
 				position: absolute;
 				left:12%;
+				top:5%;
 				z-index: 1;
 			}
 
@@ -908,7 +934,7 @@ section#page3-wrapper{
 
 				.stencilBG{
 					left:12%;
-					bottom:0;
+					top:30%;
 				}
 	
 				.article-IMG{
@@ -973,7 +999,154 @@ section#page3-wrapper{
 		
 	}
 
+	section.page3-footer{
+		width:100%;
+		height:100vh;
+		display:flex;
+		flex-direction: column;
+		.footer-title{
+			width:100%;
+			height: 10%;
+			display:flex;
+			justify-content: center;
+			align-items: center;
+			h2{
+				color:$TSR_textHead;
+				font-size:1.3em;
+			}
+		}
+		.photo-grid{
+			width:100%;
+			height: 54%;
+			background-color: lightpink;
+			display: flex;
+			flex-direction: row;
+			position: relative;
 
+			.photo{
+				width:33.33%;	
+				background-repeat: no-repeat;	
+				background-size: cover;	
+			}
+
+			.photo1{
+				background-image: url("../img/steak4a.jpg");
+			}
+
+			.photo2{
+				background-image: url("../img/hotel4b.jpg");
+			}
+
+			.photo3{
+				background-image: url("../img/garden4c.jpg");
+			}
+
+
+			.photo-banner{
+				width:100%;
+				height:30%;
+				background-color: $TSR_textHead;
+				position: absolute;
+				bottom:0;
+				display: flex;
+				flex-direction: row;
+				justify-content: space-evenly;
+
+				.banner-text{
+					width:100%;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+
+					p{
+						padding:2%;
+						color:$TSR-White;
+						font-size:1.2em;
+						line-height: 1.3em
+					}
+				}
+
+				.banner-button{
+					width:100%;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+
+						
+					button{
+						width:50%;
+						height:34px;
+						border:1px solid white;
+						background-color:transparent; 
+						padding:1%;
+						margin:1%;
+						font-family: $TSRmain;
+						font-size: 1em;
+						color:white;				
+					}
+				}
+
+			}
+		}
+		.footer{
+			width:90%;
+			margin:0 auto;
+			height: 25%;
+			display: flex;
+			flex-direction: row;
+
+
+			.foot{
+				width:33%;
+				height: 90%;
+				border-bottom:2px solid $TSR_Accent;
+
+			}
+
+			.foot2{
+				width:100%;
+				display:flex;
+				flex-direction:column;
+				justify-content: center;
+				align-items: center;
+				img{width:25%;}
+			}
+
+			.foot3,.foot1{
+				ul{
+					display: flex;
+					flex-direction: column;
+					justify-content: space-evenly;
+					width: 100%;
+					height: 100%;
+
+					li{
+						color:$TSR_textHead;
+
+					}
+				}
+			}
+		}
+
+	}
+
+	.pic-label{
+		color:$TSR_textHead;
+	}
 }
 
 
+
+
+//PAGE ONE
+	//CSS 
+	//MENU
+	//RIGHT BUTTON IMAGES
+
+//PAGE TWO
+	//CSS 
+	//MENU
+//PAGE THREE
+	//CSS 
+	//FOOTER
+//EXTRA CREDIT PAGES
