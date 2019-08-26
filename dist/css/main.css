@@ -189,7 +189,7 @@ section#page-wrapper .scroll-wrapper .scroll-screen .screen-bottomBox {
 }
 
 section#page-wrapper .scroll-wrapper .scroll-screen .screen-bottomBox .bottomBox_wrapper {
-	width: 80%;
+	width: 100%;
 	margin: 0 auto;
 	line-height: 1.5em;
 	height: 100%;
@@ -321,7 +321,8 @@ section#page-wrapper .scroll-wrapper .screen_3Service .screen_top .float-title {
 }
 
 section#page-wrapper .scroll-wrapper .screen_3Service .screen_top .screen3_topTxtBox {
-	width: 90%;
+	width: 80%;
+	max-width: 85%;
 	display: -webkit-box;
 	display: flex;
 	-webkit-box-orient: horizontal;
@@ -337,7 +338,8 @@ section#page-wrapper .scroll-wrapper .screen_3Service .screen_top .screen3_topTx
 }
 
 section#page-wrapper .scroll-wrapper .screen_3Service .screen_top .screen3_topTxtBox .screen3_topImg img {
-	width: 100%;
+	width: 75%;
+	max-width: 80%;
 }
 
 section#page-wrapper .scroll-wrapper .screen_3Service .screen_top .screen3_topTxtBox .screen3_topTxt {

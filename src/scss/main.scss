@@ -110,7 +110,7 @@ section#page-wrapper{
 				justify-content: space-evenly;
 
 				.bottomBox_wrapper{
-					width:80%;
+					width:100%;
 					margin:0 auto;
 					line-height: 1.5em;
 				
@@ -222,7 +222,8 @@ section#page-wrapper{
 					
 				}
 				.screen3_topTxtBox{
-					width:90%;
+					width:80%;
+					max-width:85%;
 					display: flex;
 					flex-direction: row;
 					align-self: center;
@@ -231,7 +232,8 @@ section#page-wrapper{
 					.screen3_topImg{
 						width:25%;
 						img{
-							width:100%;
+							width:75%;
+							max-width: 80%;
 						}
 					}
 
