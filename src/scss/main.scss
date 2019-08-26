@@ -45,6 +45,7 @@ body {
 	color:white;
 	font-family: $TSRmain;
 	padding:1%;
+	font-size:1em;
 }
 
 /* 2. Content ================================= */
@@ -64,7 +65,6 @@ section#page-wrapper{
 		width:100%;
 		margin:0 auto;
 		height: 50vh;
-		// background-color:rgb(218, 196, 199);
 		overflow: scroll;
 		@media#{$tablet}{
 			height: 100vh;
@@ -73,11 +73,32 @@ section#page-wrapper{
 			overflow: unset;
 		}
 
-		#left-nav{
+		.left-nav{
 			width:100%;
 			height:50px;
 			background-color:#ffffff;
 			border-bottom: 3px solid $TSR_Accent;
+
+			a{
+				text-decoration: none;
+			}
+			
+			.nav-bttn{
+				width:20%;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				color:$TSR_textHead;
+				
+				span{
+					margin:-1.5%;
+				}
+
+				p{
+					margin-top:3%;
+				}
+			}
 		}
 
 		.scroll-screen{
@@ -128,7 +149,7 @@ section#page-wrapper{
 					}
 					.tsr_txt{
 						width:65%;
-						font-size:.9em;
+						font-size:1.10em;
 						color: $TSR_text;
 					}
 				}
@@ -151,8 +172,8 @@ section#page-wrapper{
 					.txtBox{
 						text-align: center;
 						margin: 0 auto;
-						margin-bottom:10%;
-						font-size:1.2em;
+						margin:5%;
+						font-size:1.5em;
 						color: $TSR_textHead;
 					}
 
@@ -347,10 +368,12 @@ section#page-wrapper{
 		
 		.screen_5Footer{
 			
-
 			.screen_top{
 				width:100%;
 				height:50%;
+				background-image: url("../img/trainBg.png");
+				background-size: 100%;
+				background-repeat: no-repeat;
 				
 				.TXTbox{
 					width:100%;
@@ -364,6 +387,7 @@ section#page-wrapper{
 						height: auto;
 						font-size:2em;
 						text-align: center;
+						color:$TSR_textHead;
 					}
 				}
 			}
@@ -387,36 +411,52 @@ section#page-wrapper{
 						
 
 						.footer_logo{
-							width:30%;
+							width:20%;
 							height: 75%;
+							margin: 5%;
 							align-self: center;
 							#logo_footer{
 								width: 100%;
 							}
 						}
 
-						.social_icons{
-							width:100%;
-							height: 25%;
-							background-color: yellow;
-						}
 					}
 					.bttm_footer{
 						width:100%;
 						height: 50%;
 						display: flex;
 						flex-direction: row;
+						
 
-						.bttm_left{
+						.bttm{
 							width:50%;
 							height: 100%;
-							background-color: bisque;
-						}
-						.bttm_left{
-							width:50%;
-							height: 100%;
+							display: flex;
+							flex-direction: column;
 							
+
+							ul{
+								width:50%;
+								height: 80%;
+								margin: 0 auto;
+								display: flex;
+								flex-direction: column;
+								justify-content: space-between;
+								color:$TSR_textHead;
+
+								li{
+									font-size:1.2em;
+									.txt{
+										font-size: 1em;
+										color:$TSR_Accent;
+										float: right;
+									}
+								}
+
+							}
+						
 						}
+			
 					
 					}
 				}
@@ -434,6 +474,13 @@ section#page-wrapper{
 		position: relative;
 		font-family: $TSRstencil;
 
+		@media#{$tablet}{
+			height: 100vh;
+			width:50%;
+			position: fixed;
+			right:0;
+		}
+
 		a:link{
 			text-decoration: none;
 		}
@@ -444,22 +491,17 @@ section#page-wrapper{
 		}
 
 		.moscow{
-			color:$TSR_Mscw;
+			color:transparent;
+			-webkit-text-stroke-width: 1px;
+			-webkit-text-stroke-color: black;
+		
 		}
 
 		.bjing{
 			color:$TSR_Bjing;
 		}
 		
-		
-		@media#{$tablet}{
-			height: 100vh;
-			width:50%;
-			position: fixed;
-			right:0;
-		}
-		
-		
+
 		.bookNow_bttn{
 			display: none;
 			position: absolute;
@@ -551,6 +593,87 @@ section#page-wrapper{
 
 		}
 
+		.popout-menu{
+			position: absolute;
+			top:0;
+			bottom:0;
+			left:0;
+			right:0;
+			background-image:url("../img/book-bg.jpg");
+			font-family: $TSRmain;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			.bookingWindow{
+				width:80%;
+				height: 55%;
+				border: 2px solid white;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-around;
+				color:white;
+
+				.close-button{
+					width:20%;
+					align-self: flex-end;
+					margin:1%;
+					padding:1%;
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					align-items: center;
+					color:$TSR_textHead;
+
+					.close-X{
+						font-size:3em;
+					}
+				}
+				.booking-title{
+					font-size:3.5em;
+					align-self: center;
+				}
+
+				.booking-form{
+					width:100%;
+					display: flex;
+					flex-direction: row;
+					justify-content: space-around;
+
+					.form{
+						width: 30%;
+						font-size:2em;
+						display: flex;
+						flex-direction: column;
+						justify-content: space-evenly;
+					}
+
+					.formA{
+						select{
+							width: 90%;
+							padding:16px 20px;
+							margin:2%;
+							border: none;
+							border-bottom: 2px solid white;
+							border-radius: 4px;
+							background-color: transparent;
+							color:white;
+						}
+					}
+				}
+
+				.booking-bttn{
+					align-self: flex-end;
+					width:50%;
+					.tsr_bttn{
+						width:90%;
+						color:white;
+					}
+				}
+
+			}
+		}
+
 	}
 }
 
@@ -564,14 +687,48 @@ section#page2-wrapper{
 	justify-content: space-around;
 	color: $TSR_textHead;
 
+	.left-nav{
+		width:100%;
+		height:50px;
+		background-color:#ffffff;
+		border-bottom: 3px solid $TSR_Accent;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+
+		a{
+			text-decoration: none;
+		}
+		
+		.nav-bttn{
+			width:20%;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			color:$TSR_textHead;
+			
+			span{
+				margin:-1.5%;
+			}
+
+			p{
+				margin-top:2%;
+			}
+
+			.close-X{
+				font-size:2em;
+			}
+		}
+
+		.close-button{
+			//display: none;
+		}
+	}
 	.pop-out-menu{
-		background-color: gray;
 		display: flex;
 		flex-direction: column;
 		align-items: center; 
-		#pop-out-logoA{
-			max-width: 30%;
-		}
 		ul{
 			width:100%;
 			display: flex;
@@ -582,10 +739,10 @@ section#page2-wrapper{
 			a{
 				width:25%;
 				text-decoration: none;
-				color:$TSR_Brown;
+				color:$TSR_textHead;
 
 				:hover{
-					background-color: $TSR_Brown;
+					background-color: $TSR_textHead;
 					color: white;
 				}
 				
@@ -594,22 +751,22 @@ section#page2-wrapper{
 			
 			li{
 				font-size: 1.5em;
-				border: 1.5px solid $TSR_Brown;
+				border: 1.5px solid $TSR_textHead;
 				text-align: center;padding:3%;
 			}
 
 
-			#pop-out-logo{
-				position: relative;	
-				right:43px;
-				border:none;
+			#pop-out-logo{		
+				 background-color: $TSR_textHead;	
+			
 
 				img{
-					width:170%;
+					width:100%;
 				}
 			}
 		}
 	}
+
 
 	.cabin{
 		width:90%;
@@ -1121,9 +1278,15 @@ section#page3-wrapper{
 					justify-content: space-evenly;
 					width: 100%;
 					height: 100%;
+					color:$TSR_textHead;
 
 					li{
-						color:$TSR_textHead;
+						font-size:1.2em;
+						.txt{
+							font-size: 1em;
+							color:$TSR_Accent;
+							float: right;
+						}
 
 					}
 				}

@@ -12,9 +12,14 @@
 	<body>
 		<section id="page-wrapper">
 			<section class="scroll-wrapper">
-				<nav id="left-nav">
-					====
-					MENU
+				<nav class="left-nav">
+					<a href="#">
+						<div class="nav-bttn">
+						<span>________</span>
+						<span>________</span>
+						<p>MENU</p>
+						</div>
+					</a>
 				</nav>
 
 				<section class= "scroll-screen screen_1Header">
@@ -94,7 +99,7 @@
 							<div class="bottomBox_wrapper">
 		
 								<h3 class="tsr_txtHead">UNWIND IN YOUR OWN PRIVATE HEAVEN</h3>
-								<p class="tsr_txt"> With five classes of accomodation, the tsar;s Gold Train is well suited for your personal requirements. Deserunt, nisi modi delectus cum ipsa ateius autem quas ex eos non tempore nemo nesciunt repellendus. Cabins range from the Classic Category with shared facilities to the best possible comfort availabe in Balshai</p>
+								<p class="tsr_txt"> With five classes of accomodation, the tsar's Gold Train is well suited for your personal requirements. Deserunt, nisi modi delectus cum ipsa ateius autem quas ex eos non tempore nemo nesciunt repellendus. Cabins range from the Classic Category with shared facilities to the best possible comfort availabe in Balshai</p>
 								<button class="tsr_bttn">TOUR ACCOMODATIONS</button>
 							</div>
 						</div>
@@ -113,21 +118,26 @@
 								<div class="footer_logo">
 									<img id="logo_footer" src="dist/img/logo-footer.png">
 								</div>
-								<div class="social_icons"></div>
-
 							</div>
 
 							<div class="bttm_footer">
-								<div class="bttm_left">
+								<div class="bttm_left bttm">
 
-									<div class="bttm_left_list">
-										<a><h5>CONTACT US</h5></a>
-										<p>Reservations:<p>
-										<p>Address:<p>
-									</div>
+									<ul class="bttm_left_list">
+											<li>CONTACT US</li>
+											<li>Reservations:
+												<p class="txt">49.30.786.000.33</p>
+												<p class="txt">BookTSR@tsrReservations.com</p>
+											</li>
+											<li>Address:
+												<p class="txt">1000 Canterbury Ln,</p>
+												<p class="txt">Moscow 125009</p>
+											</li>
+									</ul>
+								
 
 								</div>
-								<div class="bttm_right">
+								<div class="bttm_right bttm">
 
 									<ul class="bttm_right_list">
 										<a><li>RESOURCES</li></a>
@@ -179,7 +189,40 @@
 					</div>
 					</div>
 				</a>
+
+				<div class="popout-menu">
+					
+					<div class="bookingWindow">
+						<a  href="#" class="close-button">
+							<span class="close-X">X</span>
+							Close
+						</a>
+						<div class="booking-title">
+							Which route will you be taking?
+						</div>
+						<div class="booking-form">
+							<form class="form formA">
+									<label for="country">Trip</label>
+									<select id="country" name="country">
+										<option value="city-select">........</option>
+										<option value="beijing">BEIJING</option>
+										<option value="moscow">MOSCOW</option>
+										<option value="usa">USA</option>
+									</select>
+							</form>
+							<form class="form formB">
+								<label for="passengers"> No. of Passengers</label>
+								<input type="number" id="passengers" name="passenger count">
+							</form>
+						</div>
+						<div class="booking-bttn">
+							<button class="tsr_bttn"> Check Availability</button>
+						</div>
+					</div>
+				</div>
 			</section>
+
+
 		</section>
 
 		<script src="dist/js/main.js"></script>
