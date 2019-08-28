@@ -651,13 +651,17 @@ section#page-wrapper .fixed-wrapper h2 {
 }
 
 section#page-wrapper .fixed-wrapper .moscow {
-	color: transparent;
-	-webkit-text-stroke-width: 1px;
-	-webkit-text-stroke-color: black;
+	background: url("../img/book-bg.jpg") no-repeat;
+	background-position-y: 35.5%;
+	-webkit-text-fill-color: transparent;
+	-webkit-background-clip: text;
 }
 
 section#page-wrapper .fixed-wrapper .bjing {
-	color: #493615;
+	background: url("../img/beijing.png") no-repeat;
+	-webkit-text-fill-color: transparent;
+	background-position-y: 50%;
+	-webkit-background-clip: text;
 }
 
 section#page-wrapper .fixed-wrapper .bookNow_bttn {
@@ -1690,16 +1694,6 @@ section#page4-wrapper {
 	width: 100%;
 }
 
-section#page4-wrapper .article-intro h2 {
-	font-size: 2em;
-	color: #5F2314;
-}
-
-section#page4-wrapper .article0 {
-	width: 80%;
-	margin: 0 auto;
-}
-
 section#page4-wrapper section.giantBG {
 	width: 100%;
 	height: 100vh;
@@ -1791,9 +1785,50 @@ section#page4-wrapper section.giantBG .header-logo .hdr_right button {
 	color: #5F2314;
 }
 
+section#page4-wrapper section.giantBG .hdr_title {
+	width: 80%;
+	height: 50%;
+	margin: 0 auto;
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	        flex-direction: column;
+	-webkit-box-pack: space-evenly;
+	        justify-content: space-evenly;
+	-webkit-box-align: center;
+	        align-items: center;
+	color: white;
+}
+
+section#page4-wrapper section.giantBG .hdr_title h1 {
+	font-family: "ff-carina", sans-serif;
+	font-weight: 700;
+	font-size: 5em;
+	color: #E3DAC6;
+}
+
+section#page4-wrapper section.giantBG .hdr_title h2 {
+	font-size: 1.5em;
+}
+
+section#page4-wrapper section.giantBG .hdr_title p {
+	font-size: 1.2em;
+	width: 55%;
+}
+
 section#page4-wrapper section.page4-articles {
 	width: 100%;
 	margin: 5% auto;
+}
+
+section#page4-wrapper section.page4-articles .article-intro {
+	margin: 3%;
+}
+
+section#page4-wrapper section.page4-articles .article-intro h2 {
+	font-size: 2em;
+	color: #5F2314;
 }
 
 section#page4-wrapper section.page4-articles .articles {
@@ -1841,6 +1876,11 @@ section#page4-wrapper section.page4-articles .articles .article-IMG {
 
 section#page4-wrapper section.page4-articles .articles .article-IMG img {
 	width: 100%;
+}
+
+section#page4-wrapper section.page4-articles .article0 .article-txt-wrapper {
+	width: 50%;
+	margin: 0 auto;
 }
 
 @media (min-width: 767px) {
@@ -2133,6 +2173,37 @@ section#page5-wrapper section.giantBG .header-logo .hdr_right button {
 	font-family: "mr-eaves-sans", sans-serif;
 	font-size: 1em;
 	color: white;
+}
+
+section#page5-wrapper section.giantBG .hdr_title {
+	width: 80%;
+	height: 50%;
+	margin: 0 auto;
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	        flex-direction: column;
+	-webkit-box-pack: space-evenly;
+	        justify-content: space-evenly;
+	-webkit-box-align: center;
+	        align-items: center;
+	color: white;
+}
+
+section#page5-wrapper section.giantBG .hdr_title h1 {
+	font-family: "ff-carina", sans-serif;
+	font-weight: 700;
+	font-size: 5em;
+}
+
+section#page5-wrapper section.giantBG .hdr_title h2 {
+	font-size: 1.5em;
+}
+
+section#page5-wrapper section.giantBG .hdr_title p {
+	font-size: 1.2em;
+	width: 55%;
 }
 
 section#page5-wrapper section.page5-articles {
