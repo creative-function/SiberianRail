@@ -946,13 +946,13 @@ section#page2-wrapper .left-nav .close-button2 {
 }
 
 section#page2-wrapper .popout-menu2 {
-	-webkit-transform: translateX(-2000px);
-	    -ms-transform: translateX(-2000px);
-	        transform: translateX(-2000px);
-	-webkit-transition: -webkit-transform 1s;
-	transition: -webkit-transform 1s;
-	transition: transform 1s;
-	transition: transform 1s, -webkit-transform 1s;
+	-webkit-transform: translateX(-3000px);
+	    -ms-transform: translateX(-3000px);
+	        transform: translateX(-3000px);
+	-webkit-transition: -webkit-transform 1.5s;
+	transition: -webkit-transform 1.5s;
+	transition: transform 1.5s;
+	transition: transform 1.5s, -webkit-transform 1.5s;
 	display: -webkit-box;
 	display: flex;
 	-webkit-box-orient: vertical;
@@ -1787,7 +1787,7 @@ section#page4-wrapper section.giantBG .header-logo .hdr_right button {
 
 section#page4-wrapper section.giantBG .hdr_title {
 	width: 80%;
-	height: 50%;
+	height: 100%;
 	margin: 0 auto;
 	display: -webkit-box;
 	display: flex;
@@ -1798,7 +1798,14 @@ section#page4-wrapper section.giantBG .hdr_title {
 	        justify-content: space-evenly;
 	-webkit-box-align: center;
 	        align-items: center;
+	text-align: center;
 	color: white;
+}
+
+@media (min-width: 767px) {
+	section#page4-wrapper section.giantBG .hdr_title {
+		height: 50%;
+	}
 }
 
 section#page4-wrapper section.giantBG .hdr_title h1 {
@@ -1814,7 +1821,7 @@ section#page4-wrapper section.giantBG .hdr_title h2 {
 
 section#page4-wrapper section.giantBG .hdr_title p {
 	font-size: 1.2em;
-	width: 55%;
+	width: 80%;
 }
 
 section#page4-wrapper section.page4-articles {
@@ -2177,7 +2184,7 @@ section#page5-wrapper section.giantBG .header-logo .hdr_right button {
 
 section#page5-wrapper section.giantBG .hdr_title {
 	width: 80%;
-	height: 50%;
+	height: 100%;
 	margin: 0 auto;
 	display: -webkit-box;
 	display: flex;
@@ -2188,7 +2195,14 @@ section#page5-wrapper section.giantBG .hdr_title {
 	        justify-content: space-evenly;
 	-webkit-box-align: center;
 	        align-items: center;
+	text-align: center;
 	color: white;
+}
+
+@media (min-width: 767px) {
+	section#page5-wrapper section.giantBG .hdr_title {
+		height: 50%;
+	}
 }
 
 section#page5-wrapper section.giantBG .hdr_title h1 {
@@ -2203,7 +2217,7 @@ section#page5-wrapper section.giantBG .hdr_title h2 {
 
 section#page5-wrapper section.giantBG .hdr_title p {
 	font-size: 1.2em;
-	width: 55%;
+	width: 560px;
 }
 
 section#page5-wrapper section.page5-articles {

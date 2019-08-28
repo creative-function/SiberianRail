@@ -14,6 +14,6 @@ $nav_bttn.addEventListener("click", function(){
 
 $close_bttn2.addEventListener("click", function(){
     console.log("clicky close button");
-    $popout_menu2.style.transform = "translateX(-2000px)";
+    $popout_menu2.style.transform = "translateX(-3000px)";
     $close_bttn2.style.transform = "translateY(-200px)";
 })
