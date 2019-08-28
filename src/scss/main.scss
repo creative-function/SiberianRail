@@ -78,10 +78,15 @@ section#page-wrapper{
 			height:50px;
 			background-color:#ffffff;
 			border-bottom: 3px solid $TSR_Accent;
+			display: flex;
+			justify-content: space-evenly;
 
 			a{
 				text-decoration: none;
+				color: $TSR_textHead;
 			}
+
+			
 			
 			.nav-bttn{
 				width:20%;
@@ -99,6 +104,16 @@ section#page-wrapper{
 					margin-top:3%;
 				}
 			}
+
+			.nav-list{
+				width:60%;
+				display: flex;
+				flex-direction: row;
+				justify-content: space-around;
+				align-items: center;
+				transform: translateX(-1000px);
+				transition: transform 1s, ease-in-out;
+			}
 		}
 
 		.scroll-screen{
@@ -106,13 +121,7 @@ section#page-wrapper{
 			height: 100vh;
 			display: flex;
 			flex-direction: column;
-			@media#{$tablet}{
-				height: 55vh;
-			}
-			@media#{$desktop}{
-				height: 100vh;
-			}
-
+			
 			.screen_top{
 				width:100%;
 				height: 50%;
@@ -172,13 +181,17 @@ section#page-wrapper{
 					.txtBox{
 						text-align: center;
 						margin: 0 auto;
-						margin:5%;
+						margin:2%;
 						font-size:1.5em;
 						color: $TSR_textHead;
 					}
 
-					#logo{
-						width:100%;
+					.imgBox{
+						width:85%;
+						margin:2% auto;
+						#logo{
+							width:100%;
+						}
 					}
 				}
 			}
@@ -272,7 +285,7 @@ section#page-wrapper{
 					height: 100%;
 					display:flex;
 					flex-direction: column-reverse;
-					@media#{$tablet}{
+					@media#{$desktop}{
 						flex-direction:row;
 					}
 					
@@ -284,7 +297,7 @@ section#page-wrapper{
 						display: flex;
 						flex-direction: column;
 						justify-content: space-between;
-						@media#{$tablet}{
+						@media#{$desktop}{
 							width:50%;
 						}
 						
@@ -311,7 +324,7 @@ section#page-wrapper{
 
 					.screen3_bttmImg{
 						width:100%;
-						@media#{$tablet}{
+						@media#{$desktop}{
 							width:60%
 						}
 						
@@ -329,7 +342,7 @@ section#page-wrapper{
 			
 			.screen_top{
 				width:100%;
-				height: 50vh;
+				height: 70vh;
 				.IMGbox{
 					width:75%;
 					position: relative;
@@ -363,6 +376,11 @@ section#page-wrapper{
 
 			}
 
+			.bottomBox_4{
+				height: 30vh;
+				z-index: 99;
+			}
+
 		}
 
 		
@@ -372,7 +390,7 @@ section#page-wrapper{
 				width:100%;
 				height:50%;
 				background-image: url("../img/trainBg.png");
-				background-size: 100%;
+				background-size: cover;
 				background-repeat: no-repeat;
 				
 				.TXTbox{
@@ -411,13 +429,20 @@ section#page-wrapper{
 						
 
 						.footer_logo{
-							width:20%;
+							max-width:25%;
 							height: 75%;
 							margin: 5%;
 							align-self: center;
+							// @media#{$tablet}{
+							// 	width:80%;
+							// }
+							// @media#{$desktop}{
+							// 	width:40%;
+							// }
 							#logo_footer{
 								width: 100%;
 							}
+
 						}
 
 					}
@@ -436,7 +461,7 @@ section#page-wrapper{
 							
 
 							ul{
-								width:50%;
+								width:80%;
 								height: 80%;
 								margin: 0 auto;
 								display: flex;
@@ -604,10 +629,13 @@ section#page-wrapper{
 			display: flex;
 			justify-content: center;
 			align-items: center;
+			transform:translateX(1000px);
+			transition: transform 1s, ease;
 
 			.bookingWindow{
-				width:80%;
-				height: 55%;
+				width:90%;
+				height: 70%;
+				margin: 0 auto;
 				border: 2px solid white;
 				display: flex;
 				flex-direction: column;
@@ -626,11 +654,13 @@ section#page-wrapper{
 					color:$TSR_textHead;
 
 					.close-X{
-						font-size:3em;
+						font-size:1.9em;
 					}
 				}
 				.booking-title{
-					font-size:3.5em;
+					font-size:2.2em;
+					text-align: center;
+					width:100%;
 					align-self: center;
 				}
 
@@ -642,7 +672,7 @@ section#page-wrapper{
 
 					.form{
 						width: 30%;
-						font-size:2em;
+						font-size:1.5em;
 						display: flex;
 						flex-direction: column;
 						justify-content: space-evenly;
@@ -658,6 +688,13 @@ section#page-wrapper{
 							border-radius: 4px;
 							background-color: transparent;
 							color:white;
+						}
+					}
+
+					.formB{
+
+						#passengers{
+							width:100%;
 						}
 					}
 				}
@@ -721,25 +758,34 @@ section#page2-wrapper{
 			}
 		}
 
-		.close-button{
-			//display: none;
+		.close-button2{
+			transform: translateY(-200px);
+			transition: transform 1s;
 		}
 	}
-	.pop-out-menu{
+	.popout-menu2{
+		transform: translateX(-2000px);
+		transition: transform 1s;
 		display: flex;
 		flex-direction: column;
 		align-items: center; 
 		ul{
 			width:100%;
 			display: flex;
-			flex-direction: row;
+			flex-direction: column;
 			justify-content: space-evenly;
 			align-items: center;
+			@media#{$tablet}{
+				flex-direction: row;
+			}
 			
 			a{
-				width:25%;
+				width:100%;
 				text-decoration: none;
 				color:$TSR_textHead;
+				@media#{$tablet}{
+					width:35%;
+				}
 
 				:hover{
 					background-color: $TSR_textHead;
@@ -750,7 +796,7 @@ section#page2-wrapper{
 
 			
 			li{
-				font-size: 1.5em;
+				font-size: 1.3em;
 				border: 1.5px solid $TSR_textHead;
 				text-align: center;padding:3%;
 			}
@@ -761,7 +807,8 @@ section#page2-wrapper{
 			
 
 				img{
-					width:100%;
+					width:100%;	
+
 				}
 			}
 		}
@@ -781,10 +828,13 @@ section#page2-wrapper{
 			height: 50%;
 			position: relative;
 			display:flex;
-			align-items: center;		img{
+			align-items: center;
+			//background-color: blue;
+			img{
 				width:100%;
 			}
 
+		
 			.tint_box{
 				position: absolute;
 				z-index:99;
@@ -793,7 +843,45 @@ section#page2-wrapper{
 				height:100%;
 				background-color:$TSR_WhiteTint;
 			}
+
 		}
+
+		.cabin-slide-wrapper{
+			display: none;
+			@media#{$tablet}{
+				display: block;
+				position: absolute;
+				right:-100px;
+				width:50%;
+				height:78%;
+				//background-color: lightgreen;
+				.slideshow-circles{
+					width:75px;
+					height: 15px;
+					position: relative;
+					top:100%;
+					left:10%;
+					display: flex;
+					flex-direction: row;
+					justify-content: space-around;
+					z-index: 99;
+				}
+				.slideCirc{
+					width:20%;
+					//height: 25%;
+					border-radius: 50%;
+					//background-color: white;
+					border: 2px solid $TSR_Accent;
+				}
+				.slideCirc:nth-child(4){
+					background-color: $TSR_Accent;
+					border:none;
+	
+				}
+			}
+							
+		}
+
 		.cabin-txt{
 			width:100%;
 			height:50%;
@@ -842,6 +930,7 @@ section#page2-wrapper{
 					position:absolute;
 					left:-12%;
 				}
+
 			}
 
 			.cabin-txt{
@@ -854,7 +943,7 @@ section#page2-wrapper{
 	}
 
 	.cabin0{
-		width:90%;
+		width:95%;
 		height:50px;
 		margin:0% auto;
 		display: flex;
@@ -862,6 +951,15 @@ section#page2-wrapper{
 		justify-content: space-between;
 		font-size: 1.5em;
 		color:$TSR_text;
+	}
+
+	.cabin1{
+		.cabin-IMG{
+			.cabin-slide-wrapper{
+				height: 56% ;
+			}
+		}
+
 	}
 
 	@media#{$desktop}{
@@ -878,6 +976,11 @@ section#page2-wrapper{
 					position: absolute;
 					left:unset;
 					right:-11.5%;
+				}
+
+				.cabin-slide-wrapper{
+					left:30px;
+					//background-color: blue;
 				}
 			}
 		}
@@ -955,8 +1058,9 @@ section#page3-wrapper{
 			
 		}
 		.cities{
-			width:70%;
+			width:100%;
 			height: 95%;
+			//margin: 0 auto;
 			float: right;
 			display: flex;
 			flex-direction: column;
@@ -988,9 +1092,18 @@ section#page3-wrapper{
 			}
 
 			.cc_2{
+				display: none;
 				width:225px;
 				height:225px;
-				h2{font-size: 3.5em;}
+				h2{
+					font-size: 3.5em;
+					position: relative;
+					top: 36%;
+					left: 13%;
+				}
+				@media#{$desktop}{
+					display:block;
+				}
 			}
 
 			.cc_3{
@@ -1203,7 +1316,7 @@ section#page3-wrapper{
 
 			.photo-banner{
 				width:100%;
-				height:30%;
+				height:auto;
 				background-color: $TSR_textHead;
 				position: absolute;
 				bottom:0;
@@ -1250,7 +1363,7 @@ section#page3-wrapper{
 		.footer{
 			width:90%;
 			margin:0 auto;
-			height: 25%;
+			height: 35%;
 			display: flex;
 			flex-direction: row;
 
