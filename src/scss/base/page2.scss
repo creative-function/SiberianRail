@@ -1,0 +1,271 @@
+section#page2-wrapper{
+	width:100%;
+	height: auto;
+	margin:0 auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	color: $TSR_textHead;
+
+	.left-nav{
+		width:100%;
+		height:50px;
+		background-color:#ffffff;
+		border-bottom: 3px solid $TSR_Accent;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+
+		a{
+			text-decoration: none;
+		}
+		
+		.nav-bttn{
+			width:20%;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			color:$TSR_textHead;
+			
+			span{
+				margin:-1.5%;
+			}
+
+			p{
+				margin-top:2%;
+			}
+
+			.close-X{
+				font-size:2em;
+			}
+		}
+
+		.close-button2{
+			transform: translateY(-200px);
+			transition: transform 1s;
+		}
+	}
+	.popout-menu2{
+		transform: translateX(-2000px);
+		transition: transform 1s;
+		display: flex;
+		flex-direction: column;
+		align-items: center; 
+		ul{
+			width:100%;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-evenly;
+			align-items: center;
+			@media#{$tablet}{
+				flex-direction: row;
+			}
+			
+			a{
+				width:100%;
+				text-decoration: none;
+				color:$TSR_textHead;
+				@media#{$tablet}{
+					width:35%;
+				}
+
+				:hover{
+					background-color: $TSR_textHead;
+					color: white;
+				}
+				
+			}
+
+			
+			li{
+				font-size: 1.3em;
+				border: 1.5px solid $TSR_textHead;
+				text-align: center;padding:3%;
+			}
+
+
+			#pop-out-logo{		
+				 background-color: $TSR_textHead;	
+			
+
+				img{
+					width:100%;	
+
+				}
+			}
+		}
+	}
+
+
+	.cabin{
+		width:90%;
+		height:100vh;
+		max-width:600px;
+		margin:5% auto;
+		border: 2px solid $TSR_Accent;
+		display: flex;
+		flex-direction:column;
+		.cabin-IMG{
+			width:100%;
+			height: 50%;
+			position: relative;
+			display:flex;
+			align-items: center;
+			//background-color: blue;
+			img{
+				width:100%;
+			}
+
+		
+			.tint_box{
+				position: absolute;
+				z-index:99;
+				right:0;
+				width:30%;
+				height:100%;
+				background-color:$TSR_WhiteTint;
+			}
+
+		}
+
+		.cabin-slide-wrapper{
+			display: none;
+			@media#{$tablet}{
+				display: block;
+				position: absolute;
+				right:-100px;
+				width:50%;
+				height:78%;
+				//background-color: lightgreen;
+				.slideshow-circles{
+					width:75px;
+					height: 15px;
+					position: relative;
+					top:100%;
+					left:10%;
+					display: flex;
+					flex-direction: row;
+					justify-content: space-around;
+					z-index: 99;
+				}
+				.slideCirc{
+					width:20%;
+					//height: 25%;
+					border-radius: 50%;
+					//background-color: white;
+					border: 2px solid $TSR_Accent;
+				}
+				.slideCirc:nth-child(4){
+					background-color: $TSR_Accent;
+					border:none;
+	
+				}
+			}
+							
+		}
+
+		.cabin-txt{
+			width:100%;
+			height:50%;
+			.cabin-text-wrapper{
+				width:80%;
+				height: 100%;
+				margin: 0 auto;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-evenly;
+				font-size:1.2em;
+			
+				h2,p,ol{
+					width:85%;
+				}
+				h2{
+					font-size:1.3em;
+				}
+				ol{
+					
+					list-style: circle;
+					align-self: flex-end;
+
+				}
+				.add-cart{
+					display:flex;
+					flex-direction: row;
+					width:100%;
+				}
+				
+			}
+		}
+
+		@media#{$desktop}{
+			height: 64vh;
+			flex-direction:row;
+			max-width:none;
+
+		
+			.cabin-IMG{
+				width:50%;
+				height:100%;
+				position: relative;
+
+				img{
+					position:absolute;
+					left:-12%;
+				}
+
+			}
+
+			.cabin-txt{
+				width:50%;
+				height:100%;
+			}
+
+
+		}
+	}
+
+	.cabin0{
+		width:95%;
+		height:50px;
+		margin:0% auto;
+		display: flex;
+		border: none;
+		justify-content: space-between;
+		font-size: 1.5em;
+		color:$TSR_text;
+	}
+
+	.cabin1{
+		.cabin-IMG{
+			.cabin-slide-wrapper{
+				height: 56% ;
+			}
+		}
+
+	}
+
+	@media#{$desktop}{
+
+		.cabin:nth-child(odd){
+			flex-direction: row-reverse;
+
+			.cabin-IMG{
+				.tint_box{
+					left:0;
+				}
+
+				img{
+					position: absolute;
+					left:unset;
+					right:-11.5%;
+				}
+
+				.cabin-slide-wrapper{
+					left:30px;
+					//background-color: blue;
+				}
+			}
+		}
+	}
+}
