@@ -1513,6 +1513,10 @@ section#page3-wrapper section.giantBG .cities .city-circle {
 	        align-items: center;
 	-webkit-box-pack: center;
 	        justify-content: center;
+	-webkit-transition: -webkit-transform 1.5s ease-in-out;
+	transition: -webkit-transform 1.5s ease-in-out;
+	transition: transform 1.5s ease-in-out;
+	transition: transform 1.5s ease-in-out, -webkit-transform 1.5s ease-in-out;
 }
 
 section#page3-wrapper section.giantBG .cities .city-circle h2 {
@@ -1554,8 +1558,6 @@ section#page3-wrapper section.giantBG .cities .city-circle:hover {
 	-webkit-transform: scale(1.5);
 	    -ms-transform: scale(1.5);
 	        transform: scale(1.5);
-	-webkit-transition: 1.5s ease-in-out;
-	transition: 1.5s ease-in-out;
 	border: 3px solid #FDD739;
 }
 

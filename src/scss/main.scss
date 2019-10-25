@@ -1329,7 +1329,7 @@ section#page3-wrapper{
 				display: flex;
 				align-items: center;
 				justify-content: center;
-				
+				transition: transform 1.5s ease-in-out;
 				h2{
 					font-size: 4em;
 					font-family: $TSRheading;
@@ -1362,7 +1362,6 @@ section#page3-wrapper{
 
 			.city-circle:hover{
 				transform: scale(1.5);
-				transition:1.5s ease-in-out;
 				border: 3px solid $TSR-Gold;
 				
 				h2{
