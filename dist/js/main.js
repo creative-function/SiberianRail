@@ -20,7 +20,7 @@ $menu_buttonPg1.addEventListener("click", function () {
     $nav_icon.style.display = "block";
     $close_icon.style.display = "none";
   }
-}); ///PAGE ONE POP-OUT MENU
+}); ///PAGE 1,3,4,5 POP-OUT MENU
 
 var $bookNow_bttn = document.querySelector(".bookNow_bttn");
 var $popout_menu = document.querySelector(".popout-menu");
@@ -31,6 +31,6 @@ $bookNow_bttn.addEventListener("click", function () {
 });
 $close_bttn.addEventListener("click", function () {
   console.log("clicky close button");
-  $popout_menu.style.transform = "translateX(1000px)";
+  $popout_menu.style.transform = "translateX(1500px)";
 });
 //# sourceMappingURL=main.js.map
