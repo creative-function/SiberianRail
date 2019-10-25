@@ -4,15 +4,29 @@ to verify that you're working in the right files.`)
 
 ///PAGE ONE LEFT MENU
 
+let $nav_icon = document.querySelector(".nav-icon");
+let $close_icon = document.querySelector(".close-X");
 let $menu_buttonPg1 = document.querySelector("#nav-pg1");
 
 let $nav_listPg1 = document.querySelector(".nav-list");
 
 
 $menu_buttonPg1.addEventListener("click", function(){
-    $nav_listPg1.style.transform = "translateX(0)"; 
-   
-    console.log("clicky main menu ");
+    console.log("click");
+    
+    if($close_icon.style.display == "none"){
+        $nav_listPg1.style.transform ="translateX(0)";
+        $nav_listPg1.style.opacity = "1";
+        $nav_icon.style.display = "none";
+        $close_icon.style.display = "block";
+        
+    } else{
+        $nav_listPg1.style.transform = "translateX(-1500px)";
+        $nav_listPg1.style.opacity = ".2";
+        $nav_icon.style.display = "block";
+        $close_icon.style.display = "none";
+        
+    }
 });
 
 ///PAGE ONE POP-OUT MENU
