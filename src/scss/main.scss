@@ -665,12 +665,18 @@ section#page-wrapper{
 			margin:2%;
 			border: 2px solid;
 			background: transparent;
-
+			transition: 1s ease-in-out;
 			@media#{$tablet}{
 				display: block;
 			}
 			
 
+		}
+
+		.bookNow_bttn:hover{
+			background-color: $TSR_GoldTint;
+			border: $TSR-Gold;
+			transform: scale(1.1);
 		}
 
 		.fixed-button{
@@ -712,10 +718,20 @@ section#page-wrapper{
 
 		.button_top{
 			background-color: $TSR-Orange;
+			
 		}
-
+		.button_top:hover{
+			background-image: url("../img/moscow.jpg");
+			background-position: center;
+		}
 		.button_bottom{
-			background-color:$TSR-Gold;
+			background-color:$TSR-Gold;		
+		}
+		
+		.button_bottom:hover{
+			background-size: 350%;
+			background-image: url("../img/beijing.png");
+			
 		}
 
 		.fixed-bar{
@@ -725,6 +741,7 @@ section#page-wrapper{
 			width: 70%;
 			height: 40px;
 			background-color:$TSR-White;
+			transition: transform 1.2s, width 1s, ease-in-out;
 
 			.fixed-bar_title{
 				width:50%;
@@ -738,6 +755,16 @@ section#page-wrapper{
 					color:$TSR_textHead;
 					font-size:1.3em;
 				}
+
+				.f-b_arrows{
+					color:$TSR_textHead;
+					opacity: 1;
+					padding:4%;
+					transform: translateX(350px);
+					transition: transform 1s, opacity 1s ease-in-out;
+				}
+
+				
 			}
 			@media#{$tablet}{
 				top:49%;
@@ -745,6 +772,20 @@ section#page-wrapper{
 			
 
 		}
+
+		.fixed-bar:hover{
+			width:100%;
+			transform: scale(1.5);
+			
+			.fixed-bar_title{
+				justify-content: flex-end;
+				.f-b_arrows{
+					opacity: 1;
+					transform: translateX(0);
+				}
+			}
+		}
+
 
 		.popout-menu{
 			position: absolute;

@@ -715,12 +715,22 @@ section#page-wrapper .fixed-wrapper .bookNow_bttn {
 	margin: 2%;
 	border: 2px solid;
 	background: transparent;
+	-webkit-transition: 1s ease-in-out;
+	transition: 1s ease-in-out;
 }
 
 @media (min-width: 767px) {
 	section#page-wrapper .fixed-wrapper .bookNow_bttn {
 		display: block;
 	}
+}
+
+section#page-wrapper .fixed-wrapper .bookNow_bttn:hover {
+	background-color: rgba(253, 209, 43, 0.7);
+	border: #FDD739;
+	-webkit-transform: scale(1.1);
+	    -ms-transform: scale(1.1);
+	        transform: scale(1.1);
 }
 
 section#page-wrapper .fixed-wrapper .fixed-button {
@@ -770,8 +780,18 @@ section#page-wrapper .fixed-wrapper .button_top {
 	background-color: #E46125;
 }
 
+section#page-wrapper .fixed-wrapper .button_top:hover {
+	background-image: url("../img/moscow.jpg");
+	background-position: center;
+}
+
 section#page-wrapper .fixed-wrapper .button_bottom {
 	background-color: #FDD739;
+}
+
+section#page-wrapper .fixed-wrapper .button_bottom:hover {
+	background-size: 350%;
+	background-image: url("../img/beijing.png");
 }
 
 section#page-wrapper .fixed-wrapper .fixed-bar {
@@ -781,6 +801,10 @@ section#page-wrapper .fixed-wrapper .fixed-bar {
 	width: 70%;
 	height: 40px;
 	background-color: #FFFFFF;
+	-webkit-transition: width 1s, ease-in-out, -webkit-transform 1.2s;
+	transition: width 1s, ease-in-out, -webkit-transform 1.2s;
+	transition: transform 1.2s, width 1s, ease-in-out;
+	transition: transform 1.2s, width 1s, ease-in-out, -webkit-transform 1.2s;
 }
 
 section#page-wrapper .fixed-wrapper .fixed-bar .fixed-bar_title {
@@ -801,10 +825,42 @@ section#page-wrapper .fixed-wrapper .fixed-bar .fixed-bar_title h2 {
 	font-size: 1.3em;
 }
 
+section#page-wrapper .fixed-wrapper .fixed-bar .fixed-bar_title .f-b_arrows {
+	color: #B55827;
+	opacity: 1;
+	padding: 4%;
+	-webkit-transform: translateX(350px);
+	    -ms-transform: translateX(350px);
+	        transform: translateX(350px);
+	-webkit-transition: opacity 1s ease-in-out, -webkit-transform 1s;
+	transition: opacity 1s ease-in-out, -webkit-transform 1s;
+	transition: transform 1s, opacity 1s ease-in-out;
+	transition: transform 1s, opacity 1s ease-in-out, -webkit-transform 1s;
+}
+
 @media (min-width: 767px) {
 	section#page-wrapper .fixed-wrapper .fixed-bar {
 		top: 49%;
 	}
+}
+
+section#page-wrapper .fixed-wrapper .fixed-bar:hover {
+	width: 100%;
+	-webkit-transform: scale(1.5);
+	    -ms-transform: scale(1.5);
+	        transform: scale(1.5);
+}
+
+section#page-wrapper .fixed-wrapper .fixed-bar:hover .fixed-bar_title {
+	-webkit-box-pack: end;
+	        justify-content: flex-end;
+}
+
+section#page-wrapper .fixed-wrapper .fixed-bar:hover .fixed-bar_title .f-b_arrows {
+	opacity: 1;
+	-webkit-transform: translateX(0);
+	    -ms-transform: translateX(0);
+	        transform: translateX(0);
 }
 
 section#page-wrapper .fixed-wrapper .popout-menu {
