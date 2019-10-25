@@ -1134,6 +1134,8 @@ section#page3-wrapper{
 		height: 100vh;
 		background-image: url("../img/beijing.png");
 		background-size: cover;
+		position: relative;
+		overflow: hidden;
 		@media#{$tablet}{
 			height: 75vh;
 		}
@@ -1181,16 +1183,124 @@ section#page3-wrapper{
 					visibility: visible;
 				}
 		
-				button{
+				.bookNow_bttn{
 					width:50%;
 					height:34px;
 					border:1px solid white;
-					background-color:transparent; 
+					background-color:transparent;
+					transition: transform 1s ease-in-out; 
 					padding:1%;
 					margin:1%;
 					font-family: $TSRmain;
 					font-size: 1em;
 					color:white;
+				}
+
+				.bookNow_bttn:hover{
+					background-color: $TSR_GoldTint;
+					border: $TSR-Gold;
+					transform: scale(1.1);
+				}
+
+				.popout-menu{
+					position: absolute;
+					top:0;
+					bottom:0;
+					left:0;
+					right:0;
+					background-image:url("../img/about-hero-bg.png");
+					background-size: cover;
+					font-family: $TSRmain;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					transform:translateX(1500px);
+					transition: transform 1s, ease;
+					display: none;
+					@media#{$tablet}{
+						display: block;
+					}
+
+					.bookingWindow{
+						width:90%;
+						height: 70%;
+						margin: 5% auto;
+						border: 2px solid white;
+						display: flex;
+						flex-direction: column;
+						justify-content: space-around;
+						color:white;
+
+						.close-button{
+							width:20%;
+							align-self: flex-end;
+							margin:1%;
+							padding:1%;
+							display: flex;
+							flex-direction: column;
+							justify-content: center;
+							align-items: center;
+							color:$TSR_textHead;
+
+							.close-X{
+								font-size:1.9em;
+							}
+						}
+
+						.booking-title{
+							font-size:2.2em;
+							text-align: center;
+							width:100%;
+							align-self: center;
+						}
+
+						.booking-form{
+							width:100%;
+							display: flex;
+							flex-direction: row;
+							justify-content: space-around;
+
+							.form{
+								width: 30%;
+								font-size:1.5em;
+								display: flex;
+								flex-direction: column;
+								justify-content: space-evenly;
+							}
+
+							.formA{
+								select{
+									width: 90%;
+									padding:16px 20px;
+									margin:2%;
+									border: none;
+									border-bottom: 2px solid white;
+									border-radius: 4px;
+									background-color: transparent;
+									color:white;
+								}
+							}
+
+							.formB{
+
+								#passengers{
+									width:100%;
+								}
+							}
+						}
+
+						.booking-bttn{
+							align-self: flex-end;
+							width:40%;
+							.tsr_bttn{
+								width:75%;
+								color:white;
+								background-color: $TSR_Brown;
+							}
+						}
+
+					}
+
 				}
 			}
 			
@@ -1612,16 +1722,23 @@ section#page4-wrapper{
 					visibility: visible;
 				}
 		
-				button{
+				.bookNow_bttn{
 					width:50%;
 					height:34px;
 					border:2px solid $TSR_Brown;
 					background-color:transparent; 
+					transition: transform 1s ease-in-out;
 					padding:1%;
 					margin:1%;
 					font-family: $TSRmain;
 					font-size: 1em;
 					color:$TSR_Brown;
+				}
+
+				.bookNow_bttn:hover{
+					background-color: $TSR_GoldTint;
+					border: $TSR-Gold;
+					transform: scale(1.1);
 				}
 
 				.popout-menu{
@@ -2053,16 +2170,23 @@ section#page5-wrapper{
 					visibility: visible;
 				}
 		
-				button{
+				.bookNow_bttn{
 					width:50%;
 					height:34px;
 					border:1px solid white;
-					background-color:transparent; 
+					background-color:transparent;
+					transition: transform 1s ease-in-out; 
 					padding:1%;
 					margin:1%;
 					font-family: $TSRmain;
 					font-size: 1em;
 					color:white;
+				}
+
+				.bookNow_bttn:hover{
+					background-color: $TSR_GoldTint;
+					border: $TSR-Gold;
+					transform: scale(1.1);
 				}
 
 				.popout-menu{

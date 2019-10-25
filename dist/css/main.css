@@ -1255,6 +1255,8 @@ section#page3-wrapper section.giantBG {
 	height: 100vh;
 	background-image: url("../img/beijing.png");
 	background-size: cover;
+	position: relative;
+	overflow: hidden;
 }
 
 @media (min-width: 767px) {
@@ -1329,16 +1331,149 @@ section#page3-wrapper section.giantBG .header-logo .hdr_right {
 	}
 }
 
-section#page3-wrapper section.giantBG .header-logo .hdr_right button {
+section#page3-wrapper section.giantBG .header-logo .hdr_right .bookNow_bttn {
 	width: 50%;
 	height: 34px;
 	border: 1px solid white;
 	background-color: transparent;
+	-webkit-transition: -webkit-transform 1s ease-in-out;
+	transition: -webkit-transform 1s ease-in-out;
+	transition: transform 1s ease-in-out;
+	transition: transform 1s ease-in-out, -webkit-transform 1s ease-in-out;
 	padding: 1%;
 	margin: 1%;
 	font-family: "mr-eaves-sans", sans-serif;
 	font-size: 1em;
 	color: white;
+}
+
+section#page3-wrapper section.giantBG .header-logo .hdr_right .bookNow_bttn:hover {
+	background-color: rgba(253, 209, 43, 0.7);
+	border: #FDD739;
+	-webkit-transform: scale(1.1);
+	    -ms-transform: scale(1.1);
+	        transform: scale(1.1);
+}
+
+section#page3-wrapper section.giantBG .header-logo .hdr_right .popout-menu {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-image: url("../img/about-hero-bg.png");
+	background-size: cover;
+	font-family: "mr-eaves-sans", sans-serif;
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-pack: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	        align-items: center;
+	-webkit-transform: translateX(1500px);
+	    -ms-transform: translateX(1500px);
+	        transform: translateX(1500px);
+	-webkit-transition: ease, -webkit-transform 1s;
+	transition: ease, -webkit-transform 1s;
+	transition: transform 1s, ease;
+	transition: transform 1s, ease, -webkit-transform 1s;
+	display: none;
+}
+
+@media (min-width: 767px) {
+	section#page3-wrapper section.giantBG .header-logo .hdr_right .popout-menu {
+		display: block;
+	}
+}
+
+section#page3-wrapper section.giantBG .header-logo .hdr_right .popout-menu .bookingWindow {
+	width: 90%;
+	height: 70%;
+	margin: 5% auto;
+	border: 2px solid white;
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	        flex-direction: column;
+	justify-content: space-around;
+	color: white;
+}
+
+section#page3-wrapper section.giantBG .header-logo .hdr_right .popout-menu .bookingWindow .close-button {
+	width: 20%;
+	align-self: flex-end;
+	margin: 1%;
+	padding: 1%;
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	        flex-direction: column;
+	-webkit-box-pack: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	        align-items: center;
+	color: #B55827;
+}
+
+section#page3-wrapper section.giantBG .header-logo .hdr_right .popout-menu .bookingWindow .close-button .close-X {
+	font-size: 1.9em;
+}
+
+section#page3-wrapper section.giantBG .header-logo .hdr_right .popout-menu .bookingWindow .booking-title {
+	font-size: 2.2em;
+	text-align: center;
+	width: 100%;
+	align-self: center;
+}
+
+section#page3-wrapper section.giantBG .header-logo .hdr_right .popout-menu .bookingWindow .booking-form {
+	width: 100%;
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	        flex-direction: row;
+	justify-content: space-around;
+}
+
+section#page3-wrapper section.giantBG .header-logo .hdr_right .popout-menu .bookingWindow .booking-form .form {
+	width: 30%;
+	font-size: 1.5em;
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	        flex-direction: column;
+	-webkit-box-pack: space-evenly;
+	        justify-content: space-evenly;
+}
+
+section#page3-wrapper section.giantBG .header-logo .hdr_right .popout-menu .bookingWindow .booking-form .formA select {
+	width: 90%;
+	padding: 16px 20px;
+	margin: 2%;
+	border: none;
+	border-bottom: 2px solid white;
+	border-radius: 4px;
+	background-color: transparent;
+	color: white;
+}
+
+section#page3-wrapper section.giantBG .header-logo .hdr_right .popout-menu .bookingWindow .booking-form .formB #passengers {
+	width: 100%;
+}
+
+section#page3-wrapper section.giantBG .header-logo .hdr_right .popout-menu .bookingWindow .booking-bttn {
+	align-self: flex-end;
+	width: 40%;
+}
+
+section#page3-wrapper section.giantBG .header-logo .hdr_right .popout-menu .bookingWindow .booking-bttn .tsr_bttn {
+	width: 75%;
+	color: white;
+	background-color: #5F2314;
 }
 
 section#page3-wrapper section.giantBG .cities {
@@ -1837,16 +1972,28 @@ section#page4-wrapper section.giantBG .header-logo .hdr_right {
 	}
 }
 
-section#page4-wrapper section.giantBG .header-logo .hdr_right button {
+section#page4-wrapper section.giantBG .header-logo .hdr_right .bookNow_bttn {
 	width: 50%;
 	height: 34px;
 	border: 2px solid #5F2314;
 	background-color: transparent;
+	-webkit-transition: -webkit-transform 1s ease-in-out;
+	transition: -webkit-transform 1s ease-in-out;
+	transition: transform 1s ease-in-out;
+	transition: transform 1s ease-in-out, -webkit-transform 1s ease-in-out;
 	padding: 1%;
 	margin: 1%;
 	font-family: "mr-eaves-sans", sans-serif;
 	font-size: 1em;
 	color: #5F2314;
+}
+
+section#page4-wrapper section.giantBG .header-logo .hdr_right .bookNow_bttn:hover {
+	background-color: rgba(253, 209, 43, 0.7);
+	border: #FDD739;
+	-webkit-transform: scale(1.1);
+	    -ms-transform: scale(1.1);
+	        transform: scale(1.1);
 }
 
 section#page4-wrapper section.giantBG .header-logo .hdr_right .popout-menu {
@@ -2361,16 +2508,28 @@ section#page5-wrapper section.giantBG .header-logo .hdr_right {
 	}
 }
 
-section#page5-wrapper section.giantBG .header-logo .hdr_right button {
+section#page5-wrapper section.giantBG .header-logo .hdr_right .bookNow_bttn {
 	width: 50%;
 	height: 34px;
 	border: 1px solid white;
 	background-color: transparent;
+	-webkit-transition: -webkit-transform 1s ease-in-out;
+	transition: -webkit-transform 1s ease-in-out;
+	transition: transform 1s ease-in-out;
+	transition: transform 1s ease-in-out, -webkit-transform 1s ease-in-out;
 	padding: 1%;
 	margin: 1%;
 	font-family: "mr-eaves-sans", sans-serif;
 	font-size: 1em;
 	color: white;
+}
+
+section#page5-wrapper section.giantBG .header-logo .hdr_right .bookNow_bttn:hover {
+	background-color: rgba(253, 209, 43, 0.7);
+	border: #FDD739;
+	-webkit-transform: scale(1.1);
+	    -ms-transform: scale(1.1);
+	        transform: scale(1.1);
 }
 
 section#page5-wrapper section.giantBG .header-logo .hdr_right .popout-menu {
