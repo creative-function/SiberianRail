@@ -1502,6 +1502,7 @@ section#page3-wrapper section.giantBG .cities {
 }
 
 section#page3-wrapper section.giantBG .cities .city-circle {
+	text-decoration: none;
 	width: 250px;
 	height: 250px;
 	margin: 3%;
