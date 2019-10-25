@@ -1919,45 +1919,40 @@ section#page4-wrapper section.giantBG {
 section#page4-wrapper section.giantBG .header-logo {
 	display: -webkit-box;
 	display: flex;
-	-webkit-box-orient: horizontal;
+	-webkit-box-orient: vertical;
 	-webkit-box-direction: normal;
-	        flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: space-around;
+	        flex-direction: column;
+	-webkit-box-pack: justify;
+	        justify-content: space-between;
+	-webkit-box-align: center;
+	        align-items: center;
 	width: 100%;
-	height: 5%;
+	height: 20%;
 }
 
 @media (min-width: 767px) {
 	section#page4-wrapper section.giantBG .header-logo {
-		height: 25%;
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		        flex-direction: row;
+		justify-content: space-around;
+		height: 15%;
 	}
 }
 
-section#page4-wrapper section.giantBG .header-logo .clear {
-	width: 55%;
-	margin: 0 auto;
-}
-
-section#page4-wrapper section.giantBG .header-logo .clear img {
-	width: 100%;
-}
-
-@media (min-width: 767px) {
-	section#page4-wrapper section.giantBG .header-logo .clear {
-		display: none;
-	}
+section#page4-wrapper section.giantBG .header-logo .hdr_left {
+	width: 367px;
+	display: block;
 }
 
 section#page4-wrapper section.giantBG .header-logo .hdr_left img {
 	width: 100%;
 	margin-top: 2%;
-	visibility: hidden;
 }
 
 @media (min-width: 767px) {
-	section#page4-wrapper section.giantBG .header-logo .hdr_left img {
-		visibility: visible;
+	section#page4-wrapper section.giantBG .header-logo .hdr_left {
+		display: block;
 	}
 }
 
@@ -1967,17 +1962,10 @@ section#page4-wrapper section.giantBG .header-logo .hdr_right {
 	display: flex;
 	-webkit-box-pack: end;
 	        justify-content: flex-end;
-	visibility: hidden;
-}
-
-@media (min-width: 767px) {
-	section#page4-wrapper section.giantBG .header-logo .hdr_right {
-		visibility: visible;
-	}
 }
 
 section#page4-wrapper section.giantBG .header-logo .hdr_right .bookNow_bttn {
-	width: 50%;
+	width: 100%;
 	height: 34px;
 	border: 2px solid #5F2314;
 	background-color: transparent;
@@ -1990,6 +1978,12 @@ section#page4-wrapper section.giantBG .header-logo .hdr_right .bookNow_bttn {
 	font-family: "mr-eaves-sans", sans-serif;
 	font-size: 1em;
 	color: #5F2314;
+}
+
+@media (min-width: 767px) {
+	section#page4-wrapper section.giantBG .header-logo .hdr_right .bookNow_bttn {
+		width: 50%;
+	}
 }
 
 section#page4-wrapper section.giantBG .header-logo .hdr_right .bookNow_bttn:hover {
@@ -2022,13 +2016,6 @@ section#page4-wrapper section.giantBG .header-logo .hdr_right .popout-menu {
 	transition: ease, -webkit-transform 1s;
 	transition: transform 1s, ease;
 	transition: transform 1s, ease, -webkit-transform 1s;
-	display: none;
-}
-
-@media (min-width: 767px) {
-	section#page4-wrapper section.giantBG .header-logo .hdr_right .popout-menu {
-		display: block;
-	}
 }
 
 section#page4-wrapper section.giantBG .header-logo .hdr_right .popout-menu .bookingWindow {
@@ -2442,7 +2429,7 @@ section#page5-wrapper section.giantBG {
 
 @media (min-width: 767px) {
 	section#page5-wrapper section.giantBG {
-		height: 75vh;
+		height: 70vh;
 	}
 }
 
@@ -2455,45 +2442,40 @@ section#page5-wrapper section.giantBG {
 section#page5-wrapper section.giantBG .header-logo {
 	display: -webkit-box;
 	display: flex;
-	-webkit-box-orient: horizontal;
+	-webkit-box-orient: vertical;
 	-webkit-box-direction: normal;
-	        flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: space-around;
+	        flex-direction: column;
+	-webkit-box-pack: justify;
+	        justify-content: space-between;
+	-webkit-box-align: center;
+	        align-items: center;
 	width: 100%;
-	height: 5%;
+	height: 20%;
 }
 
 @media (min-width: 767px) {
 	section#page5-wrapper section.giantBG .header-logo {
-		height: 25%;
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		        flex-direction: row;
+		justify-content: space-around;
+		height: 15%;
 	}
 }
 
-section#page5-wrapper section.giantBG .header-logo .clear {
-	width: 55%;
-	margin: 0 auto;
-}
-
-section#page5-wrapper section.giantBG .header-logo .clear img {
-	width: 100%;
-}
-
-@media (min-width: 767px) {
-	section#page5-wrapper section.giantBG .header-logo .clear {
-		display: none;
-	}
+section#page5-wrapper section.giantBG .header-logo .hdr_left {
+	width: 367px;
+	display: block;
 }
 
 section#page5-wrapper section.giantBG .header-logo .hdr_left img {
 	width: 100%;
 	margin-top: 2%;
-	visibility: hidden;
 }
 
 @media (min-width: 767px) {
-	section#page5-wrapper section.giantBG .header-logo .hdr_left img {
-		visibility: visible;
+	section#page5-wrapper section.giantBG .header-logo .hdr_left {
+		display: block;
 	}
 }
 
@@ -2503,7 +2485,6 @@ section#page5-wrapper section.giantBG .header-logo .hdr_right {
 	display: flex;
 	-webkit-box-pack: end;
 	        justify-content: flex-end;
-	visibility: hidden;
 }
 
 @media (min-width: 767px) {
@@ -2513,7 +2494,7 @@ section#page5-wrapper section.giantBG .header-logo .hdr_right {
 }
 
 section#page5-wrapper section.giantBG .header-logo .hdr_right .bookNow_bttn {
-	width: 50%;
+	width: 100%;
 	height: 34px;
 	border: 1px solid white;
 	background-color: transparent;
@@ -2526,6 +2507,12 @@ section#page5-wrapper section.giantBG .header-logo .hdr_right .bookNow_bttn {
 	font-family: "mr-eaves-sans", sans-serif;
 	font-size: 1em;
 	color: white;
+}
+
+@media (min-width: 767px) {
+	section#page5-wrapper section.giantBG .header-logo .hdr_right .bookNow_bttn {
+		width: 50%;
+	}
 }
 
 section#page5-wrapper section.giantBG .header-logo .hdr_right .bookNow_bttn:hover {
@@ -2557,13 +2544,6 @@ section#page5-wrapper section.giantBG .header-logo .hdr_right .popout-menu {
 	transition: ease, -webkit-transform 1s;
 	transition: transform 1s, ease;
 	transition: transform 1s, ease, -webkit-transform 1s;
-	display: none;
-}
-
-@media (min-width: 767px) {
-	section#page5-wrapper section.giantBG .header-logo .hdr_right .popout-menu {
-		display: block;
-	}
 }
 
 section#page5-wrapper section.giantBG .header-logo .hdr_right .popout-menu .bookingWindow {
@@ -2658,15 +2638,15 @@ section#page5-wrapper section.giantBG .header-logo .hdr_right .popout-menu .book
 
 section#page5-wrapper section.giantBG .hdr_title {
 	width: 80%;
-	height: 100%;
+	height: 70%;
 	margin: 0 auto;
 	display: -webkit-box;
 	display: flex;
 	-webkit-box-orient: vertical;
 	-webkit-box-direction: normal;
 	        flex-direction: column;
-	-webkit-box-pack: space-evenly;
-	        justify-content: space-evenly;
+	-webkit-box-pack: center;
+	        justify-content: center;
 	-webkit-box-align: center;
 	        align-items: center;
 	text-align: center;
@@ -2683,10 +2663,12 @@ section#page5-wrapper section.giantBG .hdr_title h1 {
 	font-family: "ff-carina", sans-serif;
 	font-weight: 700;
 	font-size: 5em;
+	margin: 5% auto;
 }
 
 section#page5-wrapper section.giantBG .hdr_title h2 {
 	font-size: 1.5em;
+	margin: 5% auto;
 }
 
 section#page5-wrapper section.giantBG .hdr_title p {
