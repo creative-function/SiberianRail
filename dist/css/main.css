@@ -86,12 +86,9 @@ body {
 }
 
 .main-nav {
-	width: 100%;
-	height: 70px;
-	border-bottom: 3px solid #E3DAC6;
-	display: -webkit-box;
-	display: flex;
-	justify-content: space-around;
+	position: absolute;
+	width: 50%;
+	height: auto;
 }
 
 .main-nav a {
@@ -163,17 +160,16 @@ body {
 }
 
 .main-nav .nav-list {
-	width: 75%;
+	background-color: #FFFFFF;
+	width: 100%;
+	height: 90vh;
 	display: -webkit-box;
 	display: flex;
-	-webkit-box-orient: horizontal;
+	-webkit-box-orient: vertical;
 	-webkit-box-direction: normal;
-	        flex-direction: row;
+	        flex-direction: column;
 	flex-wrap: wrap;
-	-webkit-box-pack: justify;
-	        justify-content: space-between;
-	-webkit-box-align: center;
-	        align-items: center;
+	justify-content: space-around;
 	-webkit-transform: translateX(-1500px);
 	    -ms-transform: translateX(-1500px);
 	        transform: translateX(-1500px);
@@ -258,7 +254,7 @@ section#page-wrapper .scroll-wrapper .scroll-screen .screen_top .tsr_txt {
 
 section#page-wrapper .scroll-wrapper .scroll-screen .screen-bottomBox {
 	width: 100%;
-	height: 50vh;
+	height: 50%;
 	display: -webkit-box;
 	display: flex;
 	-webkit-box-orient: vertical;
@@ -298,40 +294,6 @@ section#page-wrapper .scroll-wrapper .scroll-screen .screen-bottomBox .bottomBox
 }
 
 section#page-wrapper .scroll-wrapper .screen_1Header .header-welcome {
-	width: 100%;
-	display: -webkit-box;
-	display: flex;
-	-webkit-box-orient: vertical;
-	-webkit-box-direction: normal;
-	        flex-direction: column;
-}
-
-section#page-wrapper .scroll-wrapper .screen_1Header .header-welcome .welcome-txtBox {
-	width: 85%;
-	margin: 0 auto;
-	display: -webkit-box;
-	display: flex;
-	-webkit-box-orient: vertical;
-	-webkit-box-direction: normal;
-	        flex-direction: column;
-	-webkit-box-pack: justify;
-	        justify-content: space-between;
-}
-
-section#page-wrapper .scroll-wrapper .screen_1Header .header-welcome .welcome-txtBox .txtBox {
-	text-align: center;
-	margin: 0 auto;
-	margin: 2%;
-	font-size: 1.5em;
-	color: #B55827;
-}
-
-section#page-wrapper .scroll-wrapper .screen_1Header .header-welcome .welcome-txtBox .imgBox {
-	width: 85%;
-	margin: 2% auto;
-}
-
-section#page-wrapper .scroll-wrapper .screen_1Header .header-welcome .welcome-txtBox .imgBox #logo {
 	width: 100%;
 }
 
@@ -1261,13 +1223,13 @@ section#page3-wrapper section.giantBG {
 
 @media (min-width: 767px) {
 	section#page3-wrapper section.giantBG {
-		height: 75vh;
+		height: 85vh;
 	}
 }
 
-@media (min-width: 900px) {
+@media (min-width: 1440px) {
 	section#page3-wrapper section.giantBG {
-		height: 100vh;
+		background-position-y: -100px;
 	}
 }
 
@@ -1478,25 +1440,24 @@ section#page3-wrapper section.giantBG .header-logo .hdr_right .popout-menu .book
 }
 
 section#page3-wrapper section.giantBG .cities {
-	width: 100%;
+	min-width: 500px;
+	width: 95%;
 	height: 95%;
+	margin: 0 5%;
 	float: right;
 	display: -webkit-box;
 	display: flex;
-	-webkit-box-orient: vertical;
+	-webkit-box-orient: horizontal;
 	-webkit-box-direction: normal;
-	        flex-direction: column;
-	-webkit-box-pack: center;
-	        justify-content: center;
+	        flex-direction: row;
+	-webkit-box-pack: end;
+	        justify-content: flex-end;
 	-webkit-box-align: center;
 	        align-items: center;
 }
 
 @media (min-width: 767px) {
 	section#page3-wrapper section.giantBG .cities {
-		-webkit-box-orient: horizontal;
-		-webkit-box-direction: normal;
-		        flex-direction: row;
 		height: 50%;
 		align-self: center;
 	}
@@ -1504,9 +1465,9 @@ section#page3-wrapper section.giantBG .cities {
 
 section#page3-wrapper section.giantBG .cities .city-circle {
 	text-decoration: none;
-	width: 250px;
-	height: 250px;
-	margin: 3%;
+	width: 300px;
+	height: 300px;
+	margin: 2%;
 	border: 3px solid rgba(255, 255, 255, 0.5);
 	border-radius: 50%;
 	display: -webkit-box;
@@ -1530,36 +1491,36 @@ section#page3-wrapper section.giantBG .cities .city-circle h2 {
 
 section#page3-wrapper section.giantBG .cities .cc_2 {
 	display: none;
-	width: 225px;
-	height: 225px;
+	width: 200px;
+	height: 200px;
 }
 
 section#page3-wrapper section.giantBG .cities .cc_2 h2 {
-	font-size: 3.5em;
+	font-size: 3em;
 	position: relative;
 	top: 36%;
 	left: 13%;
 }
 
-@media (min-width: 900px) {
+@media (min-width: 767px) {
 	section#page3-wrapper section.giantBG .cities .cc_2 {
 		display: block;
 	}
 }
 
 section#page3-wrapper section.giantBG .cities .cc_3 {
-	width: 200px;
-	height: 200px;
+	width: 100px;
+	height: 100px;
 }
 
 section#page3-wrapper section.giantBG .cities .cc_3 h2 {
-	font-size: 4em;
+	font-size: 3em;
 }
 
 section#page3-wrapper section.giantBG .cities .city-circle:hover {
-	-webkit-transform: scale(1.5);
-	    -ms-transform: scale(1.5);
-	        transform: scale(1.5);
+	-webkit-transform: scale(1.3);
+	    -ms-transform: scale(1.3);
+	        transform: scale(1.3);
 	border: 3px solid #FDD739;
 }
 

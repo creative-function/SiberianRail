@@ -32,13 +32,10 @@ body {
 }
 
 .main-nav{
-	width:100%;
-	height:70px;
-	//background-color:#ffffff;
-	border-bottom: 3px solid $TSR_Accent;
-	display: flex;
-	justify-content: space-around;
-
+	position: absolute;
+	width:50%;
+	height:auto;
+	
 	a{
 		text-decoration: none;
 		color: $TSR_textHead;
@@ -59,6 +56,7 @@ body {
 		width:10%;
 		display: flex;
 		justify-content: center;
+		//position: absolute;
 
 		.nav-bttn{
 			display: flex;
@@ -111,15 +109,19 @@ body {
 	}
 
 	.nav-list{
-		width:75%;
+		background-color: $TSR-White;
+		width:100%;
+		height:90vh;
 		display: flex;
-		flex-direction: row;
+		flex-direction: column;
 		flex-wrap: wrap;
-		justify-content: space-between;
-		align-items: center;
+		justify-content: space-around;
+		//align-items: flex-start;
 		transform: translateX(-1500px);
 		transition: transform 1s, ease-in-out;
 	}
+
+
 }
 
 .float-title{
@@ -258,7 +260,7 @@ section#page-wrapper{
 
 			.screen-bottomBox{
 				width: 100%;
-				height: 50vh;
+				height: 50%;
 				display: flex;
 				flex-direction: column;
 				justify-content: space-evenly;
@@ -293,34 +295,7 @@ section#page-wrapper{
 		.screen_1Header{
 			.header-welcome{
 				width:100%;
-				display: flex;
-				flex-direction: column;
-				.welcome-txtBox{
-					width:85%;
-					margin: 0 auto;
-					display: flex;
-					flex-direction: column;
-					justify-content: space-between;
-
-					.txtBox{
-						text-align: center;
-						margin: 0 auto;
-						margin:2%;
-						font-size:1.5em;
-						color: $TSR_textHead;
-					}
-
-					.imgBox{
-						width:85%;
-						margin:2% auto;
-						#logo{
-							width:100%;
-						}
-					}
-				}
 			}
-
-			
 		}
 
 		.screen_2TSR{
@@ -507,7 +482,6 @@ section#page-wrapper{
 
 		}
 
-		
 		.screen_5Footer{
 			
 			.screen_top{
@@ -1137,12 +1111,12 @@ section#page3-wrapper{
 		position: relative;
 		overflow: hidden;
 		@media#{$tablet}{
-			height: 75vh;
+			height: 85vh;
 		}
-		@media#{$desktop}{
-			height: 100vh;
-		}
+		@media#{$XLdesktop}{
+			background-position-y: -100px;
 
+		}
 		.header-logo{
 			display: flex;
 			flex-direction: row;
@@ -1307,25 +1281,25 @@ section#page3-wrapper{
 			
 		}
 		.cities{
-			width:100%;
+			min-width: 500px;
+			width:95%;
 			height: 95%;
-			//margin: 0 auto;
+			margin: 0 5%;
 			float: right;
 			display: flex;
-			flex-direction: column;
-			justify-content: center;
+			flex-direction: row;
+			justify-content: flex-end;
 			align-items: center;
 			@media#{$tablet}{
-				flex-direction: row;
 				height: 50%;
 				align-self: center;
 			}
 		
 			.city-circle{
 				text-decoration: none;
-				width:250px;
-				height:250px;
-				margin:3%;
+				width:300px;
+				height:300px;
+				margin:2%;
 				border: 3px solid $TSR_WhiteTint;
 				border-radius: 50%;
 				display: flex;
@@ -1343,27 +1317,27 @@ section#page3-wrapper{
 
 			.cc_2{
 				display: none;
-				width:225px;
-				height:225px;
+				width:200px;
+				height:200px;
 				h2{
-					font-size: 3.5em;
+					font-size: 3em;
 					position: relative;
 					top: 36%;
 					left: 13%;
 				}
-				@media#{$desktop}{
+				@media#{$tablet}{
 					display:block;
 				}
 			}
 
 			.cc_3{
-				width:200px;
-				height:200px;
-				h2{font-size: 4em;}
+				width:100px;
+				height:100px;
+				h2{font-size: 3em;}
 			}
 
 			.city-circle:hover{
-				transform: scale(1.5);
+				transform: scale(1.3);
 				border: 3px solid $TSR-Gold;
 				
 				h2{
