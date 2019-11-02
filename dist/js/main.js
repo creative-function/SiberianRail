@@ -6,8 +6,11 @@ var $nav_icon = document.querySelector(".nav-icon");
 var $close_icon = document.querySelector(".close-X");
 var $menu_buttonPg1 = document.querySelector("#nav-pg1");
 var $nav_listPg1 = document.querySelector(".nav-list");
+$close_icon.style.display = "none"; //sets initial display value regardless of sass
+//alt solution - toggle class/ keep styling in css
+
 $menu_buttonPg1.addEventListener("click", function () {
-  console.log("click");
+  console.log("click 2");
 
   if ($close_icon.style.display == "none") {
     $nav_listPg1.style.transform = "translateX(0)";

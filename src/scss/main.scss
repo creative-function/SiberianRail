@@ -132,13 +132,23 @@ body {
 
 .tsr_bttn{
 	margin-top:5%;
-	width:35%;
+	width:65%;
 	background-color:$TSR_textHead;
 	border: none;
 	color:white;
 	font-family: $TSRmain;
 	padding:1%;
 	font-size:1em;
+}
+
+.tsr_bttn_2{
+	width:25%;
+	background-color:$TSR_textHead;
+	border: none;
+	color:white;
+	font-family: $TSRmain;
+	padding:1%;
+	font-size:.8em;
 }
 
 /* 2. Content ================================= */
@@ -156,10 +166,9 @@ section#page-wrapper{
 	.scroll-wrapper{
 		width:100%;
 		margin:0 auto;
-		height: 50vh;
+		height: 100vh;
 		overflow: scroll;
 		@media#{$tablet}{
-			height: 100vh;
 			width:50%;
 			margin:0;
 			overflow: unset;
@@ -247,13 +256,13 @@ section#page-wrapper{
 			height: 100vh;
 			display: flex;
 			flex-direction: column;
-			
 			.screen_top{
 				width:100%;
 				height: 50%;
-
+				line-height: 1.5em;
 				.tsr_txt{
-					font-size:.9em;
+					width: 100%;
+					font-size:1.10em;
 					color: $TSR_text;
 				}
 			}
@@ -283,9 +292,13 @@ section#page-wrapper{
 						margin: 2% 0;
 					}
 					.tsr_txt{
-						width:65%;
+						width:85%;
 						font-size:1.10em;
 						color: $TSR_text;
+
+						@media#{$desktop}{
+							width:65%;
+						}
 					}
 				}
 			}
@@ -299,6 +312,11 @@ section#page-wrapper{
 		}
 
 		.screen_2TSR{
+
+			// background-image: url("../img/trainLines_1@144x.png");
+			// background-size:contain;
+			// background-position-y: 340px;
+			// background-repeat: no-repeat;
 			.screen_top{
 				
 				.IMGbox{
@@ -308,6 +326,7 @@ section#page-wrapper{
 					position: relative;
 					@media#{$tablet}{
 						min-width:88%;
+						width:90%;
 					}
 					@media#{$desktop}{
 						min-width:70%;
@@ -316,69 +335,117 @@ section#page-wrapper{
 					.float-title{
 						width:max-content;
 						position: absolute;
-						top:20%;
-						right:-15%;
-						font-size:3em;
+						top:130px;
+						right:-70px;
+						font-size:4em;
 						z-index: 99;
 						color:$TSR_textHead;
 						@media#{$tablet}{
+							right:-35px;
 							font-size:5em;
+						}
+						@media#{$desktop}{
+							right:-120px;
 						}
 					}
 
-					img{
+					.tsr-tracks{
 						width:100%;
 						height: 70%;
 						position: absolute;
 						bottom:0;
 					}
+					.tsr-lines{
+						position: absolute;
+						top:255px;
+						right:-140px;
+					}
+				}
+			}
+
+			.bottomBox_2{
+				position: relative;
+				img{
+					position: absolute;
+					z-index: 1;
+					width: 100%;
+					top:10%;
+				}
+
+				.tsr_txt,.tsr_txtHead{
+					z-index: 99;
 				}
 			}
 		}
 
 		.screen_3Service{
+			position: relative;
 			.screen_top{
 				display: flex;
 				flex-direction: column;
 				justify-content: center;
 				position: relative;
 				width:100%;
+				margin-bottom: 15%;
+				@media#{$desktop}{
+					margin-bottom: -15%;
+				}
+
 				.float-title{
-					font-size:3em;
+					font-size:4em;
 					z-index: 99;
 					margin-bottom:5%;
 					text-align: center;
-					color:$TSR_Accent;
+					color:$TSR_textHead;
 					@media#{$desktop}{
 						font-size: 5em;
 					}
 					
 				}
 				.screen3_topTxtBox{
-					width:80%;
-					max-width:85%;
+					width:100%;
+					//max-width:85%;
+					padding: 0 5%;
 					display: flex;
 					flex-direction: row;
 					align-self: center;
 					justify-content: space-evenly;
+					@media#{$desktop}{
+						width:75%;
+					}
 					
 					.screen3_topImg{
-						width:25%;
+						width:15%;
+						display: flex;
+						align-items: center;
+				
 						img{
-							width:75%;
-							max-width: 80%;
+							width:100%;
 						}
 					}
 
 					.screen3_topTxt{
-						width:70%;
+						width:65%;
 						padding:2%;
+						.tsr_txt{
+							width: 100%;
+						}
 					}
 				}
 			}
 
 			.bottomBox_3{
 				width:100%;
+				position: relative;
+				// img.moonFall{
+				// 	display:none;
+				// 	width:30%;
+				// 	position: sticky;
+				// 	top:0;
+				// 	@media#{$desktop}{
+				// 		display: block;
+				// 	}
+				// }
 				.bottomBox_wrapper{
 					width:100%;
 					height: 100%;
@@ -397,32 +464,22 @@ section#page-wrapper{
 						flex-direction: column;
 						justify-content: space-between;
 						@media#{$desktop}{
-							width:50%;
+							width:60%;
 						}
 						
 
 						.bttmTxt_wrapper{
-							width:80%;
+							width:90%;
 							margin:0 auto;
 							display: flex;
 							flex-direction: column;
-							
-
-						}
-
-					
-						.tsr_txt{
-							width:85%;
-						}
-
-						.bttnBox_3{
-							width:70%;
+			
 						}
 					
 					}
 
 					.screen3_bttmImg{
-						width:100%;
+						width:85%;
 						@media#{$desktop}{
 							width:60%
 						}
@@ -435,13 +492,27 @@ section#page-wrapper{
 				
 				}
 			}
+			
+			img.moonFall{
+				display:none;
+				width:20%;
+				position: absolute;
+				bottom:-50px;
+				right: 250px;
+				@media#{$desktop}{
+					display: block;
+				}
+			}
 		}
-
+		
 		.screen_4Cabins{
 			
 			.screen_top{
 				width:100%;
-				height: 70vh;
+				height: 55vh;
+				@media#{$tablet}{
+					height: 60vh;
+				}
 				.IMGbox{
 					width:75%;
 					position: relative;
@@ -455,17 +526,21 @@ section#page-wrapper{
 					}
 					.float-title{
 						width:max-content;
-						font-size:3em;
+						font-size:4em;
 						z-index: 99;
 						//text-align: center;
 						position: absolute;
-						bottom:-20%;
-						right:-30%;
+						bottom:-20px;
+						right:-15%;
 						color: $TSR_textHead;
 						@media#{$tablet}{
-							font-size: 5em;
-							bottom:-15%;
+							font-size: 3.5em;
 						}
+						@media#{$desktop}{
+							font-size: 5em;
+						}
+						
+
 					}
 
 					img{
@@ -476,8 +551,18 @@ section#page-wrapper{
 			}
 
 			.bottomBox_4{
-				height: 30vh;
-				z-index: 99;
+				width:70%;
+				height: auto;
+				margin:1% auto;
+				position: relative;
+				img.cabin-line{
+					position: relative;
+					left:-90%;
+					top:20px;
+				}
+				.tsr_txt{
+					width: 65%;
+				}
 			}
 
 		}
@@ -487,8 +572,8 @@ section#page-wrapper{
 			.screen_top{
 				width:100%;
 				height:50%;
-				background-image: url("../img/trainBg.png");
-				background-size: cover;
+				background-image: url("../img/compassLine.svg");
+				background-position: left;
 				background-repeat: no-repeat;
 				
 				.TXTbox{
@@ -497,6 +582,7 @@ section#page-wrapper{
 					display: flex;
 					justify-content: center;
 					align-items: center;
+					
 
 					.footer_txt{
 						width:30%;
@@ -504,6 +590,7 @@ section#page-wrapper{
 						font-size:2em;
 						text-align: center;
 						color:$TSR_textHead;
+						background-color: white;
 					}
 				}
 			}
@@ -590,15 +677,15 @@ section#page-wrapper{
 	}
 
 	.fixed-wrapper{
+		display: none;
 		width:100%;
 		height: 50vh;
 		border:$TSR_GoldTint;
-		display:flex;
-		flex-direction: column;
-		position: relative;
 		font-family: $TSRstencil;
 	
 		@media#{$tablet}{
+			display: flex;
+			display: block;
 			height: 100vh;
 			width:50%;
 			position: fixed;
@@ -619,6 +706,7 @@ section#page-wrapper{
 			background-position-y: 35.5%;
 			-webkit-text-fill-color: transparent;
 			-webkit-background-clip: text;
+		
 		}
 
 		.bjing{
@@ -674,19 +762,12 @@ section#page-wrapper{
 					font-size:.5em;
 				}
 				
-				.arrow_top{
-					position: relative;
-					right:0;
-					color:white;
-				}
-
-				.arrow_bottom{
-					position: relative;
-					right:0;
-					color:white;
-				}
-
+				.arrow_top,.arrow_bottom{
 				
+					img{
+						width: 100%;
+					}
+				}			
 			}
 		}
 
@@ -716,26 +797,32 @@ section#page-wrapper{
 			height: 40px;
 			background-color:$TSR-White;
 			transition: transform 1.2s, width 1s, ease-in-out;
+			overflow: hidden;
 
 			.fixed-bar_title{
 				width:50%;
 				height: 100%;
 				display: flex;
-				justify-content: center;
+				justify-content:space-evenly;
 				align-content: center;
 				h2{
-					display: flex;
+					//display: flex;
 					align-self: center;
 					color:$TSR_textHead;
 					font-size:1.3em;
+					transform: scale(1);
+					transition: transform .8s ease-in-out;
 				}
 
-				.f-b_arrows{
-					color:$TSR_textHead;
-					opacity: 1;
-					padding:4%;
-					transform: translateX(350px);
+				.f-b_arrow{
+					opacity: 0;
+					align-self: center;
+					transform: translateX(255px);
 					transition: transform 1s, opacity 1s ease-in-out;
+
+					img{
+						width: 110%;
+					}
 				}
 
 				
@@ -748,12 +835,12 @@ section#page-wrapper{
 		}
 
 		.fixed-bar:hover{
-			width:100%;
-			transform: scale(1.5);
-			
 			.fixed-bar_title{
-				justify-content: flex-end;
-				.f-b_arrows{
+				h2{
+					font-size:1.5em;
+					transform: scale(1.4);
+				}
+				.f-b_arrow{
 					opacity: 1;
 					transform: translateX(0);
 				}
@@ -870,10 +957,13 @@ section#page2-wrapper{
 	flex-direction: column;
 	justify-content: space-around;
 	color: $TSR_textHead;
-
+	background-image: url("../img/book_backLine2.png");
+	background-repeat: repeat-y;
+	background-position-x:75%;
 	
 	.cabin-menu{
 		//transform: translateX(-3000px);
+		background-color: $TSR-White;
 		transition: transform 1.5s;
 		display: flex;
 		flex-direction: column;
@@ -924,79 +1014,177 @@ section#page2-wrapper{
 		}
 	}
 
-
 	.cabin{
-		width:90%;
-		height:100vh;
+		width:85%;
+		height:710px;
 		max-width:600px;
-		margin:5% auto;
+		margin:2% auto;
 		border: 2px solid $TSR_Accent;
 		display: flex;
 		flex-direction:column;
+		position: relative;
+		//background-color: indigo;
+		background-color:$TSR-White;
+		@media#{$desktop}{
+			height: 500px;
+			flex-direction:row;
+			max-width:none;
+
+		
+			.cabin-IMG{
+				width:50%;
+				height:100%;
+				position: relative;
+
+				img{
+					position:absolute;
+					left:-26%;
+				}
+
+			}
+
+			.cabin-txt{
+				width:40%;
+				height:100%;
+			}
+
+
+		}
+
+		img.asset-lines{
+			width:20%;
+			position: absolute;
+			right:-10%;
+			top:5%;
+			@media#{$tablet}{
+				top:70%;
+			}
+			@media#{$desktop}{
+				width:15%;
+				right:-8%;
+				top:50%;
+			}
+		}
 		.cabin-IMG{
+			order:2;
 			width:100%;
-			height: 65%;
+			height: 45%;
+			left:-15%;
 			position: relative;
 			display:flex;
 			align-items: center;
 			//background-color: blue;
 			img{
-				width:100%;
+				width:128%;
 			}
-
+			@media#{$tablet}{
+				order:1;
+				height: 100%;
+				left:0;
+				img{
+					width:100%;
+				}
+			}
 		
 			.tint_box{
 				position: absolute;
 				z-index:99;
-				right:0;
+				right:-28%;
 				width:30%;
-				height:100%;
+				height:115%;
 				background-color:$TSR_WhiteTint;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+
+				.tint_arrow_left_odd{
+					width:15%;
+					display: block;
+					@media#{$desktop}{
+						display: block;
+						left:15%;
+					}
+				}
+
+				.tint_arrow_right_even{
+					width:15%;
+					display: block;
+					@media#{$desktop}{
+						display: none;
+					}
+				}
+
+				.tint_arrow_left_even{
+					width:15%;
+					display: none;
+					@media#{$desktop}{
+						display: block;
+						left:15%;
+					}
+				}
+
+				@media#{$tablet}{
+					right:0;
+					height: 100%;
+				}
+
+				@media#{$desktop}{
+					right:50px;
+				}
 			}
 
 		}
 
 		.cabin-slide-wrapper{
-			display: none;
-			@media#{$tablet}{
-				display: block;
-				position: absolute;
-				right:-100px;
-				width:50%;
-				height:78%;
-				//background-color: lightgreen;
-				.slideshow-circles{
-					width:75px;
-					height: 15px;
-					position: relative;
-					top:100%;
-					left:10%;
-					display: flex;
-					flex-direction: row;
-					justify-content: space-around;
-					z-index: 99;
-				}
-				.slideCirc{
-					width:20%;
-					//height: 25%;
-					border-radius: 50%;
-					//background-color: white;
-					border: 2px solid $TSR_Accent;
-				}
-				.slideCirc:nth-child(4){
-					background-color: $TSR_Accent;
-					border:none;
-	
-				}
+			display: block;
+			position: absolute;
+			right:-15px;
+			width:30%;
+			height:85%;
+			//background-color: lightgreen;
+			.slideshow-circles{
+				width:100px;
+				height: 10px;
+				position: relative;
+				top:100%;
+				left:-90px;
+				display: flex;
+				flex-direction: row;
+				justify-content: space-around;
+				z-index: 99;
 			}
+			.slideCirc{
+				width:10%;
+				//height: 25%;
+				border-radius: 50%;
+				//background-color: white;
+				border: 2px solid $TSR_Accent;
+			}
+			.slideCirc:nth-child(4){
+				background-color: $TSR_Accent;
+				border:none;
+
+			}
+			@media#{$tablet}{
+				right:90px;
+			}
+			@media#{$desktop}{
+				height: 400px;
+				right:-15px;
+			}
+			
 							
 		}
 
 		.cabin-txt{
+			order:1;
 			width:100%;
-			height:50%;
+			height:45%;
+			@media#{$tablet}{
+				height:100%;
+			}
 			.cabin-text-wrapper{
-				width:80%;
+				width:60%;
 				height: 100%;
 				margin: 0 auto;
 				display: flex;
@@ -1020,36 +1208,38 @@ section#page2-wrapper{
 					display:flex;
 					flex-direction: row;
 					width:100%;
+
+					p{
+						font-size: 1.25em;
+					}
+				}
+
+				.bttn-tablet{
+					display: none;
+					@media#{$tablet}{
+						display:flex;
+						flex-direction: row;
+					}
 				}
 				
 			}
 		}
 
-		@media#{$desktop}{
-			height: 64vh;
-			flex-direction:row;
-			max-width:none;
-
-		
-			.cabin-IMG{
-				width:50%;
-				height:100%;
-				position: relative;
-
-				img{
-					position:absolute;
-					left:-12%;
-				}
-
+		.cabin-bttn-mobile{
+			height: auto;
+			padding:3%;
+			order:3;
+			display: block;
+			.add-cart{
+				display:flex;
+				flex-direction: row;
+				width:100%;
 			}
-
-			.cabin-txt{
-				width:50%;
-				height:100%;
+			@media#{$tablet}{
+				display: none;
 			}
-
-
 		}
+		
 	}
 
 	.cabin0{
@@ -1063,34 +1253,46 @@ section#page2-wrapper{
 		color:$TSR_text;
 	}
 
-	.cabin1{
-		.cabin-IMG{
-			.cabin-slide-wrapper{
-				height: 56% ;
-			}
-		}
-
-	}
-
 	@media#{$desktop}{
 
-		.cabin:nth-child(odd){
+		.cabin:nth-child(even){
 			flex-direction: row-reverse;
-
+			background-color:transparent;
 			.cabin-IMG{
 				.tint_box{
-					left:0;
+					left:60px;
+
+					.tint_arrow_right_even{
+						width:15%;
+						display: block;
+						@media#{$desktop}{
+							display: none;
+						}
+					
+					}
+
+					.tint_arrow_left_even{
+						width:15%;
+						display: none;
+						@media#{$desktop}{
+							display: block;
+							left:60%;
+						}
+					}
 				}
 
 				img{
 					position: absolute;
 					left:unset;
-					right:-11.5%;
+					right:-25.5%;
 				}
 
 				.cabin-slide-wrapper{
-					left:30px;
+					left:155px;
 					//background-color: blue;
+					.slideshow-circles{
+						left:15px;
+					}
 				}
 			}
 		}
