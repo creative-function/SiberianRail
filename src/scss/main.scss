@@ -33,7 +33,9 @@ body {
 
 .main-nav{
 	position: absolute;
+	top:0;
 	width:50%;
+	z-index: 99;
 	height:auto;
 	
 	a{
@@ -951,65 +953,122 @@ section#page-wrapper{
 
 section#page2-wrapper{
 	width:100%;
+	min-width: 355px;
 	height: auto;
 	margin:0 auto;
 	display: flex;
+	overflow: hidden;
 	flex-direction: column;
 	justify-content: space-around;
 	color: $TSR_textHead;
 	background-image: url("../img/book_backLine2.png");
 	background-repeat: repeat-y;
 	background-position-x:75%;
-	
+	background-position-y: 35%;
+	//background-size:contain;
+
 	.cabin-menu{
-		//transform: translateX(-3000px);
-		background-color: $TSR-White;
+		width:85%;
+		margin:0 auto;
+		margin-bottom: 2%;
+		//transform: translateY(-3000px);
+		height: auto;
+		background-color: transparent;
 		transition: transform 1.5s;
 		display: flex;
 		flex-direction: column;
 		align-items: center; 
+		
 		ul{
 			width:100%;
+			position: relative;
 			display: flex;
-			flex-direction: column;
+			flex-direction: row;
 			justify-content: space-evenly;
 			align-items: center;
 			@media#{$tablet}{
 				flex-direction: row;
 			}
 			
-			a{
-				width:100%;
-				text-decoration: none;
-				color:$TSR_textHead;
-				@media#{$tablet}{
-					width:35%;
-				}
-
-				:hover{
-					background-color: $TSR_textHead;
-					color: white;
-				}
-				
-			}
-
 			
-			li{
-				font-size: 1.3em;
-				border: 1.5px solid $TSR_textHead;
-				text-align: center;padding:3%;
+
+			.cm{
+				width:50%;
+				height: 37%;
+				//transform: translateY(-3000px);
+				transition: transform 1.5s;
+				@media#{$tablet}{
+					text-align: center;
+				}
+
+				a{
+					width:100%;
+					text-decoration: none;
+					color:$TSR_textHead;
+					@media#{$tablet}{
+						width:35%;
+					}
+
+					:hover{
+						background-color: $TSR_textHead;
+						color: white;
+					}
+				}
+
+				li{
+					//font-size: 1.3em;
+					border: 1.5px solid $TSR_textHead;
+					padding:2%;
+					background-color:$TSR-White;
+				}
 			}
 
+			.cab-menu_rt{
+				text-align: right;
+				@media#{$tablet}{
+					text-align: center;
+				}
+
+			}
 
 			#pop-out-logo{		
-				 background-color: $TSR_textHead;	
-				 width:100%;	
+				 //background-color: $TSR_textHead;	
+				 position: absolute;
+				 top:-5%;
+				 width:60%;
+				 border:none;	
+				 padding: 0%;
+
+				 #Layer_2{
+					 width: 100%;
+				 }
 				@media#{$tablet}{
-					width:50%;
+					width:45%;
 				}
+				
 				img{
 					width:100%;	
 				}
+			}
+		}
+
+		.cabin0{
+			width:95%;
+			height:110px;
+			margin:7% auto;
+			display: flex;
+			flex-direction: column;
+			border: none;
+			justify-content: space-between;
+			font-size: 1.3em;
+			background-color:transparent;
+			color:$TSR_text;
+			@media#{$tablet}{
+				flex-direction: row;
+			}
+
+			.input-date{
+				width: 90%;
 			}
 		}
 	}
@@ -1067,7 +1126,7 @@ section#page2-wrapper{
 		}
 		.cabin-IMG{
 			order:2;
-			width:100%;
+			width:128%;
 			height: 45%;
 			left:-15%;
 			position: relative;
@@ -1081,6 +1140,7 @@ section#page2-wrapper{
 				order:1;
 				height: 100%;
 				left:0;
+				width: 100%;
 				img{
 					width:100%;
 				}
@@ -1089,9 +1149,9 @@ section#page2-wrapper{
 			.tint_box{
 				position: absolute;
 				z-index:99;
-				right:-28%;
-				width:30%;
-				height:115%;
+				right:0%;
+				width:15%;
+				height:110%;
 				background-color:$TSR_WhiteTint;
 				display: flex;
 				align-items: center;
@@ -1102,7 +1162,7 @@ section#page2-wrapper{
 					display: block;
 					@media#{$desktop}{
 						display: block;
-						left:15%;
+						left:15px;
 					}
 				}
 
@@ -1129,7 +1189,7 @@ section#page2-wrapper{
 				}
 
 				@media#{$desktop}{
-					right:50px;
+					right:20%;
 				}
 			}
 
@@ -1184,7 +1244,7 @@ section#page2-wrapper{
 				height:100%;
 			}
 			.cabin-text-wrapper{
-				width:60%;
+				width:85%;
 				height: 100%;
 				margin: 0 auto;
 				display: flex;
@@ -1242,16 +1302,7 @@ section#page2-wrapper{
 		
 	}
 
-	.cabin0{
-		width:95%;
-		//height:50px;
-		margin:0% auto;
-		display: flex;
-		border: none;
-		justify-content: space-between;
-		font-size: 1.5em;
-		color:$TSR_text;
-	}
+	
 
 	@media#{$desktop}{
 
@@ -1260,7 +1311,7 @@ section#page2-wrapper{
 			background-color:transparent;
 			.cabin-IMG{
 				.tint_box{
-					left:60px;
+					left:20%;
 
 					.tint_arrow_right_even{
 						width:15%;
@@ -1291,7 +1342,7 @@ section#page2-wrapper{
 					left:155px;
 					//background-color: blue;
 					.slideshow-circles{
-						left:15px;
+						left:43px;
 					}
 				}
 			}

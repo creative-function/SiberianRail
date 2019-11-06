@@ -87,7 +87,9 @@ body {
 
 .main-nav {
 	position: absolute;
+	top: 0;
 	width: 50%;
+	z-index: 99;
 	height: auto;
 }
 
@@ -1042,10 +1044,12 @@ section#page-wrapper .fixed-wrapper .popout-menu .bookingWindow .booking-bttn .t
 
 section#page2-wrapper {
 	width: 100%;
+	min-width: 355px;
 	height: auto;
 	margin: 0 auto;
 	display: -webkit-box;
 	display: flex;
+	overflow: hidden;
 	-webkit-box-orient: vertical;
 	-webkit-box-direction: normal;
 	        flex-direction: column;
@@ -1054,10 +1058,15 @@ section#page2-wrapper {
 	background-image: url("../img/book_backLine2.png");
 	background-repeat: repeat-y;
 	background-position-x: 75%;
+	background-position-y: 35%;
 }
 
 section#page2-wrapper .cabin-menu {
-	background-color: #FFFFFF;
+	width: 85%;
+	margin: 0 auto;
+	margin-bottom: 2%;
+	height: auto;
+	background-color: transparent;
 	-webkit-transition: -webkit-transform 1.5s;
 	transition: -webkit-transform 1.5s;
 	transition: transform 1.5s;
@@ -1073,11 +1082,12 @@ section#page2-wrapper .cabin-menu {
 
 section#page2-wrapper .cabin-menu ul {
 	width: 100%;
+	position: relative;
 	display: -webkit-box;
 	display: flex;
-	-webkit-box-orient: vertical;
+	-webkit-box-orient: horizontal;
 	-webkit-box-direction: normal;
-	        flex-direction: column;
+	        flex-direction: row;
 	-webkit-box-pack: space-evenly;
 	        justify-content: space-evenly;
 	-webkit-box-align: center;
@@ -1092,43 +1102,103 @@ section#page2-wrapper .cabin-menu ul {
 	}
 }
 
-section#page2-wrapper .cabin-menu ul a {
+section#page2-wrapper .cabin-menu ul .cm {
+	width: 50%;
+	height: 37%;
+	-webkit-transition: -webkit-transform 1.5s;
+	transition: -webkit-transform 1.5s;
+	transition: transform 1.5s;
+	transition: transform 1.5s, -webkit-transform 1.5s;
+}
+
+@media (min-width: 767px) {
+	section#page2-wrapper .cabin-menu ul .cm {
+		text-align: center;
+	}
+}
+
+section#page2-wrapper .cabin-menu ul .cm a {
 	width: 100%;
 	text-decoration: none;
 	color: #B55827;
 }
 
 @media (min-width: 767px) {
-	section#page2-wrapper .cabin-menu ul a {
+	section#page2-wrapper .cabin-menu ul .cm a {
 		width: 35%;
 	}
 }
 
-section#page2-wrapper .cabin-menu ul a :hover {
+section#page2-wrapper .cabin-menu ul .cm a :hover {
 	background-color: #B55827;
 	color: white;
 }
 
-section#page2-wrapper .cabin-menu ul li {
-	font-size: 1.3em;
+section#page2-wrapper .cabin-menu ul .cm li {
 	border: 1.5px solid #B55827;
-	text-align: center;
-	padding: 3%;
+	padding: 2%;
+	background-color: #FFFFFF;
+}
+
+section#page2-wrapper .cabin-menu ul .cab-menu_rt {
+	text-align: right;
+}
+
+@media (min-width: 767px) {
+	section#page2-wrapper .cabin-menu ul .cab-menu_rt {
+		text-align: center;
+	}
 }
 
 section#page2-wrapper .cabin-menu ul #pop-out-logo {
-	background-color: #B55827;
+	position: absolute;
+	top: -5%;
+	width: 60%;
+	border: none;
+	padding: 0%;
+}
+
+section#page2-wrapper .cabin-menu ul #pop-out-logo #Layer_2 {
 	width: 100%;
 }
 
 @media (min-width: 767px) {
 	section#page2-wrapper .cabin-menu ul #pop-out-logo {
-		width: 50%;
+		width: 45%;
 	}
 }
 
 section#page2-wrapper .cabin-menu ul #pop-out-logo img {
 	width: 100%;
+}
+
+section#page2-wrapper .cabin-menu .cabin0 {
+	width: 95%;
+	height: 110px;
+	margin: 7% auto;
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	        flex-direction: column;
+	border: none;
+	-webkit-box-pack: justify;
+	        justify-content: space-between;
+	font-size: 1.3em;
+	background-color: transparent;
+	color: #83554E;
+}
+
+@media (min-width: 767px) {
+	section#page2-wrapper .cabin-menu .cabin0 {
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		        flex-direction: row;
+	}
+}
+
+section#page2-wrapper .cabin-menu .cabin0 .input-date {
+	width: 90%;
 }
 
 section#page2-wrapper .cabin {
@@ -1193,7 +1263,7 @@ section#page2-wrapper .cabin img.asset-lines {
 section#page2-wrapper .cabin .cabin-IMG {
 	-webkit-box-ordinal-group: 3;
 	        order: 2;
-	width: 100%;
+	width: 128%;
 	height: 45%;
 	left: -15%;
 	position: relative;
@@ -1213,6 +1283,7 @@ section#page2-wrapper .cabin .cabin-IMG img {
 		        order: 1;
 		height: 100%;
 		left: 0;
+		width: 100%;
 	}
 	section#page2-wrapper .cabin .cabin-IMG img {
 		width: 100%;
@@ -1222,9 +1293,9 @@ section#page2-wrapper .cabin .cabin-IMG img {
 section#page2-wrapper .cabin .cabin-IMG .tint_box {
 	position: absolute;
 	z-index: 99;
-	right: -28%;
-	width: 30%;
-	height: 115%;
+	right: 0%;
+	width: 15%;
+	height: 110%;
 	background-color: rgba(255, 255, 255, 0.5);
 	display: -webkit-box;
 	display: flex;
@@ -1242,7 +1313,7 @@ section#page2-wrapper .cabin .cabin-IMG .tint_box .tint_arrow_left_odd {
 @media (min-width: 900px) {
 	section#page2-wrapper .cabin .cabin-IMG .tint_box .tint_arrow_left_odd {
 		display: block;
-		left: 15%;
+		left: 15px;
 	}
 }
 
@@ -1278,7 +1349,7 @@ section#page2-wrapper .cabin .cabin-IMG .tint_box .tint_arrow_left_even {
 
 @media (min-width: 900px) {
 	section#page2-wrapper .cabin .cabin-IMG .tint_box {
-		right: 50px;
+		right: 20%;
 	}
 }
 
@@ -1343,7 +1414,7 @@ section#page2-wrapper .cabin .cabin-txt {
 }
 
 section#page2-wrapper .cabin .cabin-txt .cabin-text-wrapper {
-	width: 60%;
+	width: 85%;
 	height: 100%;
 	margin: 0 auto;
 	display: -webkit-box;
@@ -1419,18 +1490,6 @@ section#page2-wrapper .cabin .cabin-bttn-mobile .add-cart {
 	}
 }
 
-section#page2-wrapper .cabin0 {
-	width: 95%;
-	margin: 0% auto;
-	display: -webkit-box;
-	display: flex;
-	border: none;
-	-webkit-box-pack: justify;
-	        justify-content: space-between;
-	font-size: 1.5em;
-	color: #83554E;
-}
-
 @media (min-width: 900px) {
 	section#page2-wrapper .cabin:nth-child(even) {
 		-webkit-box-orient: horizontal;
@@ -1439,7 +1498,7 @@ section#page2-wrapper .cabin0 {
 		background-color: transparent;
 	}
 	section#page2-wrapper .cabin:nth-child(even) .cabin-IMG .tint_box {
-		left: 60px;
+		left: 20%;
 	}
 	section#page2-wrapper .cabin:nth-child(even) .cabin-IMG .tint_box .tint_arrow_right_even {
 		width: 15%;
@@ -1469,7 +1528,7 @@ section#page2-wrapper .cabin0 {
 		left: 155px;
 	}
 	section#page2-wrapper .cabin:nth-child(even) .cabin-IMG .cabin-slide-wrapper .slideshow-circles {
-		left: 15px;
+		left: 43px;
 	}
 }
 
