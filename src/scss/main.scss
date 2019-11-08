@@ -33,29 +33,66 @@ body {
 
 .main-nav{
 	position: absolute;
-	top:0;
-	width:50%;
+	top:1.5%;
+	width:5%;
+	min-width: 5%;
 	z-index: 99;
 	height:auto;
+	//background-color: goldenrod;
 	
 	a{
 		text-decoration: none;
 		color: $TSR_textHead;
+		width:100%;
 		li{
 			text-align: center;
-			width:110px;
-			padding:1%;
-			//border:2px solid black;
+			width:100%;
+			padding-left:5%;
+			font-size:1.2em;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+
+			.hover-line{
+				width: 75%;
+				height: 5px;
+				background-color: $TSR_Accent;
+				display: none;
+			}
 		}
-		li:hover{
-			background-color: $TSR_textHead;
-			color: white;
-		}	
-		
+
+		.active{
+			color: $TSR_Accent;
+			.hover-line{
+				display: block;
+			}
+		}
 	}
 
-	#nav-pg1{
-		width:10%;
+	a:hover{
+		li{
+			
+			.hover-line{
+				display: block;
+				background-color: $TSR_textHead;
+			}
+		}
+
+		.active{
+			color: $TSR_Orange;
+			.hover-line{
+				background-color:$TSR_Orange;
+			}
+		}	
+	}
+
+	a:active{
+		color: $TSR_Orange;
+	}
+
+
+	#navButton{
+		width:100%;
 		display: flex;
 		justify-content: center;
 		//position: absolute;
@@ -111,9 +148,10 @@ body {
 	}
 
 	.nav-list{
-		background-color: $TSR-White;
-		width:100%;
-		height:90vh;
+		background-color: $TSR_White;
+		//background-color: rosybrown;
+		width:500px;
+		height:50vh;
 		display: flex;
 		flex-direction: column;
 		flex-wrap: wrap;
@@ -121,6 +159,7 @@ body {
 		//align-items: flex-start;
 		transform: translateX(-1500px);
 		transition: transform 1s, ease-in-out;
+
 	}
 
 
@@ -176,83 +215,12 @@ section#page-wrapper{
 			overflow: unset;
 		}
 
-		// .left-nav{
-		// 	width:100%;
-		// 	height:50px;
-		// 	background-color:#ffffff;
-		// 	border-bottom: 3px solid $TSR_Accent;
-		// 	display: flex;
-		// 	justify-content: space-around;
-
-		// 	a{
-		// 		text-decoration: none;
-		// 		color: $TSR_textHead;
-		// 	}
-		// 	#nav-pg1{
-		// 		width:10%;
-		// 		display: flex;
-		// 		justify-content: center;
-
-		// 		.nav-bttn{
-		// 			display: flex;
-		// 			flex-direction: column;
-		// 			justify-content: center;
-		// 			align-items: center;
-		// 			color:$TSR_textHead;
-					
-		// 			.nav-icon {
-		// 				width: 40px;
-		// 				display: block;
-		// 			}
-
-		// 			.nav-icon:after, 
-		// 			.nav-icon:before, 
-		// 			.nav-icon div {
-		// 				background-color: $TSR_textHead;
-		// 				border-radius: 3px;
-		// 				content: '';
-		// 				display: block;
-		// 				height: 3px;
-		// 				margin: 7px 0;
-		// 				transition: all .2s ease-in-out;
-		// 			}
-
-		// 			.close-X{
-		// 				font-size:2em;
-		// 				display: none;
-		// 				//transform: rotate(0deg);
-		// 				transition: transform 2s, ease-in-out;
-		// 			}
-
-		// 			// .nav-icon:hover:before {
-		// 			// 	transform: translateY(12px) rotate(135deg);
-		// 			// }
-
-		// 			// .nav-icon:hover:after {
-		// 			// 	transform: translateY(-12px) rotate(-135deg);
-		// 			// }
-
-		// 			// .nav-icon:hover div {
-		// 			// 	transform: scale(0);
-		// 			// }
-
-		// 			p{
-		// 				margin-top:3%;
-		// 			}
-		// 		}
-
-		// 	}
-		// 	.nav-list{
-		// 		width:60%;
-		// 		display: flex;
-		// 		flex-direction: row;
-		// 		justify-content: space-around;
-		// 		align-items: center;
-		// 		transform: translateX(-1000px);
-		// 		transition: transform 1s, ease-in-out;
-		// 	}
-		// }
-
+		.main-nav{
+			.nav-list{
+				width:49.5vw;
+				height: 100vh;
+			}
+		}
 		.scroll-screen{
 			width:100%;
 			height: 100vh;
@@ -967,6 +935,10 @@ section#page2-wrapper{
 	background-position-y: 35%;
 	//background-size:contain;
 
+	.main-nav{
+		top:0%;
+	}
+
 	.cabin-menu{
 		width:85%;
 		margin:0 auto;
@@ -994,11 +966,15 @@ section#page2-wrapper{
 
 			.cm{
 				width:50%;
-				height: 37%;
+				//height: 37%;
 				//transform: translateY(-3000px);
 				transition: transform 1.5s;
+				display: flex;
+				flex-direction: column;
+				
 				@media#{$tablet}{
 					text-align: center;
+					flex-direction: row;
 				}
 
 				a{
@@ -1025,6 +1001,7 @@ section#page2-wrapper{
 
 			.cab-menu_rt{
 				text-align: right;
+				justify-content: flex-end;
 				@media#{$tablet}{
 					text-align: center;
 				}
@@ -1043,7 +1020,7 @@ section#page2-wrapper{
 					 width: 100%;
 				 }
 				@media#{$tablet}{
-					width:45%;
+					width:40%;
 				}
 				
 				img{
@@ -1151,7 +1128,7 @@ section#page2-wrapper{
 		
 			.tint_box{
 				position: absolute;
-				z-index:99;
+				z-index:95;
 				right:0%;
 				width:15%;
 				height:110%;
@@ -1214,7 +1191,7 @@ section#page2-wrapper{
 				display: flex;
 				flex-direction: row;
 				justify-content: space-around;
-				z-index: 99;
+				z-index: 95;
 			}
 			.slideCirc{
 				width:10%;
@@ -1243,13 +1220,15 @@ section#page2-wrapper{
 			order:1;
 			width:100%;
 			height:45%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
 			@media#{$tablet}{
 				height:100%;
 			}
 			.cabin-text-wrapper{
-				width:85%;
-				height: 100%;
-				margin: 0 auto;
+				width:75%;
+				height: 75%;
 				display: flex;
 				flex-direction: column;
 				justify-content: space-evenly;
@@ -1262,10 +1241,7 @@ section#page2-wrapper{
 					font-size:1.3em;
 				}
 				ol{
-					
 					list-style: circle;
-					align-self: flex-end;
-
 				}
 				.add-cart{
 					display:flex;
@@ -1356,6 +1332,14 @@ section#page2-wrapper{
 section#page3-wrapper{
 	.main-nav{
 		border: none;
+
+		#navButton{
+			.nav-icon:after, 
+			.nav-icon:before, 
+			.nav-icon div {
+				background-color: $TSR_White;
+			}
+		}
 	}
 	width:100%;
 	min-width: 355px;
@@ -1395,6 +1379,7 @@ section#page3-wrapper{
 				}
 			}
 			.hdr_left{
+				
 				img{
 					width: 100%;
 					margin-top:2%;
@@ -2010,6 +1995,7 @@ section#page3-wrapper{
 section#page4-wrapper{
 	.main-nav{
 		border: none;
+		top:1.5%;
 	}
 	width:100%;
 
@@ -2040,6 +2026,7 @@ section#page4-wrapper{
 
 			.hdr_left{
 				width:367px;
+				height: 100%;
 				display: block;
 				img{
 					width: 100%;
@@ -2052,6 +2039,7 @@ section#page4-wrapper{
 				}
 			}
 			.hdr_right{
+				height: 100%;
 				width:34%;
 				display: flex;
 				justify-content: flex-end;
@@ -2448,6 +2436,14 @@ section#page4-wrapper{
 section#page5-wrapper{
 	.main-nav{
 		border: none;
+
+		#navButton{
+			.nav-icon:after, 
+			.nav-icon:before, 
+			.nav-icon div {
+				background-color: $TSR_White;
+			}
+		}
 	}
 	width:100%;
 
@@ -2479,6 +2475,7 @@ section#page5-wrapper{
 
 			.hdr_left{
 				width:367px;
+				height: 100%;
 				display: block;
 				img{
 					width: 100%;
@@ -2492,6 +2489,7 @@ section#page5-wrapper{
 			}
 			.hdr_right{
 				width:34%;
+				height: 100%;
 				display: flex;
 				justify-content: flex-end;
 				//visibility: hidden;	

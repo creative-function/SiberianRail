@@ -6,7 +6,7 @@ to verify that you're working in the right files.`)
 
 let $nav_icon = document.querySelector(".nav-icon");
 let $close_icon = document.querySelector(".close-X");
-let $menu_buttonPg1 = document.querySelector("#nav-pg1");
+let $menu_buttonPg1 = document.querySelector("#navButton");
 
 let $nav_listPg1 = document.querySelector(".nav-list");
 

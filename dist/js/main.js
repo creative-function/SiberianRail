@@ -4,7 +4,7 @@ console.log("Hello chello TSR! \nChange this message, and make sure it changes i
 
 var $nav_icon = document.querySelector(".nav-icon");
 var $close_icon = document.querySelector(".close-X");
-var $menu_buttonPg1 = document.querySelector("#nav-pg1");
+var $menu_buttonPg1 = document.querySelector("#navButton");
 var $nav_listPg1 = document.querySelector(".nav-list");
 $close_icon.style.display = "none"; //sets initial display value regardless of sass
 //alt solution - toggle class/ keep styling in css
