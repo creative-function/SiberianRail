@@ -47,7 +47,7 @@ $bookNow_bttn.addEventListener("click", function(){
 
 $close_bttn.addEventListener("click", function(){
     console.log("clicky close button");
-    $popout_menu.style.transform = "translateX(1500px)";
+    $popout_menu.style.transform = "translateX(3500px)";
 });
 
 

@@ -1194,7 +1194,12 @@ section#page2-wrapper .cabin-menu .cabin0 {
 		-webkit-box-orient: horizontal;
 		-webkit-box-direction: normal;
 		        flex-direction: row;
+		height: 50px;
 	}
+}
+
+section#page2-wrapper .cabin-menu .cabin0 form {
+	background-color: rgba(255, 255, 255, 0.5);
 }
 
 section#page2-wrapper .cabin-menu .cabin0 .input-date {
@@ -1534,6 +1539,7 @@ section#page2-wrapper .cabin .cabin-bttn-mobile .add-cart {
 
 section#page3-wrapper {
 	width: 100%;
+	min-width: 355px;
 }
 
 section#page3-wrapper .main-nav {
@@ -1551,7 +1557,7 @@ section#page3-wrapper section.giantBG {
 
 @media (min-width: 767px) {
 	section#page3-wrapper section.giantBG {
-		height: 85vh;
+		height: 65vh;
 	}
 }
 
@@ -1661,9 +1667,9 @@ section#page3-wrapper section.giantBG .header-logo .hdr_right .popout-menu {
 	        justify-content: center;
 	-webkit-box-align: center;
 	        align-items: center;
-	-webkit-transform: translateX(1500px);
-	    -ms-transform: translateX(1500px);
-	        transform: translateX(1500px);
+	-webkit-transform: translateX(3500px);
+	    -ms-transform: translateX(3500px);
+	        transform: translateX(3500px);
 	-webkit-transition: ease, -webkit-transform 1s;
 	transition: ease, -webkit-transform 1s;
 	transition: transform 1s, ease;
@@ -1768,18 +1774,17 @@ section#page3-wrapper section.giantBG .header-logo .hdr_right .popout-menu .book
 }
 
 section#page3-wrapper section.giantBG .cities {
-	min-width: 500px;
-	width: 95%;
-	height: 95%;
-	margin: 0 5%;
-	float: right;
+	width: 100%;
+	height: 90%;
+	margin: 0 auto;
 	display: -webkit-box;
 	display: flex;
 	-webkit-box-orient: horizontal;
 	-webkit-box-direction: normal;
 	        flex-direction: row;
-	-webkit-box-pack: end;
-	        justify-content: flex-end;
+	flex-wrap: wrap;
+	-webkit-box-pack: center;
+	        justify-content: center;
 	-webkit-box-align: center;
 	        align-items: center;
 }
@@ -1787,14 +1792,13 @@ section#page3-wrapper section.giantBG .cities {
 @media (min-width: 767px) {
 	section#page3-wrapper section.giantBG .cities {
 		height: 50%;
-		align-self: center;
 	}
 }
 
 section#page3-wrapper section.giantBG .cities .city-circle {
 	text-decoration: none;
-	width: 300px;
-	height: 300px;
+	width: 225px;
+	height: 225px;
 	margin: 2%;
 	border: 3px solid rgba(255, 255, 255, 0.5);
 	border-radius: 50%;
@@ -1811,10 +1815,20 @@ section#page3-wrapper section.giantBG .cities .city-circle {
 }
 
 section#page3-wrapper section.giantBG .cities .city-circle h2 {
-	font-size: 4em;
+	font-size: 3.5em;
 	font-family: "ff-carina", sans-serif;
 	color: rgba(255, 255, 255, 0.5);
 	font-weight: 700;
+}
+
+@media (min-width: 767px) {
+	section#page3-wrapper section.giantBG .cities .city-circle {
+		width: 300px;
+		height: 300px;
+	}
+	section#page3-wrapper section.giantBG .cities .city-circle h2 {
+		font-size: 4em;
+	}
 }
 
 section#page3-wrapper section.giantBG .cities .cc_2 {
@@ -1837,42 +1851,99 @@ section#page3-wrapper section.giantBG .cities .cc_2 h2 {
 }
 
 section#page3-wrapper section.giantBG .cities .cc_3 {
-	width: 100px;
-	height: 100px;
+	width: 75px;
+	height: 75px;
 }
 
-section#page3-wrapper section.giantBG .cities .cc_3 h2 {
-	font-size: 3em;
+section#page3-wrapper section.giantBG .cities .cc_3 .base {
+	display: block;
+}
+
+section#page3-wrapper section.giantBG .cities .cc_3 .hover {
+	display: none;
+	width: 100%;
+}
+
+section#page3-wrapper section.giantBG .cities .cc_3 .hover svg {
+	width: 30%;
 }
 
 section#page3-wrapper section.giantBG .cities .city-circle:hover {
-	-webkit-transform: scale(1.3);
-	    -ms-transform: scale(1.3);
-	        transform: scale(1.3);
+	-webkit-transform: scale(1);
+	    -ms-transform: scale(1);
+	        transform: scale(1);
 	border: 3px solid #FDD739;
+}
+
+@media (min-width: 767px) {
+	section#page3-wrapper section.giantBG .cities .city-circle:hover {
+		-webkit-transform: scale(1.3);
+		    -ms-transform: scale(1.3);
+		        transform: scale(1.3);
+	}
 }
 
 section#page3-wrapper section.giantBG .cities .city-circle:hover h2 {
 	color: #FDD739;
 }
 
+section#page3-wrapper section.giantBG .cities .cc_3:hover .base {
+	display: none;
+}
+
+section#page3-wrapper section.giantBG .cities .cc_3:hover .hover {
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-pack: center;
+	        justify-content: center;
+}
+
 section#page3-wrapper section.bg2 {
+	height: 70vh;
 	background-image: url("../img/book-bg.jpg");
 }
 
 section#page3-wrapper section.page3-articles {
-	width: 95%;
-	margin: 5% auto;
+	width: 100%;
+	height: 90vh;
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	        flex-direction: column;
+}
+
+@media (min-width: 767px) {
+	section#page3-wrapper section.page3-articles {
+		height: 500px;
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		        flex-direction: row;
+		flex-wrap: wrap;
+	}
+}
+
+@media (min-width: 900px) {
+	section#page3-wrapper section.page3-articles {
+		height: 900px;
+	}
+}
+
+section#page3-wrapper section.page3-articles .article-intro {
+	width: 65%;
+	height: 10%;
+	padding: 5%;
 }
 
 section#page3-wrapper section.page3-articles .article-intro h2 {
-	font-size: 3em;
+	font-size: 1.8em;
+	letter-spacing: .1em;
 	color: #FDD739;
 }
 
 section#page3-wrapper section.page3-articles .articles {
 	width: 100%;
-	margin: 5% auto;
+	height: 100%;
 	display: -webkit-box;
 	display: flex;
 	-webkit-box-orient: vertical;
@@ -1882,6 +1953,7 @@ section#page3-wrapper section.page3-articles .articles {
 
 @media (min-width: 767px) {
 	section#page3-wrapper section.page3-articles .articles {
+		height: 75%;
 		-webkit-box-orient: horizontal;
 		-webkit-box-direction: normal;
 		        flex-direction: row;
@@ -1889,28 +1961,86 @@ section#page3-wrapper section.page3-articles .articles {
 }
 
 section#page3-wrapper section.page3-articles .articles .article-txt-wrapper {
-	width: 89%;
+	width: 100%;
 	height: 50%;
 	z-index: 99;
-	margin: 5%;
+	padding: 1%;
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-pack: center;
+	        justify-content: center;
+}
+
+@media (min-width: 767px) {
+	section#page3-wrapper section.page3-articles .articles .article-txt-wrapper {
+		width: 50%;
+		height: 100%;
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		        flex-direction: row;
+	}
 }
 
 section#page3-wrapper section.page3-articles .articles .article-txt-wrapper .article-text {
 	width: 85%;
 	height: 100%;
 	font-size: 1em;
+	padding: 2%;
 	line-height: 1.2em;
+	position: relative;
+	z-index: 99;
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	        flex-direction: column;
+	-webkit-box-pack: space-evenly;
+	        justify-content: space-evenly;
 	color: #83554E;
 }
 
+@media (min-width: 900px) {
+	section#page3-wrapper section.page3-articles .articles .article-txt-wrapper .article-text {
+		height: 50%;
+		justify-content: space-around;
+		align-self: center;
+	}
+}
+
+@media (min-width: 1440px) {
+	section#page3-wrapper section.page3-articles .articles .article-txt-wrapper .article-text {
+		max-width: 60%;
+	}
+}
+
 section#page3-wrapper section.page3-articles .articles .article-txt-wrapper .article-text h2 {
-	margin: 2% auto;
 	font-size: 1.2em;
+}
+
+section#page3-wrapper section.page3-articles .articles .article-txt-wrapper .stencilBG {
+	color: #FDD739;
+	font-family: "zefani_stencilregular";
+	font-size: 20em;
 }
 
 section#page3-wrapper section.page3-articles .articles .article-IMG {
 	width: 100%;
-	height: 50%;
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	        flex-direction: column;
+	-webkit-box-pack: end;
+	        justify-content: flex-end;
+}
+
+@media (min-width: 767px) {
+	section#page3-wrapper section.page3-articles .articles .article-IMG {
+		-webkit-box-pack: center;
+		        justify-content: center;
+		width: 50%;
+		height: 100%;
+	}
 }
 
 section#page3-wrapper section.page3-articles .articles .article-IMG img {
@@ -1927,81 +2057,100 @@ section#page3-wrapper section.page3-articles .article1 {
 	position: relative;
 }
 
-section#page3-wrapper section.page3-articles .article1 .stencilBG {
+section#page3-wrapper section.page3-articles .article1 .article-txt-wrapper .stencilBG {
 	position: absolute;
-	left: 12%;
-	top: 5%;
+	left: 15%;
+	top: -3%;
 	z-index: 1;
 }
 
-@media (min-width: 767px) {
+@media (min-width: 900px) {
 	section#page3-wrapper section.page3-articles .article1 .article-txt-wrapper {
-		width: 40%;
-		position: relative;
-		align-self: flex-end;
+		width: 50%;
 	}
-	section#page3-wrapper section.page3-articles .article1 .stencilBG {
-		left: 12%;
-		top: 30%;
+	section#page3-wrapper section.page3-articles .article1 .article-txt-wrapper .stencilBG {
+		left: 15%;
+		top: 15%;
 	}
 	section#page3-wrapper section.page3-articles .article1 .article-IMG {
-		width: 55%;
+		width: 50%;
 	}
 }
 
-section#page3-wrapper section.page3-articles .article2 {
+section#page3-wrapper section.p3-a2 {
+	background-color: goldenrod;
+	height: 350px;
+}
+
+section#page3-wrapper section.p3-a2 .article2 {
+	height: 100%;
 	-webkit-box-orient: vertical;
-	-webkit-box-direction: reverse;
-	        flex-direction: column-reverse;
+	-webkit-box-direction: normal;
+	        flex-direction: column;
 }
 
-section#page3-wrapper section.page3-articles .article2 .test {
-	position: relative;
-}
-
-section#page3-wrapper section.page3-articles .article2 .test .sten2 {
-	position: absolute;
-	top: -200px;
-	right: 0;
+section#page3-wrapper section.p3-a2 .article2 .article-txt-wrapper {
+	height: 100%;
 }
 
 @media (min-width: 767px) {
-	section#page3-wrapper section.page3-articles .article2 {
-		-webkit-box-orient: horizontal;
-		-webkit-box-direction: normal;
-		        flex-direction: row;
-	}
-	section#page3-wrapper section.page3-articles .article2 .test .sten2 {
-		left: 100px;
-	}
-	section#page3-wrapper section.page3-articles .article2 .article-txt-wrapper {
-		width: 40%;
+	section#page3-wrapper section.p3-a2 .article2 .article-txt-wrapper {
 		position: relative;
-		left: 100px;
+		left: 20%;
 	}
 }
 
-section#page3-wrapper section.page3-articles .article3 {
-	position: relative;
+@media (min-width: 900px) {
+	section#page3-wrapper section.p3-a2 .article2 .article-txt-wrapper .article-text {
+		height: 80%;
+	}
 }
 
-section#page3-wrapper section.page3-articles .article3 .test {
+section#page3-wrapper section.p3-a3 {
+	background-color: lightblue;
+}
+
+@media (min-width: 900px) {
+	section#page3-wrapper section.p3-a3 {
+		height: 500px;
+	}
+}
+
+section#page3-wrapper section.p3-a3 .article3 {
+	height: 100%;
+	position: relative;
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-pack: justify;
+	        justify-content: space-between;
+}
+
+section#page3-wrapper section.p3-a3 .article3 .test {
 	position: absolute;
 }
 
 @media (min-width: 767px) {
-	section#page3-wrapper section.page3-articles .article3 .test {
-		top: 15%;
-		left: 21%;
+	section#page3-wrapper section.p3-a3 .article3 .article-txt-wrapper {
+		width: 50%;
 	}
-	section#page3-wrapper section.page3-articles .article3 .article-txt-wrapper {
-		width: 30%;
-		align-self: center;
-		z-index: 1;
-		margin: 0%;
+}
+
+@media (min-width: 900px) {
+	section#page3-wrapper section.p3-a3 .article3 .article-txt-wrapper {
+		-webkit-box-pack: end;
+		        justify-content: flex-end;
 	}
-	section#page3-wrapper section.page3-articles .article3 .article-IMG {
-		width: 70%;
+}
+
+@media (min-width: 900px) {
+	section#page3-wrapper section.p3-a3 .article3 .article-txt-wrapper .article-text {
+		height: 80%;
+	}
+}
+
+@media (min-width: 900px) {
+	section#page3-wrapper section.p3-a3 .article3 .article-IMG {
+		width: 39%;
 	}
 }
 
@@ -2033,7 +2182,7 @@ section#page3-wrapper section.page3-footer .footer-title h2 {
 
 section#page3-wrapper section.page3-footer .photo-grid {
 	width: 100%;
-	height: 54%;
+	height: 65%;
 	background-color: lightpink;
 	display: -webkit-box;
 	display: flex;
@@ -2046,7 +2195,7 @@ section#page3-wrapper section.page3-footer .photo-grid {
 section#page3-wrapper section.page3-footer .photo-grid .photo {
 	width: 33.33%;
 	background-repeat: no-repeat;
-	background-size: cover;
+	background-size: contain;
 }
 
 section#page3-wrapper section.page3-footer .photo-grid .photo1 {
@@ -2063,7 +2212,7 @@ section#page3-wrapper section.page3-footer .photo-grid .photo3 {
 
 section#page3-wrapper section.page3-footer .photo-grid .photo-banner {
 	width: 100%;
-	height: auto;
+	height: 35%;
 	background-color: #B55827;
 	position: absolute;
 	bottom: 0;
@@ -2077,7 +2226,7 @@ section#page3-wrapper section.page3-footer .photo-grid .photo-banner {
 }
 
 section#page3-wrapper section.page3-footer .photo-grid .photo-banner .banner-text {
-	width: 100%;
+	width: 50%;
 	display: -webkit-box;
 	display: flex;
 	-webkit-box-pack: center;
@@ -2086,15 +2235,28 @@ section#page3-wrapper section.page3-footer .photo-grid .photo-banner .banner-tex
 	        align-items: center;
 }
 
+@media (min-width: 767px) {
+	section#page3-wrapper section.page3-footer .photo-grid .photo-banner .banner-text {
+		width: 30%;
+	}
+}
+
 section#page3-wrapper section.page3-footer .photo-grid .photo-banner .banner-text p {
+	width: 85%;
 	padding: 2%;
 	color: #FFFFFF;
 	font-size: 1.2em;
 	line-height: 1.3em;
 }
 
+@media (min-width: 767px) {
+	section#page3-wrapper section.page3-footer .photo-grid .photo-banner .banner-text p {
+		width: 100%;
+	}
+}
+
 section#page3-wrapper section.page3-footer .photo-grid .photo-banner .banner-button {
-	width: 100%;
+	width: 50%;
 	display: -webkit-box;
 	display: flex;
 	-webkit-box-pack: center;
@@ -2103,8 +2265,14 @@ section#page3-wrapper section.page3-footer .photo-grid .photo-banner .banner-but
 	        align-items: center;
 }
 
+@media (min-width: 767px) {
+	section#page3-wrapper section.page3-footer .photo-grid .photo-banner .banner-button {
+		width: 30%;
+	}
+}
+
 section#page3-wrapper section.page3-footer .photo-grid .photo-banner .banner-button button {
-	width: 50%;
+	width: 65%;
 	height: 34px;
 	border: 1px solid white;
 	background-color: transparent;
@@ -2118,7 +2286,7 @@ section#page3-wrapper section.page3-footer .photo-grid .photo-banner .banner-but
 section#page3-wrapper section.page3-footer .footer {
 	width: 90%;
 	margin: 0 auto;
-	height: 35%;
+	height: 25%;
 	display: -webkit-box;
 	display: flex;
 	-webkit-box-orient: horizontal;
@@ -2196,12 +2364,6 @@ section#page4-wrapper section.giantBG {
 @media (min-width: 767px) {
 	section#page4-wrapper section.giantBG {
 		height: 75vh;
-	}
-}
-
-@media (min-width: 900px) {
-	section#page4-wrapper section.giantBG {
-		height: 100vh;
 	}
 }
 
@@ -2298,9 +2460,9 @@ section#page4-wrapper section.giantBG .header-logo .hdr_right .popout-menu {
 	        justify-content: center;
 	-webkit-box-align: center;
 	        align-items: center;
-	-webkit-transform: translateX(1500px);
-	    -ms-transform: translateX(1500px);
-	        transform: translateX(1500px);
+	-webkit-transform: translateX(3500px);
+	    -ms-transform: translateX(3500px);
+	        transform: translateX(3500px);
 	-webkit-transition: ease, -webkit-transform 1s;
 	transition: ease, -webkit-transform 1s;
 	transition: transform 1s, ease;
@@ -2722,12 +2884,6 @@ section#page5-wrapper section.giantBG {
 	}
 }
 
-@media (min-width: 900px) {
-	section#page5-wrapper section.giantBG {
-		height: 100vh;
-	}
-}
-
 section#page5-wrapper section.giantBG .header-logo {
 	display: -webkit-box;
 	display: flex;
@@ -2826,9 +2982,9 @@ section#page5-wrapper section.giantBG .header-logo .hdr_right .popout-menu {
 	        justify-content: center;
 	-webkit-box-align: center;
 	        align-items: center;
-	-webkit-transform: translateX(1500px);
-	    -ms-transform: translateX(1500px);
-	        transform: translateX(1500px);
+	-webkit-transform: translateX(3500px);
+	    -ms-transform: translateX(3500px);
+	        transform: translateX(3500px);
 	-webkit-transition: ease, -webkit-transform 1s;
 	transition: ease, -webkit-transform 1s;
 	transition: transform 1s, ease;
