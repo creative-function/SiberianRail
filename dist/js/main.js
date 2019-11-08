@@ -5,6 +5,7 @@ console.log("Hello chello TSR! \nChange this message, and make sure it changes i
 var $nav_icon = document.querySelector(".nav-icon");
 var $close_icon = document.querySelector(".close-X");
 var $menu_buttonPg1 = document.querySelector("#navButton");
+var $closing_link = document.querySelector("#closing-link");
 var $nav_listPg1 = document.querySelector(".nav-list");
 $close_icon.style.display = "none"; //sets initial display value regardless of sass
 //alt solution - toggle class/ keep styling in css
@@ -23,6 +24,12 @@ $menu_buttonPg1.addEventListener("click", function () {
     $nav_icon.style.display = "block";
     $close_icon.style.display = "none";
   }
+});
+$closing_link.addEventListener("click", function () {
+  $nav_listPg1.style.transform = "translateX(-1500px)";
+  $nav_listPg1.style.opacity = ".2";
+  $nav_icon.style.display = "block";
+  $close_icon.style.display = "none";
 }); ///PAGE 1,3,4,5 POP-OUT MENU
 
 var $bookNow_bttn = document.querySelector(".bookNow_bttn");

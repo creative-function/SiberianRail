@@ -200,7 +200,7 @@ body {
 .main-nav .nav-list {
 	background-color: #FFFFFF;
 	width: 500px;
-	height: 50vh;
+	height: 70vh;
 	display: -webkit-box;
 	display: flex;
 	-webkit-box-orient: vertical;
@@ -1621,7 +1621,7 @@ section#page3-wrapper section.giantBG {
 
 @media (min-width: 767px) {
 	section#page3-wrapper section.giantBG {
-		height: 65vh;
+		height: 70vh;
 	}
 }
 
@@ -2428,7 +2428,7 @@ section#page4-wrapper section.giantBG {
 
 @media (min-width: 767px) {
 	section#page4-wrapper section.giantBG {
-		height: 75vh;
+		height: 70vh;
 	}
 }
 

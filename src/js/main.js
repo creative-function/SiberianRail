@@ -7,7 +7,7 @@ to verify that you're working in the right files.`)
 let $nav_icon = document.querySelector(".nav-icon");
 let $close_icon = document.querySelector(".close-X");
 let $menu_buttonPg1 = document.querySelector("#navButton");
-
+let $closing_link = document.querySelector("#closing-link");
 let $nav_listPg1 = document.querySelector(".nav-list");
 
 $close_icon.style.display = "none";
@@ -31,6 +31,15 @@ $menu_buttonPg1.addEventListener("click", function(){
         
     }
 });
+
+$closing_link.addEventListener("click", function () {
+
+    $nav_listPg1.style.transform = "translateX(-1500px)";
+    $nav_listPg1.style.opacity = ".2";
+    $nav_icon.style.display = "block";
+    $close_icon.style.display = "none";
+    
+})
 
 ///PAGE 1,3,4,5 POP-OUT MENU
 

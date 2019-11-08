@@ -151,7 +151,7 @@ body {
 		background-color: $TSR_White;
 		//background-color: rosybrown;
 		width:500px;
-		height:50vh;
+		height:70vh;
 		display: flex;
 		flex-direction: column;
 		flex-wrap: wrap;
@@ -1352,7 +1352,7 @@ section#page3-wrapper{
 		position: relative;
 		overflow: hidden;
 		@media#{$tablet}{
-			height: 65vh;
+			height: 70vh;
 		}
 		@media#{$XLdesktop}{
 			background-position-y: -100px;
@@ -2007,7 +2007,7 @@ section#page4-wrapper{
 		position: relative;
 		overflow: hidden;
 		@media#{$tablet}{
-			height: 75vh;
+			height: 70vh;
 		}
 	
 		.header-logo{
