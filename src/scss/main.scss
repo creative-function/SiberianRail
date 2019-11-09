@@ -1811,6 +1811,7 @@ section#page3-wrapper{
 				}
 				.article-IMG{
 					width:50%;
+					justify-content: center;
 				}
 			}
 		}
@@ -1960,15 +1961,19 @@ section#page3-wrapper{
 		.photo-grid{
 			width:100%;
 			height: 65%;
-			background-color: lightpink;
+			background-color: $TSR_textHead;
 			display: flex;
 			flex-direction: row;
 			position: relative;
 
 			.photo{
 				width:33.33%;	
-				background-repeat: no-repeat;	
-				background-size: contain;	
+				background-repeat: no-repeat;		
+				background-size: contain;
+
+				@media#{$tablet}{
+					background-size: cover;
+				}
 			}
 
 			.photo1{
@@ -1986,13 +1991,16 @@ section#page3-wrapper{
 
 			.photo-banner{
 				width:100%;
-				height:35%;
+				height:75%;
 				background-color: $TSR_textHead;
 				position: absolute;
 				bottom:0;
 				display: flex;
 				flex-direction: row;
 				justify-content: space-evenly;
+				@media #{$tablet}{
+					height: 50%;
+				}
 
 				.banner-text{
 					width:50%;
@@ -2000,7 +2008,10 @@ section#page3-wrapper{
 					justify-content: center;
 					align-items: center;
 					@media#{$tablet}{
-						width:30%;
+						width:35%;
+					}
+					@media#{$desktop}{
+						max-width: 25%;
 					}
 
 					p{
@@ -2042,7 +2053,7 @@ section#page3-wrapper{
 		}
 		.footer{
 			width:90%;
-			margin:0 auto;
+			margin:5% auto;
 			height: 25%;
 			display: flex;
 			flex-direction: row;
