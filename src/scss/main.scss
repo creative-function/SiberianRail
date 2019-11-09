@@ -54,7 +54,7 @@ body {
 			align-items: center;
 
 			.hover-line{
-				width: 75%;
+				width: 65%;
 				height: 5px;
 				background-color: $TSR_Accent;
 				display: none;
@@ -89,7 +89,6 @@ body {
 	a:active{
 		color: $TSR_Orange;
 	}
-
 
 	#navButton{
 		width:100%;
@@ -150,7 +149,7 @@ body {
 	.nav-list{
 		background-color: $TSR_White;
 		//background-color: rosybrown;
-		width:500px;
+		width:100vw;
 		height:70vh;
 		display: flex;
 		flex-direction: column;
@@ -159,6 +158,10 @@ body {
 		//align-items: flex-start;
 		transform: translateX(-1500px);
 		transition: transform 1s, ease-in-out;
+		@media#{$tablet}{
+			width: 500px;
+		}
+		
 
 	}
 
@@ -168,7 +171,7 @@ body {
 .float-title{
 	font-family: $TSRheading;
 	font-weight:700; 
-	z-index: 99;
+	z-index: 97;
 }
 
 .tsr_bttn{
@@ -209,23 +212,26 @@ section#page-wrapper{
 		margin:0 auto;
 		height: 100vh;
 		overflow: scroll;
+
 		@media#{$tablet}{
 			width:50%;
 			margin:0;
 			overflow: unset;
 		}
 
-		.main-nav{
-			.nav-list{
-				width:49.5vw;
-				height: 100vh;
-			}
-		}
 		.scroll-screen{
 			width:100%;
 			height: 100vh;
 			display: flex;
 			flex-direction: column;
+			position: relative;
+			z-index: 98;
+			@media#{$tablet}{
+				height: 55vh;
+			}
+			@media#{$desktop}{
+				height: 100vh;
+			}
 			.screen_top{
 				width:100%;
 				height: 50%;
@@ -276,17 +282,48 @@ section#page-wrapper{
 		}
 
 		.screen_1Header{
+
+
+			.main-nav{
+				width: 15%;
+				.nav-list{
+					width:100vw;
+					height: 100vh;
+					@media#{$tablet}{
+						width:49.5vw;
+						height: 90vh;
+					}
+				}
+			}
+
+
+
 			.header-welcome{
 				width:100%;
 			}
 		}
 
-		.screen_2TSR{
+		.screen_Mobile{
+			display: block;
+			position: relative;
+			@media#{$tablet}{
+				display: none;
+			}
+			.fbM{ //journey button on mobile
+				display: none;
+			}
 
-			// background-image: url("../img/trainLines_1@144x.png");
-			// background-size:contain;
-			// background-position-y: 340px;
-			// background-repeat: no-repeat;
+			.button_top:hover{
+				background-image: none;
+			}
+			.button_bottom:hover{
+				background-image: none;
+			}
+		
+		}
+
+		.screen_2TSR{
+			overflow: hidden;
 			.screen_top{
 				
 				.IMGbox{
@@ -917,6 +954,8 @@ section#page-wrapper{
 		}
 
 	}
+
+	
 }
 
 section#page2-wrapper{
@@ -937,6 +976,7 @@ section#page2-wrapper{
 
 	.main-nav{
 		top:0%;
+		width:15%;
 	}
 
 	.cabin-menu{
@@ -950,6 +990,9 @@ section#page2-wrapper{
 		display: flex;
 		flex-direction: column;
 		align-items: center; 
+		@media#{$tablet}{
+			margin:5% auto;
+		}
 		
 		ul{
 			width:100%;
@@ -969,10 +1012,10 @@ section#page2-wrapper{
 				//height: 37%;
 				//transform: translateY(-3000px);
 				transition: transform 1.5s;
-				display: flex;
 				flex-direction: column;
-				
+				display: none;
 				@media#{$tablet}{
+					display: flex;
 					text-align: center;
 					flex-direction: row;
 				}
@@ -1011,8 +1054,8 @@ section#page2-wrapper{
 			#pop-out-logo{		
 				 //background-color: $TSR_textHead;	
 				 position: absolute;
-				 top:-5%;
-				 width:60%;
+				 top:0%;
+				 width:100%;
 				 border:none;	
 				 padding: 0%;
 
@@ -1020,7 +1063,13 @@ section#page2-wrapper{
 					 width: 100%;
 				 }
 				@media#{$tablet}{
-					width:40%;
+					top:-140%;
+					width:50%;
+				}
+
+				@media#{$desktop}{
+					top:-280%;
+					width:53%;
 				}
 				
 				img{
@@ -1032,7 +1081,7 @@ section#page2-wrapper{
 		.cabin0{
 			width:95%;
 			height:110px;
-			margin:7% auto;
+			margin:50% auto 5% auto;
 			display: flex;
 			flex-direction: column;
 			border: none;
@@ -1042,6 +1091,7 @@ section#page2-wrapper{
 			color:$TSR_text;
 			@media#{$tablet}{
 				flex-direction: row;
+				margin:15% auto 0% auto;
 				height:50px;
 			}
 			form{
@@ -1280,8 +1330,6 @@ section#page2-wrapper{
 		}
 		
 	}
-
-	
 
 	@media#{$desktop}{
 
@@ -1624,7 +1672,7 @@ section#page3-wrapper{
 	}
 
 	section.bg2{
-		height: 70vh;
+		height: 65vh;
 		background-image: url("../img/book-bg.jpg");
 	}
 
@@ -1723,7 +1771,6 @@ section#page3-wrapper{
 				flex-direction: column;
 				justify-content: flex-end;
 				@media#{$tablet}{
-					justify-content: center;
 					width:50%;
 					height: 100%;
 				}
@@ -1739,7 +1786,6 @@ section#page3-wrapper{
 				font-size: 20em;
 			}
 
-			
 		}
 
 		.article1{
@@ -1773,8 +1819,8 @@ section#page3-wrapper{
 	}
 
 	section.p3-a2{
-		background-color: goldenrod;
-			height: 350px;
+		height: 350px;
+		position: relative;
 		// @media#{$desktop}{
 		// }
 
@@ -1789,56 +1835,111 @@ section#page3-wrapper{
 				}
 			
 				.article-text{
+					@media#{$tablet}{
+						width: 100%;
+					}
 					@media#{$desktop}{
+						min-width: 70%;
 						height: 80%;
 					}
+
+					@media#{$XLdesktop}{
+						max-width: 75%;
+					}
+				}
+			}
+
+			.sten2{
+				position: absolute;
+				top:-55%;
+				right:0;
+				@media#{$desktop}{	
+					right:25%;
 				}
 			}
 
 		}
 	}
 
-	
-	
 	section.p3-a3{
-		background-color: lightblue;
+		//background-color: lightblue;
+		position: relative;
 		@media#{$desktop}{
-			height: 500px;
+			height: auto;
 		}
 		.article3{
-			height: 100%;
+			height: 80vh;
 			position: relative;
 			display: flex;
 			justify-content: space-between;
-			.test{
-				position: absolute;
-				
+			@media#{$tablet}{
+				height: 50vh;
 			}
-			
+			@media#{$desktop}{
+				height: 85vh;
+			}
 			.article-txt-wrapper{
 				@media#{$tablet}{
 					width:50%;
+					height: 80%;
 				}
 				@media#{$desktop}{
+					width: 40%;
+					height: 75%;
+					justify-content: center;
+				}
+
+				@media#{$XLdesktop}{
 					justify-content: flex-end;
 				}
 
+				
+
 				.article-text{
-					@media#{$desktop}{
-						height: 80%;
+					@media#{$tablet}{
+						width:90%;
 					}
+					@media#{$desktop}{
+						height: 40%;
+						align-self: center;
+					}
+
+					@media#{$XLdesktop}{
+						align-self: flex-end;
+					}
+
+					
 				}
 			}
 			.article-IMG{
 				
+				@media#{$tablet}{
+					width:60%;
+					justify-content: flex-start;
+				}
+
 				@media#{$desktop}{
-					width:39%;
+					width:60%;
 				}
 			}
 		}
 		
-	}
+		.sten3{
+			position: absolute;
+			top:15%;
+			right: 35%;
+			@media#{$tablet}{
+				top:10%;
+				left: 30%;
+			}
 
+			@media#{$XLdesktop}{
+				top:40%;
+				left: 35%;
+			}
+
+		}
+	}
 
 	section.page3-footer{
 		width:100%;

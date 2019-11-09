@@ -114,7 +114,7 @@ body {
 }
 
 .main-nav a li .hover-line {
-	width: 75%;
+	width: 65%;
 	height: 5px;
 	background-color: #E3DAC6;
 	display: none;
@@ -199,7 +199,7 @@ body {
 
 .main-nav .nav-list {
 	background-color: #FFFFFF;
-	width: 500px;
+	width: 100vw;
 	height: 70vh;
 	display: -webkit-box;
 	display: flex;
@@ -217,10 +217,16 @@ body {
 	transition: transform 1s, ease-in-out, -webkit-transform 1s;
 }
 
+@media (min-width: 767px) {
+	.main-nav .nav-list {
+		width: 500px;
+	}
+}
+
 .float-title {
 	font-family: "ff-carina", sans-serif;
 	font-weight: 700;
-	z-index: 99;
+	z-index: 97;
 }
 
 .tsr_bttn {
@@ -279,11 +285,6 @@ section#page-wrapper .scroll-wrapper {
 	}
 }
 
-section#page-wrapper .scroll-wrapper .main-nav .nav-list {
-	width: 49.5vw;
-	height: 100vh;
-}
-
 section#page-wrapper .scroll-wrapper .scroll-screen {
 	width: 100%;
 	height: 100vh;
@@ -292,6 +293,20 @@ section#page-wrapper .scroll-wrapper .scroll-screen {
 	-webkit-box-orient: vertical;
 	-webkit-box-direction: normal;
 	        flex-direction: column;
+	position: relative;
+	z-index: 98;
+}
+
+@media (min-width: 767px) {
+	section#page-wrapper .scroll-wrapper .scroll-screen {
+		height: 55vh;
+	}
+}
+
+@media (min-width: 900px) {
+	section#page-wrapper .scroll-wrapper .scroll-screen {
+		height: 100vh;
+	}
 }
 
 section#page-wrapper .scroll-wrapper .scroll-screen .screen_top {
@@ -353,8 +368,51 @@ section#page-wrapper .scroll-wrapper .scroll-screen .screen-bottomBox .bottomBox
 	}
 }
 
+section#page-wrapper .scroll-wrapper .screen_1Header .main-nav {
+	width: 15%;
+}
+
+section#page-wrapper .scroll-wrapper .screen_1Header .main-nav .nav-list {
+	width: 100vw;
+	height: 100vh;
+}
+
+@media (min-width: 767px) {
+	section#page-wrapper .scroll-wrapper .screen_1Header .main-nav .nav-list {
+		width: 49.5vw;
+		height: 90vh;
+	}
+}
+
 section#page-wrapper .scroll-wrapper .screen_1Header .header-welcome {
 	width: 100%;
+}
+
+section#page-wrapper .scroll-wrapper .screen_Mobile {
+	display: block;
+	position: relative;
+}
+
+@media (min-width: 767px) {
+	section#page-wrapper .scroll-wrapper .screen_Mobile {
+		display: none;
+	}
+}
+
+section#page-wrapper .scroll-wrapper .screen_Mobile .fbM {
+	display: none;
+}
+
+section#page-wrapper .scroll-wrapper .screen_Mobile .button_top:hover {
+	background-image: none;
+}
+
+section#page-wrapper .scroll-wrapper .screen_Mobile .button_bottom:hover {
+	background-image: none;
+}
+
+section#page-wrapper .scroll-wrapper .screen_2TSR {
+	overflow: hidden;
 }
 
 section#page-wrapper .scroll-wrapper .screen_2TSR .screen_top .IMGbox {
@@ -1104,6 +1162,7 @@ section#page2-wrapper {
 
 section#page2-wrapper .main-nav {
 	top: 0%;
+	width: 15%;
 }
 
 section#page2-wrapper .cabin-menu {
@@ -1123,6 +1182,12 @@ section#page2-wrapper .cabin-menu {
 	        flex-direction: column;
 	-webkit-box-align: center;
 	        align-items: center;
+}
+
+@media (min-width: 767px) {
+	section#page2-wrapper .cabin-menu {
+		margin: 5% auto;
+	}
 }
 
 section#page2-wrapper .cabin-menu ul {
@@ -1153,15 +1218,16 @@ section#page2-wrapper .cabin-menu ul .cm {
 	transition: -webkit-transform 1.5s;
 	transition: transform 1.5s;
 	transition: transform 1.5s, -webkit-transform 1.5s;
-	display: -webkit-box;
-	display: flex;
 	-webkit-box-orient: vertical;
 	-webkit-box-direction: normal;
 	        flex-direction: column;
+	display: none;
 }
 
 @media (min-width: 767px) {
 	section#page2-wrapper .cabin-menu ul .cm {
+		display: -webkit-box;
+		display: flex;
 		text-align: center;
 		-webkit-box-orient: horizontal;
 		-webkit-box-direction: normal;
@@ -1206,8 +1272,8 @@ section#page2-wrapper .cabin-menu ul .cab-menu_rt {
 
 section#page2-wrapper .cabin-menu ul #pop-out-logo {
 	position: absolute;
-	top: -5%;
-	width: 60%;
+	top: 0%;
+	width: 100%;
 	border: none;
 	padding: 0%;
 }
@@ -1218,7 +1284,15 @@ section#page2-wrapper .cabin-menu ul #pop-out-logo #Layer_2 {
 
 @media (min-width: 767px) {
 	section#page2-wrapper .cabin-menu ul #pop-out-logo {
-		width: 40%;
+		top: -140%;
+		width: 50%;
+	}
+}
+
+@media (min-width: 900px) {
+	section#page2-wrapper .cabin-menu ul #pop-out-logo {
+		top: -280%;
+		width: 53%;
 	}
 }
 
@@ -1229,7 +1303,7 @@ section#page2-wrapper .cabin-menu ul #pop-out-logo img {
 section#page2-wrapper .cabin-menu .cabin0 {
 	width: 95%;
 	height: 110px;
-	margin: 7% auto;
+	margin: 50% auto 5% auto;
 	display: -webkit-box;
 	display: flex;
 	-webkit-box-orient: vertical;
@@ -1248,6 +1322,7 @@ section#page2-wrapper .cabin-menu .cabin0 {
 		-webkit-box-orient: horizontal;
 		-webkit-box-direction: normal;
 		        flex-direction: row;
+		margin: 15% auto 0% auto;
 		height: 50px;
 	}
 }
@@ -1963,7 +2038,7 @@ section#page3-wrapper section.giantBG .cities .cc_3:hover .hover {
 }
 
 section#page3-wrapper section.bg2 {
-	height: 70vh;
+	height: 65vh;
 	background-image: url("../img/book-bg.jpg");
 }
 
@@ -2100,8 +2175,6 @@ section#page3-wrapper section.page3-articles .articles .article-IMG {
 
 @media (min-width: 767px) {
 	section#page3-wrapper section.page3-articles .articles .article-IMG {
-		-webkit-box-pack: center;
-		        justify-content: center;
 		width: 50%;
 		height: 100%;
 	}
@@ -2142,8 +2215,8 @@ section#page3-wrapper section.page3-articles .article1 .article-txt-wrapper .ste
 }
 
 section#page3-wrapper section.p3-a2 {
-	background-color: goldenrod;
 	height: 350px;
+	position: relative;
 }
 
 section#page3-wrapper section.p3-a2 .article2 {
@@ -2164,24 +2237,49 @@ section#page3-wrapper section.p3-a2 .article2 .article-txt-wrapper {
 	}
 }
 
+@media (min-width: 767px) {
+	section#page3-wrapper section.p3-a2 .article2 .article-txt-wrapper .article-text {
+		width: 100%;
+	}
+}
+
 @media (min-width: 900px) {
 	section#page3-wrapper section.p3-a2 .article2 .article-txt-wrapper .article-text {
+		min-width: 70%;
 		height: 80%;
 	}
 }
 
+@media (min-width: 1440px) {
+	section#page3-wrapper section.p3-a2 .article2 .article-txt-wrapper .article-text {
+		max-width: 75%;
+	}
+}
+
+section#page3-wrapper section.p3-a2 .article2 .sten2 {
+	position: absolute;
+	top: -55%;
+	right: 0;
+}
+
+@media (min-width: 900px) {
+	section#page3-wrapper section.p3-a2 .article2 .sten2 {
+		right: 25%;
+	}
+}
+
 section#page3-wrapper section.p3-a3 {
-	background-color: lightblue;
+	position: relative;
 }
 
 @media (min-width: 900px) {
 	section#page3-wrapper section.p3-a3 {
-		height: 500px;
+		height: auto;
 	}
 }
 
 section#page3-wrapper section.p3-a3 .article3 {
-	height: 100%;
+	height: 80vh;
 	position: relative;
 	display: -webkit-box;
 	display: flex;
@@ -2189,32 +2287,91 @@ section#page3-wrapper section.p3-a3 .article3 {
 	        justify-content: space-between;
 }
 
-section#page3-wrapper section.p3-a3 .article3 .test {
-	position: absolute;
+@media (min-width: 767px) {
+	section#page3-wrapper section.p3-a3 .article3 {
+		height: 50vh;
+	}
+}
+
+@media (min-width: 900px) {
+	section#page3-wrapper section.p3-a3 .article3 {
+		height: 85vh;
+	}
 }
 
 @media (min-width: 767px) {
 	section#page3-wrapper section.p3-a3 .article3 .article-txt-wrapper {
 		width: 50%;
+		height: 80%;
 	}
 }
 
 @media (min-width: 900px) {
+	section#page3-wrapper section.p3-a3 .article3 .article-txt-wrapper {
+		width: 40%;
+		height: 75%;
+		-webkit-box-pack: center;
+		        justify-content: center;
+	}
+}
+
+@media (min-width: 1440px) {
 	section#page3-wrapper section.p3-a3 .article3 .article-txt-wrapper {
 		-webkit-box-pack: end;
 		        justify-content: flex-end;
 	}
 }
 
+@media (min-width: 767px) {
+	section#page3-wrapper section.p3-a3 .article3 .article-txt-wrapper .article-text {
+		width: 90%;
+	}
+}
+
 @media (min-width: 900px) {
 	section#page3-wrapper section.p3-a3 .article3 .article-txt-wrapper .article-text {
-		height: 80%;
+		height: 40%;
+		align-self: center;
+	}
+}
+
+@media (min-width: 1440px) {
+	section#page3-wrapper section.p3-a3 .article3 .article-txt-wrapper .article-text {
+		align-self: flex-end;
+	}
+}
+
+@media (min-width: 767px) {
+	section#page3-wrapper section.p3-a3 .article3 .article-IMG {
+		width: 60%;
+		-webkit-box-pack: start;
+		        justify-content: flex-start;
 	}
 }
 
 @media (min-width: 900px) {
 	section#page3-wrapper section.p3-a3 .article3 .article-IMG {
-		width: 39%;
+		width: 60%;
+	}
+}
+
+section#page3-wrapper section.p3-a3 .sten3 {
+	position: absolute;
+	top: 15%;
+	right: 35%;
+}
+
+@media (min-width: 767px) {
+	section#page3-wrapper section.p3-a3 .sten3 {
+		top: 10%;
+		left: 30%;
+	}
+}
+
+@media (min-width: 1440px) {
+	section#page3-wrapper section.p3-a3 .sten3 {
+		top: 40%;
+		left: 35%;
 	}
 }
 
