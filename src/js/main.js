@@ -43,20 +43,46 @@ $closing_link.addEventListener("click", function () {
 
 ///PAGE 1,3,4,5 POP-OUT MENU
 
+//book now/pop-out menu/ close button for desktop
+let $bookNow_bttnMain = document.querySelector(".fw-Main_bttn");
+
+let $popout_menuMain = document.querySelector(".pm-Main");
+
+let $close_bttnMain = document.querySelector(".cb-Main");
+
+//book now/pop-out menu/close button for mobile
+
 let $bookNow_bttn = document.querySelector(".bookNow_bttn");
 
 let $popout_menu = document.querySelector(".popout-menu");
 
 let $close_bttn = document.querySelector(".close-button");
 
+
 $bookNow_bttn.addEventListener("click", function(){
-    console.log("clicky book now");
+    console.log("mobile book now");
     $popout_menu.style.transform = "translateX(0)";
 });
 
 $close_bttn.addEventListener("click", function(){
-    console.log("clicky close button");
+    console.log("click close button");
     $popout_menu.style.transform = "translateX(3500px)";
 });
+
+///PAGE 1 desktop functions 
+
+$bookNow_bttnMain.addEventListener("click", function(){
+    console.log("main book now");
+    $popout_menuMain.style.transform = "translateX(0)";
+});
+
+$close_bttnMain.addEventListener("click", function(){
+    console.log("click close button");
+    $popout_menuMain.style.transform = "translateX(3500px)";
+});
+
+
+
+
 
 

@@ -33,8 +33,8 @@ body {
 
 .main-nav{
 	position: absolute;
-	top:1.5%;
-	width:5%;
+	top:0%;
+	width:15%;
 	min-width: 5%;
 	z-index: 99;
 	height:auto;
@@ -195,6 +195,51 @@ body {
 	font-size:.8em;
 }
 
+.footer{
+			width:90%;
+			height: 25vh;
+			margin:0 auto;
+			display: flex;
+			flex-direction: row;
+
+
+			.foot{
+				width:33%;
+				height: 90%;
+				border-bottom:2px solid $TSR_Accent;
+
+			}
+
+			.foot2{
+				width:100%;
+				display:flex;
+				flex-direction:column;
+				justify-content: center;
+				align-items: center;
+				img{width:25%;}
+			}
+
+			.foot3,.foot1{
+				ul{
+					display: flex;
+					flex-direction: column;
+					justify-content: space-evenly;
+					width: 100%;
+					height: 100%;
+					color:$TSR_textHead;
+
+					li{
+						font-size:1.2em;
+						.txt{
+							font-size: 1em;
+							color:$TSR_Accent;
+							float: right;
+						}
+
+					}
+				}
+			}
+}
 /* 2. Content ================================= */
 
 section#page-wrapper{
@@ -285,13 +330,11 @@ section#page-wrapper{
 
 
 			.main-nav{
-				width: 15%;
 				.nav-list{
 					width:100vw;
 					height: 100vh;
 					@media#{$tablet}{
 						width:49.5vw;
-						height: 90vh;
 					}
 				}
 			}
@@ -306,6 +349,7 @@ section#page-wrapper{
 		.screen_Mobile{
 			display: block;
 			position: relative;
+			overflow: hidden;
 			@media#{$tablet}{
 				display: none;
 			}
@@ -701,6 +745,7 @@ section#page-wrapper{
 
 		a:link{
 			text-decoration: none;
+			height: auto;
 		}
 		
 		h2{
@@ -725,21 +770,17 @@ section#page-wrapper{
 		
 
 		.bookNow_bttn{
-			display: none;
+			
 			position: absolute;
 			top:0;
 			right:0;
 			width:150px;
-			height:20px;
+			height:30px;
 			margin:2%;
 			border: 2px solid;
 			background: transparent;
 			transition: 1s ease-in-out;
-			@media#{$tablet}{
-				display: block;
-			}
-			
-
+		
 		}
 
 		.bookNow_bttn:hover{
@@ -862,17 +903,15 @@ section#page-wrapper{
 			left:0;
 			right:0;
 			background-image:url("../img/book-bg.jpg");
-			background-size: 400%;
+			background-size: cover;
+   			 background-position-x: 40%;
 			font-family: $TSRmain;
 			display: flex;
 			justify-content: center;
 			align-items: center;
-			transform:translateX(1500px);
+			transform:translateX(3500px);
 			transition: transform 1s, ease;
-			display: none;
-			@media#{$tablet}{
-				display: block;
-			}
+		
 
 			.bookingWindow{
 				width:90%;
@@ -973,11 +1012,6 @@ section#page2-wrapper{
 	background-position-x:75%;
 	background-position-y: 35%;
 	//background-size:contain;
-
-	.main-nav{
-		top:0%;
-		width:15%;
-	}
 
 	.cabin-menu{
 		width:85%;
@@ -1331,6 +1365,10 @@ section#page2-wrapper{
 		
 	}
 
+	.page2-footer{
+		width: 100%;
+		border-top: 2px solid $TSR_Accent;
+	}
 	@media#{$desktop}{
 
 		.cabin:nth-child(even){
@@ -1378,19 +1416,44 @@ section#page2-wrapper{
 }
 
 section#page3-wrapper{
-	.main-nav{
-		border: none;
 
-		#navButton{
-			.nav-icon:after, 
-			.nav-icon:before, 
-			.nav-icon div {
-				background-color: $TSR_White;
+	width:100%;
+	min-width: 355px;
+
+	position: relative;
+
+	.asset-line{
+		position: absolute;
+		z-index: 99;
+		width:23.3%;
+		top:19%;
+		right:5%;
+
+		@media#{$tablet}{
+			left:30%;
+			top:14.1%;
+		}
+
+		@media#{$desktop}{
+			top:15.1%;
+		}
+
+		@media#{$XLdesktop}{
+			top:12.1%;
+		}
+
+		svg{
+			width:20%;
+
+			@media#{$desktop}{
+				width: 15%;
+			}
+
+			@media#{$XLdesktop}{
+				width: 13%;
 			}
 		}
 	}
-	width:100%;
-	min-width: 355px;
 
 	section.giantBG{
 		width:100%;
@@ -1400,25 +1463,34 @@ section#page3-wrapper{
 		position: relative;
 		overflow: hidden;
 		@media#{$tablet}{
-			height: 70vh;
+			height: 64vh;
 		}
 		@media#{$XLdesktop}{
 			background-position-y: -100px;
 
+		}
+
+		nav.main-nav{
+			.nav-list{
+
+				height: 64vh;
+			}
 		}
 		.header-logo{
 			display: flex;
 			flex-direction: row;
 			flex-wrap: wrap;
 			justify-content: space-around;
-			width: 100%;
+			width: 70%;
 			height: 5%;
+			margin: 0 auto;
 			@media#{$tablet}{
 				height: 30%;
+				width: 90%;
 			}
 
 			.clear{
-				width:55%;
+				width:100%;
 				margin:0 auto;
 				img{width:100%;}
 				
@@ -1430,7 +1502,7 @@ section#page3-wrapper{
 				
 				img{
 					width: 100%;
-					margin-top:2%;
+					
 					visibility: hidden;
 					
 					@media#{$tablet}{
@@ -1674,6 +1746,8 @@ section#page3-wrapper{
 	section.bg2{
 		height: 65vh;
 		background-image: url("../img/book-bg.jpg");
+		
+
 	}
 
 	section.page3-articles{
@@ -1683,13 +1757,17 @@ section#page3-wrapper{
 		flex-direction: column;
 
 		@media#{$tablet}{
-			height: 500px;
+			height: 600px;
 			flex-direction: row;
 			flex-wrap:wrap;
 		}
 
 		@media#{$desktop}{
 			height: 900px;
+		}
+
+		@media#{XLdesktop}{
+			min-height: 900px;
 		}
 		
 		.article-intro{
@@ -1710,28 +1788,21 @@ section#page3-wrapper{
 			flex-direction: column;
 
 			@media#{$tablet}{
-				height: 75%;
 				flex-direction: row;
-	
 			}
 
 			.article-txt-wrapper{
-				width:100%;
-				height: 50%;
 				z-index: 99;
 				padding:1%;
 				display: flex;
 				justify-content: center;
 				
 				@media#{$tablet}{
-					width:50%;
-					height: 100%;
 					flex-direction: row;
 				}
 				
 				.article-text{
 					width: 85%;
-					height: 100%;
 					font-size:1em;
 					padding:2%;
 					line-height: 1.2em;
@@ -1743,13 +1814,13 @@ section#page3-wrapper{
 					color: $TSR_text;
 
 					@media#{$desktop}{
-						height: 50%;
 						justify-content: space-around;
-						align-self: center;
+						align-self: flex-end;
 					}
 
 					@media#{$XLdesktop}{
-						max-width: 60%;
+						max-width: 70%;
+						align-self: center;
 					}
 					
 					h2{
@@ -1771,8 +1842,9 @@ section#page3-wrapper{
 				flex-direction: column;
 				justify-content: flex-end;
 				@media#{$tablet}{
-					width:50%;
+					width:55%;
 					height: 100%;
+					justify-content: center;
 				}
 
 				img{
@@ -1790,30 +1862,56 @@ section#page3-wrapper{
 
 		.article1{
 			position: relative;
-			
+			justify-content: space-between;
+		
+			@media#{$tablet}{
+				height: 80%;
+			}
 			.article-txt-wrapper{
+				width: 100%;
+				height: 100%;
+
+				@media#{$tablet}{
+					width: 45%;
+					align-self: center;
+					justify-content: flex-end;
+				}
+			
+				.article-text{
+					height: 80%;
+
+					@media#{$tablet}{
+						width: 100%;
+						align-self: center;
+					}
+
+					@media#{$desktop}{
+						width:70%;
+						height: 50%;
+						
+					}
+
+					@media#{$XLdesktop}{
+						width:75%;
+						max-width: 85%;
+						height: 50%;
+						
+					}
+				}
 
 				.stencilBG{
 					position: absolute;
 					left:15%;
 					top:-3%;
 					z-index: 1;
-				}
-			}
 
-			@media#{$desktop}{
-				.article-txt-wrapper{
-					width:50%;
-					.stencilBG{
-						left:15%;
-						top:15%;
+					@media#{$tablet}{
+						top:20%;
 					}
 				}
-				.article-IMG{
-					width:50%;
-					justify-content: center;
-				}
+
 			}
+
 		}
 
 		
@@ -1829,25 +1927,22 @@ section#page3-wrapper{
 			height: 100%;
 			flex-direction: column;
 			.article-txt-wrapper{
-				height: 100%;
+				height: 75%;
 				@media#{$tablet}{
+					width:63%;
 					position: relative;
-					left:20%;
+					left:25%;
 				}
-			
-				.article-text{
-					@media#{$tablet}{
-						width: 100%;
-					}
-					@media#{$desktop}{
-						min-width: 70%;
-						height: 80%;
-					}
 
-					@media#{$XLdesktop}{
-						max-width: 75%;
-					}
+				@media#{$desktop}{
+					width:48%;
+					max-width: 55%;
 				}
+
+				.article-text{
+					height: 80%;
+				}
+		
 			}
 
 			.sten2{
@@ -1880,32 +1975,33 @@ section#page3-wrapper{
 				height: 85vh;
 			}
 			.article-txt-wrapper{
+				height: 75%;
 				@media#{$tablet}{
 					width:50%;
-					height: 80%;
 				}
 				@media#{$desktop}{
 					width: 40%;
-					height: 75%;
-					justify-content: center;
+					justify-content: flex-end;
 				}
 
 				@media#{$XLdesktop}{
 					justify-content: flex-end;
 				}
 
-				
-
+	
 				.article-text{
+					height: 80%;
 					@media#{$tablet}{
 						width:90%;
 					}
 					@media#{$desktop}{
-						height: 40%;
+						width: 70%;
+						height: 45%;
 						align-self: center;
 					}
 
 					@media#{$XLdesktop}{
+						height: 37%;
 						align-self: flex-end;
 					}
 
@@ -1942,7 +2038,7 @@ section#page3-wrapper{
 		}
 	}
 
-	section.page3-footer{
+	section.page3-slideshow{
 		width:100%;
 		height:100vh;
 		display:flex;
@@ -1960,7 +2056,7 @@ section#page3-wrapper{
 		}
 		.photo-grid{
 			width:100%;
-			height: 65%;
+			height: 100%;
 			background-color: $TSR_textHead;
 			display: flex;
 			flex-direction: row;
@@ -1969,11 +2065,7 @@ section#page3-wrapper{
 			.photo{
 				width:33.33%;	
 				background-repeat: no-repeat;		
-				background-size: contain;
-
-				@media#{$tablet}{
-					background-size: cover;
-				}
+				background-size: cover;
 			}
 
 			.photo1{
@@ -1991,17 +2083,14 @@ section#page3-wrapper{
 
 			.photo-banner{
 				width:100%;
-				height:75%;
+				height:25%;
 				background-color: $TSR_textHead;
 				position: absolute;
 				bottom:0;
 				display: flex;
 				flex-direction: row;
 				justify-content: space-evenly;
-				@media #{$tablet}{
-					height: 50%;
-				}
-
+			
 				.banner-text{
 					width:50%;
 					display: flex;
@@ -2051,52 +2140,6 @@ section#page3-wrapper{
 
 			}
 		}
-		.footer{
-			width:90%;
-			margin:5% auto;
-			height: 25%;
-			display: flex;
-			flex-direction: row;
-
-
-			.foot{
-				width:33%;
-				height: 90%;
-				border-bottom:2px solid $TSR_Accent;
-
-			}
-
-			.foot2{
-				width:100%;
-				display:flex;
-				flex-direction:column;
-				justify-content: center;
-				align-items: center;
-				img{width:25%;}
-			}
-
-			.foot3,.foot1{
-				ul{
-					display: flex;
-					flex-direction: column;
-					justify-content: space-evenly;
-					width: 100%;
-					height: 100%;
-					color:$TSR_textHead;
-
-					li{
-						font-size:1.2em;
-						.txt{
-							font-size: 1em;
-							color:$TSR_Accent;
-							float: right;
-						}
-
-					}
-				}
-			}
-		}
-
 	}
 
 	.pic-label{
@@ -2107,7 +2150,7 @@ section#page3-wrapper{
 section#page4-wrapper{
 	.main-nav{
 		border: none;
-		top:1.5%;
+		top:.5%;
 	}
 	width:100%;
 
@@ -2128,8 +2171,9 @@ section#page4-wrapper{
 			//flex-wrap: wrap;
 			justify-content: space-between;
 			align-items: center;
-			width: 100%;
+			width: 80%;
 			height: 20%;
+			margin: 0 auto;
 			@media#{$tablet}{
 				flex-direction: row;
 				justify-content: space-around;
@@ -2137,15 +2181,15 @@ section#page4-wrapper{
 			}
 
 			.hdr_left{
-				width:367px;
+				width:80%;
 				height: 100%;
 				display: block;
 				img{
 					width: 100%;
-					margin-top:2%;
 				}
 				
 				@media#{$tablet}{
+					width: 25%;
 					display: block;		
 						
 				}
@@ -2495,51 +2539,6 @@ section#page4-wrapper{
 			}
 
 		}
-		.footer{
-			width:90%;
-			height: 25vh;
-			margin:0 auto;
-			display: flex;
-			flex-direction: row;
-
-
-			.foot{
-				width:33%;
-				height: 90%;
-				border-bottom:2px solid $TSR_Accent;
-
-			}
-
-			.foot2{
-				width:100%;
-				display:flex;
-				flex-direction:column;
-				justify-content: center;
-				align-items: center;
-				img{width:25%;}
-			}
-
-			.foot3,.foot1{
-				ul{
-					display: flex;
-					flex-direction: column;
-					justify-content: space-evenly;
-					width: 100%;
-					height: 100%;
-					color:$TSR_textHead;
-
-					li{
-						font-size:1.2em;
-						.txt{
-							font-size: 1em;
-							color:$TSR_Accent;
-							float: right;
-						}
-
-					}
-				}
-			}
-		}
 
 	}
 
@@ -2577,8 +2576,9 @@ section#page5-wrapper{
 			//flex-wrap: wrap;
 			justify-content: space-between;
 			align-items: center;
-			width: 100%;
+			width: 80%;
 			height: 20%;
+			margin: 0 auto;
 			@media#{$tablet}{
 				flex-direction: row;
 				justify-content: space-around;
@@ -2586,15 +2586,16 @@ section#page5-wrapper{
 			}
 
 			.hdr_left{
-				width:367px;
+				width:80%;
 				height: 100%;
 				display: block;
 				img{
 					width: 100%;
-					margin-top:2%;
+					
 				}
 				
 				@media#{$tablet}{
+					width: 25%;
 					display: block;		
 						
 				}
